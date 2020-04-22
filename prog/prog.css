@@ -1,0 +1,133 @@
+pre.float2 { float: left; width: 45%; margin: 5px; }
+table.float2 { float: left; width: 45%; margin: 5px; }
+ul.float2 { float: left; width: 45%; margin: 5px; }
+p.float2 { float: left; width: 45%; margin: 5px; }
+div.float2 { float: left; width: 45%; margin: 5px; }
+pre.floatr2 { float: right; width: 45%; margin: 5px; }
+table.floatr2 { float: right; width: 45%; margin: 5px; }
+ul.floatr2 { float: right; width: 45%; margin: 5px; }
+p.floatr2 { float: right; width: 45%; margin: 5px; }
+div.floatr2 { float: right; width: 45%; margin: 5px; }
+pre.float4 { float: left; width: 25%; margin: 5px; }
+pre.float3 { float: left; width: 32%; margin: 5px; }
+
+.half {
+  margin-top: -10px;
+  vertical-align: top;
+  display: inline-block;
+  width: 49%; }
+
+.label {
+  color:#ff8855;
+  background-color: #770000;
+  font-size: 20px !important;
+  padding: 1px 4px 1px 4px;
+  border-radius: 4px;
+}
+
+p.title {
+  text-align: left; background-color: #ffccc0; color: black;
+  margin-bottom: -20px;
+  margin-left: 21px;
+  margin-right: 21px;
+  padding-left: 10px;
+}
+
+/* Paragraphs aligned on the left */
+.reveal ul {
+  display: block;
+}
+.reveal ol {
+  display: block;
+}
+
+.reveal section img { background:none; border:none; box-shadow:none; }
+
+/* Adjust font sizes */
+.reveal {
+    font-size: 34px !important;
+}
+
+.small {
+  font-size: 28px !important;
+}
+
+/* Special highlighting class */
+.reveal strong {
+    color:#ff6600;
+    font-weight: bold;
+}
+
+.alert { color: red; font-weight: bold; }
+
+.reveal section img {
+  border: 0px;
+}
+
+.no-border {
+  border: 0px;
+}
+
+code {
+  color: #aa2222;
+}
+
+ul code {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.ribbon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 3px;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+a.ribbon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 3px;
+    padding: 2px;
+    border-radius: 4px;
+    color: white;
+}
+
+.ribbon-principle {
+    background-color: blue;
+    color: white;
+}
+.ribbon-principle:before {
+  content: "Principe";
+}
+
+.ribbon-exercise {
+    background-color: green;
+    color: white;
+  }
+.ribbon-exercise:before {
+  content: "Exercice";
+}
+
+.ribbon-advice {
+    background-color: #aa2222;
+    color: white;
+}
+.ribbon-advice:before {
+  content: "Conseils";
+}
+
+.ribbon-ref {
+    background-color: #aa22aa;
+    color: white;
+}
+.ribbon-ref:before {
+  content: "Référence";
+}
+
+li.fill {
+  list-style-type: none; padding: .5em;
+}
