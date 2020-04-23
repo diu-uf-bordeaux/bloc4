@@ -34,11 +34,11 @@ Abstraction
 
 Modularité
 
-Réutilisabilité / Flexibilité / Généricité
+Généricité / Réutilisabilité / Flexibilité
 
 Efficacité (complexité, mémoire)
 
-Fiabilité
+Fiabilité / Sûreté
 
 &hellip;
 

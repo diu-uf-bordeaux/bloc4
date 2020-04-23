@@ -6,12 +6,19 @@
 
 [https://wiki.inria.fr/wikis/sciencinfolycee/images/a/a7/Informatique_et_Sciences_du_Num%25C3%25A9rique_-_Sp%25C3%25A9cialit%25C3%25A9_ISN_en_Terminale_S._version_Python.pdf](Informatique et Sciences du Numérique) par G. Dowek et. al.
 
+[https://eduscol.education.fr/cid144156/nsi-bac-2021.html](Page pour retrouver le programme)
+
+[https://cache.media.education.gouv.fr/file/SPE8_MENJ_25_7_2019/93/3/spe247_annexe_1158933.pdf](Programme NSI Terminale)
+
 ## Liste de paradigmes de programmation
 
 - Programmation modulaire      (en +)
 - Programmation impérative
 - Programmation fonctionnelle
 - Programmation objet
+
+Présentés à part :
+
 - Programmation événementielle (js)
 - Programmation parallèle
 - Programmation logique
