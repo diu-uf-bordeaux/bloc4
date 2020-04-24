@@ -1,5 +1,3 @@
---
-
 ## Paradigme de programmation
 
 A **paradigm** is a global and general model for decomposing problems

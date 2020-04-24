@@ -1,2 +1,4 @@
---
 ## Fonctionnel : le paradigme (#!?)
+
+--
+

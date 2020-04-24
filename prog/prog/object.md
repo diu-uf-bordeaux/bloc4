@@ -1,2 +1,4 @@
---
 ## Objet : le paradigme (!?#)
+
+--
+

@@ -84,7 +84,7 @@ paradigme.
   * multiprocessing (https://docs.python.org/3/library/multiprocessing.html)
 
 	Bibliothèque avec des process, et des pipes pour la communication
-    des objets. Parallèlisme multi-processeur.  Existe des
+    des objets. Parallélisme multi-processeur.  Existe des
     implémentations raisonnablement simples de map-reduce.
 
   * threading (https://docs.python.org/3/library/threading.html)
@@ -100,7 +100,7 @@ paradigme.
   * exercice comparant les 3 différentes bibliothèques précédentes sur
     un même exemple (https://realpython.com/python-concurrency/)
 
-  * exemples : méthodes numériques d'intégration avec parallèlisme
+  * exemples : méthodes numériques d'intégration avec parallélisme
 
 
 ## Fonctionnement

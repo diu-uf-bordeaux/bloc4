@@ -1,5 +1,3 @@
---
-
 ## Type abstrait de données
 
 Un **type abstrait de données** (aussi appelé TAD) consiste en :
