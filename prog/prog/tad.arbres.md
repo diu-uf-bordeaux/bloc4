@@ -7,10 +7,9 @@
 <br/>
 
 - Utilisées pour représenter des ensembles de données **structurées hiérarchiquement** :
-  - système de fichiers,
+  - système de fichiers (répertoires et fichiers),
   - bases de données,
-  - sites web,
-  - fichiers XML.
+  - documents structurés (HTML, XML)
 
 <!-- .element: class="fragment" -->
 
@@ -131,6 +130,14 @@ Un <strong>arbre binaire</strong> est donc un arbre d'<strong>arité deux</stron
 
 --
 
+## Pourquoi se focaliser sur les arbres binaires ?
+
+- Toute décision peut être ramenée à des choix binaires.
+- La plupart des opérations prennent deux arguments.
+- Il est possible de simuler un arbre n-aire avec un arbre binaire.
+
+--
+
 ## Quelques arbres binaires
 <!-- .slide: data-transition="fade" -->
 
@@ -245,11 +252,9 @@ Combien de **feuilles** et de **nœuds** comporte-il :
 
 ## Type abstrait ```Arbre Binaire```
 
-1. Constructeurs :
+1. Constructeur :
 
   ```python
-  feuille : Etiquette -> Arbre binaire
-      # à partir d'un étiquette e, produit l'arbre binaire (e, ∆, ∆)
   noeud : (Etiquette * Arbre binaire * Arbre binaire) -> Arbre binaire
       # à partir d'un étiquette e et des arbres binaires g et d, 
       # produit l'arbre binaire (e, g, d)
@@ -258,21 +263,21 @@ Combien de **feuilles** et de **nœuds** comporte-il :
 2. Sélecteurs : <!-- .element: class="fragment" data-fragment-index="1" -->
   
   ```python
-  droit : Arbre binaire -> Arbre binaire
-     # à partir de l'arbre binaire (e, g, d), produit l'arbre binaire d
+  etiquette : Arbre binaire -> Etiquette
+    # à partir de l'arbre binaire (e, g, d), produit l'étiquette e
   gauche : Arbre binaire -> Arbre binaire
      # à partir de l'arbre binaire (e, g, d), produit l'arbre binaire g
-  etiquette : Arbre binaire -> Etiquette
-     # à partir de l'arbre binaire (e, g, d), produit l'étiquette e
+  droit : Arbre binaire -> Arbre binaire
+     # à partir de l'arbre binaire (e, g, d), produit l'arbre binaire d
   ```
   <!-- .element: class="fragment" data-fragment-index="1" -->
 
 3. Prédicat : <!-- .element: class="fragment" data-fragment-index="2" -->
 
   ```python
-  est_vide : Arbre binaire -> bool
-     # à partir de l'arbre binaire, produit un booléen 
-     # disant s'il s'agit de l'arbre vide ∆ 
+  est_feuille : Arbre binaire -> bool
+     # à partir de l'arbre binaire (e, g, d), produit un booléen 
+     # indiquant si g et d sont l'arbre vide
   ```
   <!-- .element: class="fragment" data-fragment-index="2" -->
 
@@ -280,6 +285,67 @@ Combien de **feuilles** et de **nœuds** comporte-il :
 
 ## Mise en oeuvre en <span class="label">Python</span>
 
-1. Listes ```[etiquette, fils_gauche, fils_droit]```
+Plusieurs implémentations possibles :
+
+1. Listes de listes
 2. Classe ```Noeud```
-3. Tableau dynamique où les fils gauche et droit d'un nœud *i* sont rangés respectivement dans les cases *2i* et *2i+1* du même tableau
+3. Liste unique dans laquelle les fils gauche et droit d'un nœud *i* sont rangés respectivement dans les cases *2i* et *2i+1*
+
+--
+
+## Listes de listes
+
+1. Arbre vide représenté par `[]`
+2. Constructeur : 
+ 
+  ```python 
+  def arbre(etiquette, gauche, droit):
+      return [etiquette, gauche, droit]
+  ```
+
+3. Sélecteurs :
+
+  ```python 
+  def etiquette(arbre):
+      return arbre[0]
+
+  def gauche(arbre):
+      return arbre[1]
+
+  def droit(arbre):
+      return arbre[2]
+  ```
+
+4. Prédicat :
+
+  ```python 
+  def est_feuille(arbre):
+      return arbre[1]==[] and arbre[2]==[]
+  ```
+
+--
+
+## Classe ```Noeud```
+
+1. Arbre vide représenté par `None`
+2. Nœud représenté par la classe :
+
+  ```python
+  class Noeud:
+      def __init__(self, etiquette, gauche=None, droit=None):
+          self.etiquette = etiquette
+          self.gauche = gauche
+          self.droit = droit
+          
+      def etiquette (self):
+          return(self.etiquette)
+      
+      def gauche(self):
+          return(self.gauche)
+
+      def droit(self):
+          return(self.droit)
+      
+      def est_feuille(self):
+          return not (self.gauche or self.droit)
+  ```
