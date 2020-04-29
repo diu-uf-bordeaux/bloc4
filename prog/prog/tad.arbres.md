@@ -1,4 +1,4 @@
-## Arbres binaires
+## Arbres
 
 - Structures de données :
   - **hiérarchiques**, 
@@ -255,7 +255,7 @@ Combien de **feuilles** et de **nœuds** comporte-il :
       # produit l'arbre binaire (e, g, d)
   ```
 
-2. Sélecteurs :
+2. Sélecteurs : <!-- .element: class="fragment" data-fragment-index="1" -->
   
   ```python
   droit : Arbre binaire -> Arbre binaire
@@ -265,14 +265,16 @@ Combien de **feuilles** et de **nœuds** comporte-il :
   etiquette : Arbre binaire -> Etiquette
      # à partir de l'arbre binaire (e, g, d), produit l'étiquette e
   ```
+  <!-- .element: class="fragment" data-fragment-index="1" -->
 
-3. Prédicat :
+3. Prédicat : <!-- .element: class="fragment" data-fragment-index="2" -->
 
   ```python
   est_vide : Arbre binaire -> bool
      # à partir de l'arbre binaire, produit un booléen 
      # disant s'il s'agit de l'arbre vide ∆ 
   ```
+  <!-- .element: class="fragment" data-fragment-index="2" -->
 
 --
 
