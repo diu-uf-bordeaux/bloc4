@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 305 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g id="graph0" transform="matrix(1,0,0,1,4,273)">
+        <g id="node1" transform="matrix(1,0,0,1,-108.897,-1.72852)">
+            <ellipse cx="257" cy="-251" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,257,-246.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">3</text>
+            </g>
+        </g>
+        <g id="node2" transform="matrix(1,0,0,1,-97.8973,-16.7285)">
+            <ellipse cx="186" cy="-171" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,186,-166.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">1</text>
+            </g>
+        </g>
+        <g id="node9" transform="matrix(1,0,0,1,-134.897,-16.7285)">
+            <ellipse cx="344" cy="-171" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,344,-166.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">4</text>
+            </g>
+        </g>
+        <g id="node3" transform="matrix(1,0,0,1,-74.8973,-32.7285)">
+            <ellipse cx="99" cy="-91" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,99,-86.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">1</text>
+            </g>
+        </g>
+        <g id="node6" transform="matrix(1,0,0,1,-96.8973,-32.7285)">
+            <ellipse cx="186" cy="-91" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,186,-86.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">5</text>
+            </g>
+        </g>
+        <g id="edge9" transform="matrix(1,0,0,1,124.475,224.363)">
+            <g transform="matrix(1,-0,-0,1,-128.475,-497.363)">
+                <g id="edge91" serif:id="edge9">
+                    <path d="M216.7,124.787L213.7,130.787L210.7,124.787L216.7,124.787Z" style="fill-rule:nonzero;"/>
+                    <path d="M213.7,103.153L213.7,125.987" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge92" serif:id="edge9" transform="matrix(1,0,0,1,1.47513,224.363)">
+            <g transform="matrix(1,-0,-0,1,-5.47513,-497.363)">
+                <g id="edge93" serif:id="edge9">
+                    <path d="M93.7,124.787L90.7,130.787L87.7,124.787L93.7,124.787Z" style="fill-rule:nonzero;"/>
+                    <path d="M90.7,103.153L90.7,125.987" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge94" serif:id="edge9" transform="matrix(-1,0,0,1,324.185,223.025)">
+            <g transform="matrix(-1,0,0,1,328.185,-496.025)">
+                <g id="edge95" serif:id="edge9">
+                    <path d="M261.786,126.871L263.954,133.219L257.575,131.145L261.786,126.871Z" style="fill-rule:nonzero;"/>
+                    <path d="M229.81,99.576C229.81,99.576 251.884,121.326 260.535,129.85" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge96" serif:id="edge9" transform="matrix(-1,0,0,1,259.887,159.634)">
+            <g transform="matrix(-1,0,0,1,263.887,-432.634)">
+                <g id="edge97" serif:id="edge9">
+                    <path d="M197.488,63.48L199.657,69.828L193.277,67.754L197.488,63.48Z" style="fill-rule:nonzero;"/>
+                    <path d="M165.513,36.185C165.513,36.185 187.587,57.936 196.238,66.459" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge98" serif:id="edge9" transform="matrix(1,0,0,1,-26.4203,223.025)">
+            <g transform="matrix(1,-0,-0,1,22.4203,-496.025)">
+                <g id="edge99" serif:id="edge9">
+                    <path d="M48.19,131.145L41.81,133.219L43.979,126.871L48.19,131.145Z" style="fill-rule:nonzero;"/>
+                    <path d="M75.954,99.576C75.954,99.576 53.88,121.326 45.229,129.85" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge910" serif:id="edge9" transform="matrix(1,0,0,1,35.5712,159.147)">
+            <g transform="matrix(1,-0,-0,1,-39.5712,-432.147)">
+                <g id="edge911" serif:id="edge9">
+                    <path d="M110.181,67.267L103.802,69.341L105.97,62.993L110.181,67.267Z" style="fill-rule:nonzero;"/>
+                    <path d="M137.946,35.698C137.946,35.698 115.872,57.448 107.221,65.972" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="node10" transform="matrix(1,0,0,1,-136.897,-32.7285)">
+            <ellipse cx="344" cy="-91" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,344,-86.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">9</text>
+            </g>
+        </g>
+        <g id="node13" transform="matrix(1,0,0,1,-186.897,-32.7285)">
+            <ellipse cx="459" cy="-91" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,459,-86.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">2</text>
+            </g>
+        </g>
+    </g>
+</svg>

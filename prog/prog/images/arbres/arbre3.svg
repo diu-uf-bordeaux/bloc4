@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 210 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g id="graph0" transform="matrix(1,0,0,1,4,273)">
+        <g id="node1" transform="matrix(1,0,0,1,-106,-3)">
+            <ellipse cx="206" cy="-251" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,206,-246.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">3</text>
+            </g>
+        </g>
+        <g id="node2" transform="matrix(1,0,0,1,-106,-17)">
+            <ellipse cx="171" cy="-171" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,171,-166.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">1</text>
+            </g>
+        </g>
+        <g id="node7" transform="matrix(1,0,0,1,-106,-17)">
+            <ellipse cx="243" cy="-171" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,243,-166.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">4</text>
+            </g>
+        </g>
+        <g id="node3" transform="matrix(1,0,0,1,-74,-31)">
+            <ellipse cx="99" cy="-91" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,99,-86.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">1</text>
+            </g>
+        </g>
+        <g id="node8" transform="matrix(1,0,0,1,-140,-31)">
+            <ellipse cx="243" cy="-91" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,243,-86.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">5</text>
+            </g>
+        </g>
+        <g id="node11" transform="matrix(1,0,0,1,-139,-31)">
+            <ellipse cx="315" cy="-91" rx="27" ry="18" style="fill:none;stroke:black;stroke-width:1px;"/>
+            <g transform="matrix(1,0,0,1,315,-86.8)">
+                <text x="-3.696px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:14px;">9</text>
+            </g>
+        </g>
+        <g id="edge9" transform="matrix(1,0,0,1,4.31214,157.089)">
+            <g transform="matrix(1,-0,-0,1,-8.31214,-430.089)">
+                <g id="edge91" serif:id="edge9">
+                    <path d="M78.356,63.935L72.543,67.283L73.352,60.624L78.356,63.935Z" style="fill-rule:nonzero;"/>
+                    <path d="M93.708,35.299C93.708,35.299 80.871,54.697 75.192,63.28" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge92" serif:id="edge9" transform="matrix(1,0,0,1,-33.5338,222.89)">
+            <g transform="matrix(1,-0,-0,1,29.5338,-495.89)">
+                <g id="edge93" serif:id="edge9">
+                    <path d="M40.51,129.735L34.697,133.084L35.506,126.424L40.51,129.735Z" style="fill-rule:nonzero;"/>
+                    <path d="M55.862,101.099C55.862,101.099 43.025,120.498 37.346,129.081" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge94" serif:id="edge9" transform="matrix(-1,0,0,1,197.621,157.098)">
+            <g transform="matrix(-1,0,0,1,201.621,-430.098)">
+                <g id="edge95" serif:id="edge9">
+                    <path d="M136.581,60.632L137.39,67.292L131.577,63.944L136.581,60.632Z" style="fill-rule:nonzero;"/>
+                    <path d="M116.225,35.307C116.225,35.307 129.062,54.706 134.741,63.289" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge96" serif:id="edge9" transform="matrix(1,0,0,1,40.783,222.89)">
+            <g transform="matrix(1,-0,-0,1,-44.783,-495.89)">
+                <g id="edge97" serif:id="edge9">
+                    <path d="M114.827,129.735L109.014,133.084L109.823,126.424L114.827,129.735Z" style="fill-rule:nonzero;"/>
+                    <path d="M130.179,101.099C130.179,101.099 117.342,120.498 111.663,129.081" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+        <g id="edge98" serif:id="edge9" transform="matrix(-1,0,0,1,235.092,222.89)">
+            <g transform="matrix(-1,0,0,1,239.092,-495.89)">
+                <g id="edge99" serif:id="edge9">
+                    <path d="M174.052,126.424L174.861,133.084L169.048,129.735L174.052,126.424Z" style="fill-rule:nonzero;"/>
+                    <path d="M153.696,101.099C153.696,101.099 166.533,120.498 172.212,129.081" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

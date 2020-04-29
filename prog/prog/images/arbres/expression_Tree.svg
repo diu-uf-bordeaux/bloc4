@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 470 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-27.7827,-21.968)">
+        <g id="Layer-1" serif:id="Layer 1">
+            <g id="g6217">
+                <g id="g5124" transform="matrix(1,0,0,1,18.9595,-7.67145)">
+                    <path id="path5112" d="M261.429,57.762L142.857,122.047L214.286,200.619" style="fill:none;stroke:black;stroke-width:2px;"/>
+                    <g id="path5114" transform="matrix(1,0,0,1,0,-30)">
+                        <path d="M142.857,152.047L71.429,230.619L35.714,310.619" style="fill:none;stroke:black;stroke-width:2px;"/>
+                    </g>
+                    <g id="path5116" transform="matrix(1,0,0,1,0,-40)">
+                        <path d="M71.429,240.619L107.143,320.619" style="fill:none;stroke:black;stroke-width:2px;"/>
+                    </g>
+                    <path id="path5120" d="M262.857,56.333L380,120.619L311.429,199.19" style="fill:none;stroke:black;stroke-width:2px;"/>
+                    <g id="path5122" transform="matrix(1,0,0,1,0,-30)">
+                        <path d="M378.571,152.047L452.857,229.19" style="fill:none;stroke:black;stroke-width:2px;"/>
+                    </g>
+                </g>
+                <g id="g5269">
+                    <g id="g5046" transform="matrix(1,0,0,1,18.9595,-47.6715)">
+                        <g id="g3717" transform="matrix(1,0,0,1,-4.28572,160)">
+                            <g id="path3705" transform="matrix(1,0,0,1,-20,110)">
+                                <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,38.7232,181.284)">
+                                <g id="text3691">
+                                    <text x="-10.117px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">4</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="g4337" transform="matrix(1,0,0,1,67.1429,160)">
+                            <g id="path4339" transform="matrix(1,0,0,1,-20,110)">
+                                <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,39.7232,181.284)">
+                                <g id="text4341">
+                                    <text x="-10.117px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">2</text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="g4620" transform="matrix(1,0,0,1,23.3072,19.4714)">
+                        <g id="path4622" transform="matrix(1,0,0,1,198.571,-28.5715)">
+                            <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                        </g>
+                        <g transform="matrix(1,0,0,1,257.857,40.8692)">
+                            <g id="text4624">
+                                <text x="-9.813px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">x</text>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="g5252" transform="matrix(1,0,0,1,0,-30)">
+                        <g id="g4443" transform="matrix(1,0,0,1,-165.978,190.852)">
+                            <g id="path4445" transform="matrix(1,0,0,1,198.571,-28.5715)">
+                                <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,257.857,40.8692)">
+                                <g id="text4447">
+                                    <text x="-8.391px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">/</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="g4453" transform="matrix(1,0,0,1,-23.1214,190.852)">
+                            <g id="path4455" transform="matrix(1,0,0,1,198.571,-28.5715)">
+                                <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,257.857,40.8692)">
+                                <g id="text4457">
+                                    <text x="-10.117px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">6</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="g4014" transform="matrix(1,0,0,1,-95.2645,112.805)">
+                            <g id="path4016" transform="matrix(1,0,0,1,198.571,-28.5715)">
+                                <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,257.857,40.8692)">
+                                <g id="text4018">
+                                    <text x="-12.719px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">+</text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="g4891" transform="matrix(1,0,0,1,-3.12153,-37.6715)">
+                        <g id="g4871" transform="matrix(1,0,0,1,-55.7143,-68.619)">
+                            <g id="path4602" transform="matrix(1,0,0,1,327.143,238.571)">
+                                <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,386.866,309.856)">
+                                <g id="text4604">
+                                    <text x="-10.117px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">5</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="g4803" transform="matrix(1,0,0,1,15.7142,-68.619)">
+                            <g transform="matrix(1,0,0,1,398.572,238.571)">
+                                <g id="g4750">
+                                    <path id="path4752" d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                                </g>
+                            </g>
+                            <g transform="matrix(1,0,0,1,458.295,309.856)">
+                                <g id="text4772">
+                                    <text x="-10.117px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">3</text>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="g4861" transform="matrix(1,0,0,1,143.571,120.476)">
+                            <g id="path4863" transform="matrix(1,0,0,1,198.571,-28.5715)">
+                                <path d="M82.857,59.409C82.857,72.34 72.217,82.981 59.286,82.981C46.355,82.981 35.714,72.34 35.714,59.409C35.714,46.479 46.355,35.838 59.286,35.838C72.217,35.838 82.857,46.479 82.857,59.409L82.857,59.409Z" style="fill:white;stroke:black;stroke-width:2px;"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,257.857,40.8692)">
+                                <g id="text4865">
+                                    <text x="-9.258px" y="0px" style="font-family:'LucidaGrande', 'Lucida Grande', sans-serif;font-weight:500;font-size:32px;">-</text>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
