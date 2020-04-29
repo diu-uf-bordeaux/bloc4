@@ -6,10 +6,19 @@
 
 <br/>
 
-- Utilisées pour représenter des ensembles de données **structurées hiérarchiquement** :
+- Utilisées pour représenter des ensembles de **données** :
   - système de fichiers (répertoires et fichiers),
   - bases de données,
   - documents structurés (HTML, XML)
+
+<!-- .element: class="fragment" -->
+
+<br/>
+
+- Utilisées dans les **algorithmes** :
+  - arbre de décision
+  - compression de textes (Huffman)
+  - synthèse d'image (_kd-tree_)
 
 <!-- .element: class="fragment" -->
 
@@ -94,7 +103,7 @@
 ## Quelques mesures sur les arbres
 <!-- .slide: data-transition="fade" -->
 
-![terminologie](prog/images/arbres/terminologie0.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
+![terminologie](prog/images/arbres/terminologie5.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
 
 - la **taille** d'un arbre est le nombre de nœuds de l'arbre.
 - la **profondeur** d'un nœud est le nombre d'arêtes sur la branche qui le relie à la racine. 
@@ -105,7 +114,7 @@
 ## Quelques mesures sur les arbres
 <!-- .slide: data-transition="fade" -->
 
-![terminologie](prog/images/arbres/terminologie0.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
+![terminologie](prog/images/arbres/terminologie6.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
 
 - l'**arité d'un nœud** est le nombre de fils du nœud.
 - l'**arité d'un arbre** est le nombre maximal de fils des nœuds de l'arbre.
@@ -141,13 +150,14 @@ Un <strong>arbre binaire</strong> est donc un arbre d'<strong>arité deux</stron
 ## Quelques arbres binaires
 <!-- .slide: data-transition="fade" -->
 
-- Dessinez chacun des arbres ci-dessous.
-- Donnez sa taille et sa hauteur, le nombre de feuilles, le nombre de nœuds à chaque profondeur.
+- Dessinez chacun des arbres ci-dessous :
 
-  1. (1, ∆, ∆)
-  2. (3, (1, ∆, (4, (1, ∆, (5, ∆, ∆)), ∆)), ∆)
-  3. (3, (1, (1, ∆, ∆), ∆), (4, (5, ∆, ∆), (9, ∆, ∆)))
-  4. (3, (1, (1, ∆, ∆), (5, ∆, ∆)), (4, (9, ∆, ∆), (2, ∆, ∆)))
+  - (1, ∆, ∆)
+  - (3, (1, ∆, (4, (1, ∆, (5, ∆, ∆)), ∆)), ∆)
+  - (3, (1, (1, ∆, ∆), ∆), (4, (5, ∆, ∆), (9, ∆, ∆)))
+  - (3, (1, (1, ∆, ∆), (5, ∆, ∆)), (4, (9, ∆, ∆), (2, ∆, ∆)))
+
+- Donnez sa taille et sa hauteur, le nombre de feuilles, le nombre de nœuds à chaque profondeur.
 
 --
 
@@ -289,7 +299,7 @@ Plusieurs implémentations possibles :
 
 1. Listes de listes
 2. Classe ```Noeud```
-3. Liste unique dans laquelle les fils gauche et droit d'un nœud *i* sont rangés respectivement dans les cases *2i* et *2i+1*
+3. Liste unique (méthode d'Eytzinger)
 
 --
 
@@ -349,3 +359,12 @@ Plusieurs implémentations possibles :
       def est_feuille(self):
           return not (self.gauche or self.droit)
   ```
+
+--
+
+## Liste unique 
+(méthode d'Eytzinger)
+
+Liste dans laquelle les fils gauche et droit d'un nœud *i* sont rangés respectivement dans les cases 2*i* et 2*i*+1.
+
+![Eytzinger](prog/images/arbres/Eytzinger.svg)<!-- .element: class="stretch" style="max-width: 75%;" -->
