@@ -26,6 +26,15 @@ shapes the way one gets to specific solutions.
 
 --
 
+## Liste de paradigmes (sur Wikipedia)
+
+![Tiobe'18](prog/images/paradigms_list.1.png) <!-- .element: style="border: none; box-shadow: none; max-height: calc(38vh); padding-right: 50px" -->
+![Tiobe'18](prog/images/paradigms_list.2.png) <!-- .element: style="border: none; box-shadow: none; max-height: calc(38vh);" -->
+
+
+
+--
+
 ## Qualités de génie logiciel
 
 Abstraction
@@ -92,10 +101,10 @@ Exemples (pas trop difficile à trouver, c'est central en Python)
 
 --
 
-## Paradigme logique
+## Autres paradigmes
 
-Cf. logpy
+Paradigme logique (cf. logpy)
 
---
+Paradigme parallèle
 
-## Parallèle, événementiel
+Paradigme événementiel
