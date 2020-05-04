@@ -116,8 +116,8 @@
 
 ![terminologie](prog/images/arbres/terminologie6.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
 
-- l'**arité d'un nœud** est le nombre de fils du nœud.
-- l'**arité d'un arbre** est le nombre maximal de fils des nœuds de l'arbre.
+- l'**arité ou degré d'un nœud** est le nombre de fils du nœud.
+- l'**arité ou degré d'un arbre** est le nombre maximal de fils des nœuds de l'arbre.
 
 <div class="fragment">
 <br/>
@@ -139,11 +139,47 @@ Un <strong>arbre binaire</strong> est donc un arbre d'<strong>arité deux</stron
 
 --
 
-## Pourquoi se focaliser sur les arbres binaires ?
+## Pourquoi les arbres binaires ?
 
-- Toute décision peut être ramenée à des choix binaires.
-- La plupart des opérations prennent deux arguments.
-- Il est possible de simuler un arbre n-aire avec un arbre binaire.
+Structure pour effectuer des recherches rapides,<br/> ou maintenir efficacement des ensembles triés.
+
+Par exemples, **arbre rouge-noir** :
+
+![arbre rouge-noir](prog/images/arbres/red-black_tree.svg)<!-- .element: class="stretch" style="max-width: 70%;" -->
+
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Red-black_tree_example.svg)<!-- .element: style="font-size: 0.4em;" -->
+
+--
+
+## Pourquoi les arbres binaires ?
+
+Aide à la création de circuits (synthèse logique)<br/> et vérification formelle de programme.
+
+Par exemple, **arbre de décision binaire** :
+
+![arbre rouge-noir](prog/images/arbres/BDD.png)<!-- .element: class="stretch" style="max-width: 50%;" -->
+
+[Wikimedia Commons](https://commons.wikimedia.org/wiki/File:BDD.png)<!-- .element: style="font-size: 0.4em;" -->
+
+--
+
+## Pourquoi les arbres binaires ?
+
+Permet de représenter un arbre quelconque.
+
+<div class='half'>
+
+Arbre **n-aire**
+![arbre n-aire](prog/images/arbres/arbre-naire.svg)<!-- .element: class="stretch" style="max-width: 100%;" -->
+
+</div>
+
+<div class='half'>
+
+Arbre **binaire** équivalent
+![arbre binaire](prog/images/arbres/arbre-binaire.svg)<!-- .element: class="stretch" style="max-width: 75%;" -->
+
+</div>
 
 --
 
@@ -262,34 +298,36 @@ Combien de **feuilles** et de **nœuds** comporte-il :
 
 ## Type abstrait ```Arbre Binaire```
 
-1. Constructeur :
+1. Constructeurs :
 
-  ```python
-  noeud : (Etiquette * Arbre binaire * Arbre binaire) -> Arbre binaire
-      # à partir d'un étiquette e et des arbres binaires g et d, 
-      # produit l'arbre binaire (e, g, d)
-  ```
+```python
+ arbre_vide : () -> Arbre binaire
+    # produit l'arbre vide
+ noeud : (Etiquette * Arbre binaire * Arbre binaire) -> Arbre binaire
+    # à partir d'un étiquette e et des arbres binaires g et d, 
+    # produit l'arbre binaire (e, g, d)
+```
 
 2. Sélecteurs : <!-- .element: class="fragment" data-fragment-index="1" -->
   
-  ```python
-  etiquette : Arbre binaire -> Etiquette
+```python
+ etiquette : Arbre binaire -> Etiquette
     # à partir de l'arbre binaire (e, g, d), produit l'étiquette e
-  gauche : Arbre binaire -> Arbre binaire
-     # à partir de l'arbre binaire (e, g, d), produit l'arbre binaire g
-  droit : Arbre binaire -> Arbre binaire
-     # à partir de l'arbre binaire (e, g, d), produit l'arbre binaire d
-  ```
-  <!-- .element: class="fragment" data-fragment-index="1" -->
+ gauche : Arbre binaire -> Arbre binaire
+    # à partir de l'arbre binaire (e, g, d), produit l'arbre binaire g
+ droit : Arbre binaire -> Arbre binaire
+    # à partir de l'arbre binaire (e, g, d), produit l'arbre binaire d
+```
+<!-- .element: class="fragment" data-fragment-index="1" -->
 
 3. Prédicat : <!-- .element: class="fragment" data-fragment-index="2" -->
 
-  ```python
-  est_feuille : Arbre binaire -> bool
-     # à partir de l'arbre binaire (e, g, d), produit un booléen 
-     # indiquant si g et d sont l'arbre vide
-  ```
-  <!-- .element: class="fragment" data-fragment-index="2" -->
+```python
+ est_vide : Arbre binaire -> bool
+    # à partir de l'arbre binaire A, produit un booléen 
+    # indiquant si A est l'arbre vide
+```
+<!-- .element: class="fragment" data-fragment-index="2" -->
 
 --
 
@@ -297,74 +335,167 @@ Combien de **feuilles** et de **nœuds** comporte-il :
 
 Plusieurs implémentations possibles :
 
-1. Listes de listes
-2. Classe ```Noeud```
-3. Liste unique (méthode d'Eytzinger)
+1. **Listes de listes** <br/>&#x279E; paradigme fonctionnel
+
+2. **Classe Noeud** <br/>&#x279E; paradigme objet
+
+3. **Liste unique** (méthode d'Eytzinger) <br/>&#x279E; paradigme impératif
 
 --
 
 ## Listes de listes
 
-1. Arbre vide représenté par `[]`
-2. Constructeur : 
+1. Constructeurs : 
  
   ```python 
-  def arbre(etiquette, gauche, droit):
+    def arbre_vide():
+      return []
+
+    def noeud(etiquette, gauche, droit):
       return [etiquette, gauche, droit]
   ```
 
-3. Sélecteurs :
+2. Sélecteurs :
 
   ```python 
-  def etiquette(arbre):
+    def etiquette(arbre):
       return arbre[0]
 
-  def gauche(arbre):
+    def gauche(arbre):
       return arbre[1]
 
-  def droit(arbre):
+    def droit(arbre):
       return arbre[2]
   ```
 
-4. Prédicat :
+3. Prédicat :
 
   ```python 
-  def est_feuille(arbre):
-      return arbre[1]==[] and arbre[2]==[]
+    def est_vide(arbre):
+      return arbre == arbre_vide()
   ```
 
 --
 
-## Classe ```Noeud```
+## Listes de listes
+
+Exemple d'utilisation :
+
+```python
+ 
+```
+
+--
+
+## Classe Noeud
 
 1. Arbre vide représenté par `None`
-2. Nœud représenté par la classe :
+2. Nœud représenté par la classe suivante :
 
   ```python
-  class Noeud:
-      def __init__(self, etiquette, gauche=None, droit=None):
-          self.etiquette = etiquette
-          self.gauche = gauche
-          self.droit = droit
-          
-      def etiquette (self):
-          return(self.etiquette)
+    class Noeud:
+      arbre_vide = None
+
+      def __init__(self, etiquette, gauche, droit):
+          self._etiquette = etiquette
+          self._gauche = gauche
+          self._droit = droit
+      
+      def etiquette(self):
+          return self._etiquette
       
       def gauche(self):
-          return(self.gauche)
+          return self._gauche
 
       def droit(self):
-          return(self.droit)
+          return self._droit
       
-      def est_feuille(self):
-          return not (self.gauche or self.droit)
+      @staticmethod
+      def est_vide(arbre):
+          return arbre is Noeud.arbre_vide
   ```
+<!-- .element: class="stretch" -->
 
 --
 
-## Liste unique 
-(méthode d'Eytzinger)
+## Classe Noeud
+
+Exemple d'utilisation :
+
+```python
+ 
+```
+
+--
+
+## Liste unique (méthode d'Eytzinger)
 
 Liste dans laquelle les fils gauche et droit d'un nœud *i* sont rangés respectivement dans les cases 2*i* et 2*i*+1.
 
-![Eytzinger](prog/images/arbres/Eytzinger.svg)<!-- .element: class="stretch" style="max-width: 75%;" -->
+![Eytzinger](prog/images/arbres/Eytzinger.svg)<!-- .element: class="stretch" style="max-width: 65%;" -->
+
+Stockage principalement adapté aux **arbres complets**.
+
+--
+
+## Liste unique (méthode d'Eytzinger)
+
+Version simple où la profondeur de l'arbre est fixée *a priori*.
+
+```python
+ arbre = [None] * (2**profondeur_max)
+
+ def etiquette(i):
+    return arbre[i]
+
+ def gauche(i): 
+    return 2 * i + 1
+ 
+ def droit(i): 
+    return 2 * i + 2
+
+ def def_racine(etiquette):
+    arbre[0] = etiquette
+
+ def def_gauche(etiquette, i):
+    arbre[gauche(i)] = etiquette
+
+ def def_droit(etiquette, i):   
+    arbre[droit(i)] = etiquette
+
+ def est_vide(i):
+    return arbre[i] == -1
+```
+<!-- .element: class="stretch" -->
+
+--
+
+## Liste unique (méthode d'Eytzinger)
+
+Exemple d'utilisation :
+
+```python
+ 
+```
+
+--
+
+## Exercices en TP
+
+1. Pour chacune des implémentations précédentes, écrire les prédicats suivants :
+
+```python
+ est_feuille : Arbre binaire -> bool
+    # à partir d'un arbre binaire A, produit un booléen 
+    # indiquant si A est une feuille
+
+ taille : Arbre binaire -> int
+    # à partir d'un arbre binaire A, produit un entier 
+    # indiquant la taille de A
+
+ hauteur : Arbre binaire -> int
+    # à partir d'un arbre binaire A, produit un entier 
+    # indiquant la hauteur de A
+```
+
+2. Représentation visuelle (exemple des expressions arithmétiques)
