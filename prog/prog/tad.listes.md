@@ -58,6 +58,8 @@ Certaines implémentations d'annulation/rétablissement d'actions utilisent une 
 - <!-- .element: class="fragment" -->Définition <strong>récursive</strong> car une liste est définie par d'autres listes.
 - <!-- .element: class="fragment" -->La première partie de la définition assure l’arrêt et donc la cohérence de la définition.
 
+--
+
 ## Type abstrait ```Liste```
 
 1. Constructeurs :
