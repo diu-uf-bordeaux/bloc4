@@ -131,3 +131,7 @@ a.ribbon {
 li.fill {
   list-style-type: none; padding: .5em;
 }
+
+th {
+    background-color: rgb(255,230,200);
+}
