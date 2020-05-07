@@ -15,7 +15,7 @@
 
 ## Code impératif : Assembleur
 
-- Routine de calcul de la suite de Fibonacci
+Calcul de la suite de Fibonacci en Assembleur 8080 <!-- .element: class="title" -->
 
 ```x86asm
 fibnci: mov  C,  A  ; C will store the counter
@@ -36,7 +36,7 @@ https://rosettacode.org/wiki/Fibonacci_sequence#8080_Assembly <!-- .element: cla
 
 ## Code impératif : Fortran
 
-- Fonction de calcul de la suite de Fibonacci
+Calcul de la suite de Fibonacci en Fortran <!-- .element: class="title" -->
 
 ```fortran
       FUNCTION IFIBO(N)
@@ -62,7 +62,7 @@ https://rosettacode.org/wiki/Fibonacci_sequence#FORTRAN_IV <!-- .element: class=
 
 ## Code impératif : C
 
-- Fonction de calcul de la suite de Fibonacci
+Calcul de la suite de Fibonacci en C <!-- .element: class="title" -->
 
 ```c
 long long int fibo(int n) {
@@ -82,7 +82,9 @@ https://rosettacode.org/wiki/Fibonacci_sequence#Iterative_13 <!-- .element: clas
 
 ## Code impératif : Python
 
-- Fonction de calcul de la suite de Fibonacci
+<div>
+
+Calcul de la suite de Fibonacci en Python <!-- .element: class="title" -->
 
 ```python
 def fibo(n):
@@ -95,6 +97,8 @@ def fibo(n):
     return fib
 ```
 
+</div>
+
 --
 ## Transition vers le modulaire
 
@@ -104,7 +108,8 @@ def fibo(n):
   * branchements (<span class="label">Python</span> `if`)
   * boucles (<span class="label">Python</span> `for`, `while`)
   * blocs de code
-  * sous-programmes (fonctions, procédures)
+
+- &hellip; et leur arrangement à discrétion dans des fonctions.
 
 - L'idée est de structurer le **flot de contrôle**, à savoir
   l'agencement des instructions entre elles.
@@ -130,12 +135,17 @@ def fibo(n):
 </div>
 <div class='half'>
 
-![CFG](prog/images/intro/cfg.png)
+![Graphe de flot de contrôle](prog/images/intro/cfg.png)
 
 </div>
 
 --
+## Transition vers le modulaire
 
 
+- L'arrangement du code en fonctions est une première forme
+  d'organisation **hiérarchique** du code.
 
-Parler d'architecture quelque part.
+- La généralisation de cette idée est la notion d'**architecture
+  logicielle** : un ensemble de modèles et techniques pour organiser
+  des composants logiciels de manière efficace.

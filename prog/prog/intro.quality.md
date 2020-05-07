@@ -15,7 +15,7 @@ Cohésion, couplage
 
 ## Abstraction
 
-
+Encapsulation / Method Hiding (public/privé)
 
 Généricité / Réutilisabilité / Flexibilité
 

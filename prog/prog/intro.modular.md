@@ -18,7 +18,9 @@
 
 ## Code modulaire : CLU
 
-```clu
+Module pour les nombres complexes en CLU <!-- .element: class="title" -->
+
+```
 complex_number = cluster is add, subtract, multiply, ...
 	rep = record [ real_part: real, imag_part: real ]
 	add = proc ... end add;

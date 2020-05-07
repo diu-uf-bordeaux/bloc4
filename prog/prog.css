@@ -28,8 +28,8 @@ pre.float3 { float: left; width: 32%; margin: 5px; }
 p.title {
   text-align: left; background-color: #ffccc0; color: black;
   margin-bottom: -20px;
-  margin-left: 21px;
-  margin-right: 21px;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-left: 10px;
 }
 
