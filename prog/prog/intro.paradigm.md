@@ -22,9 +22,10 @@
 ![Liste de paradigmes (2/2)](prog/images/paradigms_list.2.png) <!-- .element: style="border: none; box-shadow: none; max-height: calc(38vh);" -->
 
 --
+<!-- .slide: class="stretch center" -->
 
 |Paradigme       | Brique élémentaire     |
-|----------------|------------------------|
+|----------------|:----------------------:|
 |Impératif       | Instruction            |
 |Fonctionnel     | Expression, Fonction   |
 |Objet           | Objet, Message         |
@@ -33,3 +34,5 @@
 |Parallèle       | Algorithmes parallèles |
 |Événementiel    | Événement, Cible       |
 |||
+
+<!-- .element: class="stretch" -->
