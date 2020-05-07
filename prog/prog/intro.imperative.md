@@ -33,13 +33,39 @@ loop:   mov  D,  A
         ret         ; return from subroutine
 ```
 
-https://rosettacode.org/wiki/Fibonacci_sequence
+https://rosettacode.org/wiki/Fibonacci_sequence#8080_Assembly <!-- .element: class="small" -->
+
+--
+
+## Code impératif : Fortran
+
+- Fonction de calcul de la suite de Fibonacci
+
+```fortran
+      FUNCTION IFIBO(N)
+      IF(N) 9,1,2            ; test N == 0
+    1 IFN=0
+      GOTO 9
+    2 IF(N-1) 9,3,4          ; test N == 1
+    3 IFN=1
+      GOTO 9
+    4 IFNM1=0
+      IFN=1
+      DO 5 I=2,N             ; start loop
+      IFNM2=IFNM1
+      IFNM1=IFN
+    5 IFN=IFNM1+IFNM2        ; end loop
+    9 IFIBO=IFN
+      END
+```
+
+https://rosettacode.org/wiki/Fibonacci_sequence#FORTRAN_IV <!-- .element: class="small" -->
 
 --
 
 ## Code impératif : Python
 
-- Routine de calcul de la suite de Fibonacci
+- Fonction de calcul de la suite de Fibonacci
 
 ```python
 def fibo(n):
