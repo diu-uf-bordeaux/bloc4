@@ -19,10 +19,12 @@
 ## Liste de paradigmes (sur Wikipedia)
 
 ![Liste de paradigmes (1/2)](prog/images/intro/paradigms_list.1.png) <!-- .element: style="height: calc(50vh); padding-right: 50px" -->
-![Liste de paradigmes (2/2)](prog/images/intro/paradigms_list.2.png) <!-- .element: style="none; height: calc(50vh);" -->
+![Liste de paradigmes (2/2)](prog/images/intro/paradigms_list.2.png) <!-- .element: style="height: calc(50vh);" -->
 
 --
 <!-- .slide: class="stretch center" -->
+
+## Liste de paradigmes (briques)
 
 |Paradigme       | Brique élémentaire     |
 |----------------|:----------------------:|

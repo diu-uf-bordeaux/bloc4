@@ -1,4 +1,4 @@
-## Changement de paradigme
+## Transition vers le modulaire
 
 Transition avec l'impératif, les procédures, puis les modules.
 
@@ -10,7 +10,7 @@ Parler d'architecture quelque part.
 
 --
 
-## Ex. de paradigme : le modulaire
+## Exemple de paradigme : le modulaire
 
 * Brique élémentaire : le **module**
 
@@ -28,7 +28,7 @@ Parler d'architecture quelque part.
 
 --
 
-Code modulaire : CLU
+## Code modulaire : CLU
 
 ```clu
 complex_number = cluster is add, subtract, multiply, ...
