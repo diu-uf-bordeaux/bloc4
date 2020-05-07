@@ -18,8 +18,8 @@
 
 ## Liste de paradigmes (sur Wikipedia)
 
-![Liste de paradigmes (1/2)](prog/images/paradigms_list.1.png) <!-- .element: style="border: none; box-shadow: none; max-height: calc(38vh); padding-right: 50px" -->
-![Liste de paradigmes (2/2)](prog/images/paradigms_list.2.png) <!-- .element: style="border: none; box-shadow: none; max-height: calc(38vh);" -->
+![Liste de paradigmes (1/2)](prog/images/intro/paradigms_list.1.png) <!-- .element: style="border: none; box-shadow: none; max-height: calc(38vh); padding-right: 50px" -->
+![Liste de paradigmes (2/2)](prog/images/intro/paradigms_list.2.png) <!-- .element: style="border: none; box-shadow: none; max-height: calc(38vh);" -->
 
 --
 <!-- .slide: class="stretch center" -->
