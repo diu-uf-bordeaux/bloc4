@@ -10,7 +10,7 @@
 
 * Représentants historiques : Fortran (1954), Algol (1958)
 
-* Représentants actuels : **C** (1972, dernière norme : 2018)
+* Exemple actuel : **C** (1972, dernière norme : 2018)
 
 --
 
@@ -95,21 +95,3 @@ def fibo(n):
         fibPrev, fib = fib, fib + fibPrev
     return fib
 ```
-
---
-
-## Paradigme modulaire
-
-Transition avec l'impératif, les procédures, puis les modules.
-
-Parler d'architecture quelque part.
-
---
-
-## Autres paradigmes
-
-Paradigme logique (cf. logpy)
-
-Paradigme parallèle
-
-Paradigme événementiel
