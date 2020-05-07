@@ -28,6 +28,20 @@ Parler d'architecture quelque part.
 
 --
 
+Code modulaire : CLU
+
+```clu
+complex_number = cluster is add, subtract, multiply, ...
+	rep = record [ real_part: real, imag_part: real ]
+	add = proc ... end add;
+	subtract = proc ... end subtract;
+	multiply = proc ... end multiply;
+	...
+end complex_number;
+```
+
+--
+
 ## Autres paradigmes
 
 Paradigme logique (cf. logpy)

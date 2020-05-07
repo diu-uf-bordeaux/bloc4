@@ -5,8 +5,7 @@
 * Idée générale :
   - la machine possède un **état** (mémoire, registres, &hellip;)
   - chaque instruction modifie cet état
-
-* Les instructions se composent en **séquence**.
+  - les instructions se composent en **séquence**
 
 * Représentants historiques : Fortran (1954), Algol (1958)
 
