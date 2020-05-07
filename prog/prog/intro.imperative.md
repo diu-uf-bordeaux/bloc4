@@ -8,11 +8,9 @@
 
 * Les instructions se composent en **séquence**.
 
-* Historique ? (Fortran, Algol)
+* Représentants historiques : Fortran (1954), Algol (1958)
 
-Exemple (genre exemple récurrent, ou sur un thème proche)
-
-Exemple classique (genre en C)
+* Représentants actuels : **C** (1972, dernière norme : 2018)
 
 --
 
@@ -63,22 +61,39 @@ https://rosettacode.org/wiki/Fibonacci_sequence#FORTRAN_IV <!-- .element: class=
 
 --
 
+## Code impératif : C
+
+- Fonction de calcul de la suite de Fibonacci
+
+```c
+long long int fibo(int n) {
+	int fnow = 0, fnext = 1, tempf;
+	while (--n > 0) {
+		tempf = fnow + fnext;
+		fnow = fnext;
+		fnext = tempf;
+	}
+	return fnext;
+}
+```
+
+https://rosettacode.org/wiki/Fibonacci_sequence#Iterative_13 <!-- .element: class="small" -->
+
+--
+
 ## Code impératif : Python
 
 - Fonction de calcul de la suite de Fibonacci
 
 ```python
 def fibo(n):
-	if n <= 1
-        return 1
-    else:
-	    a = 0
-		b = 1
-        for i in range(2,n):
-            c = a + b
-            a = b
-            b = c
-        return b
+    if n <= 1:
+        return n
+    fibPrev = 1
+    fib = 1
+    for num in range(2, n):
+        fibPrev, fib = fib, fib + fibPrev
+    return fib
 ```
 
 --
