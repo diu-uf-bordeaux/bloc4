@@ -9,7 +9,7 @@
 
 * Représentants historiques : Fortran (1954), Algol (1958)
 
-* Exemple actuel : **C** (1972, dernière norme : 2018)
+* Exemple emblématique : **C** (1972, dernière norme : 2018)
 
 --
 
@@ -88,9 +88,54 @@ https://rosettacode.org/wiki/Fibonacci_sequence#Iterative_13 <!-- .element: clas
 def fibo(n):
     if n <= 1:
         return n
-    fibPrev = 1
+    fibPr = 1
     fib = 1
     for num in range(2, n):
-        fibPrev, fib = fib, fib + fibPrev
+        fibPr, fib = fib, fib + fibPr
     return fib
 ```
+
+--
+## Transition vers le modulaire
+
+- La programmation structurée encourage l'utilisation de **structures
+  de contrôle** pour organiser le code :
+
+  * branchements (<span class="label">Python</span> `if`)
+  * boucles (<span class="label">Python</span> `for`, `while`)
+  * blocs de code
+  * sous-programmes (fonctions, procédures)
+
+- L'idée est de structurer le **flot de contrôle**, à savoir
+  l'agencement des instructions entre elles.
+
+  * problème des sauts (`goto`, jumps)
+
+--
+## Graphe de flot contrôle
+
+<div class='half'>
+
+en Python  <!-- .element: class="title" -->
+```python
+def fibo(n):
+    if n <= 1:
+        return n
+    fibPr = 1
+    fib = 1
+    for num in range(2, n):
+        fibPr, fib = fib, fib + fibPr
+    return fib
+```
+</div>
+<div class='half'>
+
+![CFG](prog/images/intro/cfg.png)
+
+</div>
+
+--
+
+
+
+Parler d'architecture quelque part.
