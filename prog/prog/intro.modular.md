@@ -16,6 +16,28 @@
 
 --
 
+## Exemple de décomposition modulaire
+
+* Partons du code calculant la suite de Fibonacci.
+
+* Ce code peut être **étendu** de diverses manières :
+
+  - en ajoutant le code d'autres suites connues
+
+  - en ajoutant des tests de validation pour chaque suite
+
+  - en ajoutant un afficheur générique de suites &hellip;
+
+* Considérons une décomposition du code classifiant les objets selon
+  leur nature.
+
+--
+
+![Décomposition modulaire](prog/images/intro/modules.svg)<!-- .element: class="stretch" style="max-width: 80%;" -->
+
+
+--
+
 ## Code modulaire : CLU
 
 Module pour les nombres complexes en CLU <!-- .element: class="title" -->
