@@ -38,19 +38,114 @@
 
 --
 
-## Code modulaire : CLU
+## Code modulaire : Python
 
-Module pour les nombres complexes en CLU <!-- .element: class="title" -->
+<div class="half">
+
+
+sequences.py <!-- .element: class="title" -->
+```
+import math
+
+def fibo(n: int) -> int:
+    fibPr = 0
+    fib = 1
+    for num in range(1, n+1):
+        fibPr, fib = fib, fib + fibPr
+    return fibPr
+
+def catalan(n: int) -> int:
+    ...
+def rowland(n: int) -> int:
+    ...
+```
+
+</div>
+<div class="half">
+
+sequences_test.py <!-- .element: class="title" -->
+```
+import unittest
+
+def test_fibo() -> None: ...
+def test_catalan() -> None: ...
+def test_rowland() -> None: ...
 
 ```
-complex_number = cluster is add, subtract, multiply, ...
-	rep = record [ real_part: real, imag_part: real ]
-	add = proc ... end add;
-	subtract = proc ... end subtract;
-	multiply = proc ... end multiply;
-	...
-end complex_number;
+
+sequences_plot.py <!-- .element: class="title" -->
 ```
+import matplotlib
+
+def plot_a_sequence(f: Callable[[int],
+                                int],
+                    n: int) -> None: ..
+def plot_all_sequences() -> None: ...
+```
+
+</div>
+
+* Les indications de type sont optionnelles en <span class="label">Python</span>
+
+<!-- .element: style="margin-top:5%" -->
+
+
+--
+
+## Code modulaire : OCaml
+
+<div class="half">
+
+sequences.ml <!-- .element: class="title" -->
+```ocaml
+module type SEQUENCE = sig
+    val fibo : int -> int
+    val catalan : int -> int
+	val rowland : int -> int
+end
+module S : SEQUENCE = struct
+	let fibo(n) =
+	  let fibP = ref (0,1) in
+	  for i = 1 to n do
+		let (u,v) = !fibP in
+		fibP := (v, u+v)
+	  done;
+	  fst !fibPr
+end
+```
+
+</div>
+<div class="half" style="padding-top:1%">
+
+sequences_test.ml <!-- .element: class="title" -->
+```ocaml
+module type SEQUENCE_TEST = sig
+    val test_fibo : unit -> bool
+    val test_catalan : unit -> bool
+    val test_rowland : unit -> bool
+end
+```
+
+sequences_plot.ml <!-- .element: class="title" -->
+```ocaml
+module type SEQUENCE_PLOT = sig
+	val plot_a_sequence : (int -> int)
+	                    -> int -> unit
+    val plot_all_seqs : unit -> unit
+end
+```
+
+</div>
+
+* Les modules sont liés entre eux à la compilation en <span class="label">OCaml</span>
+
+<!-- .element: style="margin-top:5%" -->
+
+--
+
+## Quelques remarques ...
+
+* Chaque module met à disposition une **interface**.
 
 --
 
