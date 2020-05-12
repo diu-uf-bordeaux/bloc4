@@ -6,7 +6,7 @@ Ceci n'est pas un cours de programmation.
 
 --
 
-### Le Programme
+### Le Programme (1/2)
 
 <table style="font-size:medium">
 <tr>
@@ -75,13 +75,9 @@ leurs erreurs.
 </tr>
 </table>
 
-
-
-
-
 --
 
-### Le Programme
+### Le Programme (2/2)
 
 <table style="font-size:medium">
 <tr>

@@ -1,7 +1,6 @@
 ## Qualités de génie logiciel
 
-Quels sont les objectifs que l'on peut viser lorsque l'on cherche à
-écrire du code ?
+Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
 
 --
 

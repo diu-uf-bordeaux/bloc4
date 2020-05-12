@@ -28,7 +28,7 @@
 
   - en ajoutant un afficheur générique de suites &hellip;
 
-* Considérons une décomposition du code classifiant les objets selon
+* Considérons une décomposition du code classifiant ces ajouts selon
   leur nature.
 
 --
@@ -137,6 +137,8 @@ end
 
 </div>
 
+* Distinction est faite entre l'**interface** et l'**implémentation**.
+
 * Les modules sont liés entre eux à la compilation en <span class="label">OCaml</span>
 
 <!-- .element: style="margin-top:5%" -->
@@ -145,14 +147,38 @@ end
 
 ## Quelques remarques ...
 
-* Chaque module met à disposition une **interface**.
+* Chaque module met ainsi à disposition une **interface**&nbsp;:
+
+	- la liste des éléments à l'intérieur (fonctions, valeurs&hellip;)
+
+	- le cas échéant une forme de spécification plus précise (types,
+      documentation&hellip;)
+
+* Et il contient une **implémentation** de ces éléments&nbsp;:
+
+	- le code de chacun des éléments dans le modules
+
+	- le cas échéant, des éléments internes servant à implémenter ces
+      éléments
 
 --
 
-## Autres paradigmes
+## Alors, c'est quoi un module ?
 
-Paradigme logique (cf. logpy)
+* La forme que prennent les modules varie selon les langages&nbsp;:
 
-Paradigme parallèle
+	- en <span class="label">Python</span>, un module s'appelle bien un module,
 
-Paradigme événementiel
+	https://docs.python.org/fr/3/tutorial/modules.html
+	 <!-- .element: class="small" -->
+
+	- en <span class="label">C</span>, les modules n'existent pas
+      concrètement, mais sont simulables avec des séparations par
+      fichiers,
+
+	- en <span class="label">Java</span>, plusieurs niveaux de modules
+      coexistent, à travers les paquetages et les classes,
+
+	- en <span class="label">JavaScript</span>, une technique
+      (obsolète) consiste à encapsuler les modules à l'aide de
+      fonctions.
