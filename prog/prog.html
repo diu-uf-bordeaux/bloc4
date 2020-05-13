@@ -12,9 +12,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-    <link rel="stylesheet" href="css/reveal.css"/>
-    <link rel="stylesheet" href="css/theme/white.css"/>
-    <link rel="stylesheet" href="lib/css/zenburn.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha256-ol2N5Xr80jdDqxK0lte3orKGb9Ja3sOnpAUV7TTADmg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css" integrity="sha256-7dwMOkQRlAVq/G79bV034hezbpLtwWpwTS3g4lp47yo=" crossorigin="anonymous" />
+    <!--<link rel="stylesheet" href="lib/css/zenburn.css"/>-->
     <link rel="stylesheet" href="prog.css"/>
 
     <script>
@@ -75,7 +75,7 @@
                  data-charset="UTF-8">
         </section>
 
-	<section data-markdown="prog/intro.quality.md"
+	      <section data-markdown="prog/intro.quality.md"
                  data-separator="^\n---\n"
                  data-separator-vertical="^\n--\n"
                  data-separator-notes="^Note:"
@@ -127,7 +127,11 @@
        </div>
     </div>
 
-    <script src="js/reveal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha256-ixSKHrWAL2k0mqVSRju9+to2/uZSEK9+kJRfdNBolG8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js" integrity="sha256-+09kLhwACKXFPDvqo4xMMvi4+uXFsRZ2uYGbeN1U8sI=" crossorigin="anonymous"></script>
+
+    
+
     <script>Reveal.initialize({
       controls: true,
       progress: true,
@@ -153,14 +157,14 @@
         ]
       },
       dependencies: [
-        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/math/math.js', async: true },
-        { src: 'reveal-menu/menu.js' },
-        { src: 'plugin/search/search.js', async: true }
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.js', async: true },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.js', async: true },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/math/math.js', async: true },
+        { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/search/search.js', async: true },
+        { src: 'reveal-menu/menu.js' }
       ]
     });</script>
   </body>
