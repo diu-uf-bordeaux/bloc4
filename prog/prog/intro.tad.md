@@ -1,12 +1,13 @@
 ## Type abstrait de données
+<!-- .element: style="margin-bottom: 5%;" -->
 
-Un **type abstrait de données** (aussi appelé TAD) consiste en :
+- Un **type abstrait de données** (aussi appelé TAD) consiste en :
 
-1. un **ensemble de valeurs** possibles (aussi appelé type)
+	1. un **ensemble de valeurs** possibles (aussi appelé type)
 
-2. un **ensemble d'opérations** agissant sur ces valeurs
+	2. un **ensemble d'opérations** agissant sur ces valeurs
 
-Notion d'**interface**.
+- Il s'agit d'un exemple classique de composant modulaire.
 
 --
 
@@ -22,22 +23,25 @@ Notion d'**interface**.
 		  # à partir d'un livre, produit un livre ouvert
 	close : book -> book
 		  # à partir d'un livre, produit un livre fermé
+    pages : book -> [number]
+	      # à partir d'un livre, produit la liste de ses pages
 	read  : (book * number) -> string
 	      # à partir d'un livre ouvert et d'un numéro de page
 		  # produit le texte sur une page
 	```
 
-	NB : la notation "&rarr;" ainsi que le verbe "produit" permettent de
-    dénoter à la fois un paradigme impératif et fonctionnel, selon que
-    l'on estime que l'on a un état avant / après ou un passage
-    paramètre / retour
+<!-- NB : la notation "&rarr;" ainsi que le verbe "produit" permettent de -->
+<!-- dénoter à la fois un paradigme impératif et fonctionnel, selon que -->
+<!-- l'on estime que l'on a un état avant / après ou un passage -->
+<!-- paramètre / retour -->
 
 --
 
 ## Exemple de TAD : `sequence`  en <span class="label">Python</span>
 
 
-1. L'ensemble des suites possibles : `list` (`[]`, `[1,2,3]`, `['a','b']` &hellip;), `tuple`, `range` &hellip;
+1. L'ensemble des suites possibles : <br/>
+   `list` (`[]`, `[1,2,3]`, `['a','b']` &hellip;), `tuple`, `range` &hellip;
 2. Un ensemble d'opérations pour manipuler les suites :
 
 	```python
@@ -57,3 +61,24 @@ Notion d'**interface**.
 	```
 
 	Cf. https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
+	<!-- .element: class="x-small" -->
+
+--
+
+## A suivre &hellip;
+
+Les parties suivantes de ce cours explorent plus précisément&nbsp;:
+
+- Deux paradigmes&nbsp;:
+
+	* le paradigme <a href="#/object">objet</a>,
+
+	* et le paradigme <a href="#/functional">fonctionnel</a>.
+
+- Plusieurs types abstraits de données&nbsp;:
+
+	* les <a href="#/sequence">séquences</a> (listes, piles, files),
+
+	* les <a href="#/tree">arbres</a>,
+
+	* les <a href="#/graph">graphes</a>.

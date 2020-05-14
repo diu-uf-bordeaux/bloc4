@@ -52,6 +52,11 @@ p.title {
   font-size: 28px !important;
 }
 
+.x-small {
+  font-size: 24px !important;
+}
+
+
 /* Special highlighting class */
 .reveal strong {
     color:#ff6600;

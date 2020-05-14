@@ -12,11 +12,16 @@ Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
 
 ## Correction
 
-- Qualité du code consistant à vérifier une spécification
+- Qualité du code consistant à vérifier une spécification :
 
-- Fiabilité, sûreté, validation
+	* le code réalise t'il les calculs demandés ?
 
-- Efficacité (complexité, mémoire)
+	* le code termine t'il ses calculs sans erreur ?
+
+	* le code utilise t'il une quantité de ressources (temps, mémoire)
+      raisonnables ?
+
+- Concepts : fiabilité, sûreté, validation, efficacité &hellip;
 
 - Outils : spécifications, types, tests, modèles logiques &hellip;
 
@@ -24,17 +29,32 @@ Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
 
 ## Modularité
 
-- Qualité de découpage du code en composants ayant des dépendances
-  réduites
+- Qualité de découpage du code en composants distincts ayant des
+  dépendances réduites entre eux
 
-- Cohésion, couplage
+- Concepts : cohésion, couplage
+
+## Abstraction
+<!-- .element: style="margin-top: 5%;" -->
+
+- Qualité d'un composant à n'exposer qu'une interface minimale pour
+  interagir avec d'autres composants
+
+- Concepts : encapsulation, distinction public/privé
+  &hellip;
 
 --
 
-## Abstraction
+- Combinées, les deux dernières propriétés permettent d'envisager de
+  nombreuses techniques&nbsp;:
 
-- Qualité des composants
+	* construire des composants fortement réutilisables
+   (bibliothèques, frameworks &hellip;)
 
-- Encapsulation / Method Hiding (public/privé)
+	* construire des composants fortement indépendants
 
-- Généricité / Réutilisabilité / Flexibilité
+	* remplacer des composants par d'autres proposant la même
+      interface (résolution de bugs, améliorations &hellip;)
+
+- Concepts : généricité, réutilisabilité, séparation des
+  responsabilités &hellip;
