@@ -8,14 +8,13 @@ Architecture Orientée Objet ?
 
 --
 
-## Une entité propre
+## Une entité à part entière
 
-Un objet est une entité qui réunit des **traitements** et des **données**.
 
-* Possède ses données
-* Propose ses traitements qui peuvent avoir des effets sur ses données
+* Propose **plusieurs traitements**
+* Possède **ses données (son état)**
 
-=> Un objet existe **à l'exécution**, il est identifiable
+=> Un objet existe **à l'exécution**
 
 --
 
@@ -40,29 +39,6 @@ Un objet est une entité qui réunit des **traitements** et des **données**.
 
 --
 
-## Encapsulation 
-
-Un objet **protège ses données** 
-
-Un objet **peut laisser d'autres objets lire** ses données
-
-Un objet est **le seul à modifier** ses données
-
-![Encapsulation](prog/images/object/objet_encapsulation.png)<!-- .element: class="stretch" style="max-width: 40%;" -->
-
---
-
-## Responsabilité
-
-Un objet est **responsable des traitements qu'il propose**
-
-Il a donc toutes les données nécessaires et suffisantes
-
-Il peut utiliser (les traitements) d'autres objets
-
-![Encapsulation](prog/images/object/objet_responsable.png)<!-- .element: class="stretch" style="max-width: 40%;" -->
-
---
 
 ## Un objet sans identité ?
 
@@ -92,6 +68,31 @@ Il peut utiliser (les traitements) d'autres objets
 
 
 ![Objet](prog/images/object/object.png)<!-- .element: class="stretch" style="max-width: 50%;" -->
+
+--
+
+
+## Encapsulation 
+
+Un objet **protège ses données** 
+
+Un objet **peut laisser d'autres objets lire** ses données
+
+Un objet est **le seul à modifier** ses données
+
+![Encapsulation](prog/images/object/objet_encapsulation.png)<!-- .element: class="stretch" style="max-width: 40%;" -->
+
+--
+
+## Responsabilité
+
+Un objet est **responsable des traitements qu'il propose**
+
+Il a donc toutes les données nécessaires et suffisantes
+
+Il peut utiliser (les traitements) d'autres objets
+
+![Encapsulation](prog/images/object/objet_responsable.png)<!-- .element: class="stretch" style="max-width: 40%;" -->
 
 --
 
