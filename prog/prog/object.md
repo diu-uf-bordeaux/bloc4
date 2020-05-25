@@ -198,7 +198,7 @@ Quelle dynamicité ?
 
 ## Le Paradigme Objet 
 
-Qu'est ce qu'un objet ?
+~~Qu'est ce qu'un objet ?~~
 
 Comment programmer en objet  ?
 
@@ -218,11 +218,139 @@ Lui donner ses traitements
 
 ## La Classe  
 
-Programmation de plusieurs objet
+Nom
 
-Définition de la structuration des données
+Définition des données 
 
 Définition des traitements
 
 --
+
+## Exemple de Classe  
+
+Pile
+
+liste de caractères
+
+empiler, dépiler
+
+--
+
+## Classe et Encapsulation
+
+L'objet doit encapsuler ses données
+
+La classe précise les règles d'accès aux champs
+
+**public** : accès total
+
+**private** : accès interdit
+
+--
+
+## Valeurs et Getter / Setter  
+
+Affectation à la création
+
+Lecture (get_field)
+
+Ecriture (set_field)
+
+--
+
+## Couplage et Classe  
+
+Relations entre classes
+
+Durée de vie
+
+Lien avec les traitements
+
+--
+
+## Exemple : UE, Etudiant et Examen  
+
+Une UE a deux examens
+
+Un étudiant est inscrit à plusieurs UE
+
+=> Calcul de la moyenne pour une UE
+
+--
+
+## Coherence  
+
+Les méthodes **utilisent** les données
+
+Une classe devrait être **insécable**
+
+--
+
+## Le Paradigme Objet 
+
+~~Qu'est ce qu'un objet ?~~
+
+~~Comment programmer en objet  ?~~
+
+Architecture Orientée Objet ?
+
+--
+
+## Objectifs
+
+Améliorer la maintenance
+
+Améliorer la performance
+
+Améliorer la sécurité
+
+...
+
+--
+
+## Reuse
+
+**Réutiliser** du code
+
+Coder pour être **réutilisé**
+
+=> Héritage / Interface
+
+--
+
+## Héritage
+
+Une classe hérite d'une autre classe
+
+Les objets sont au moins conformes
+
+=> Ajouter des champs et des méthodes
+
+--
+
+## Quand hériter ?
+
+Réduire la redondance
+
+Etendre une classe
+
+Faire un template
+
+--
+
+## L'interface
+
+Définition d'un contrat d'usage
+
+Limite la dépendance de l'utilisateur
+
+=> Contrat appelant / appelé
+
+--
+
+## Quand passer par une interface
+
+Masquer l'implémentation
+
+Inverser la dépendance
 
