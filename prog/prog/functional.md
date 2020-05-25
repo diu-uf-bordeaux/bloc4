@@ -1,4 +1,4 @@
-## Fonctionnel : le paradigme
+## Le paradigme fonctionnel
 
 * Brique élémentaire : l'**expression**
 
@@ -54,6 +54,20 @@ def abs(x):
 ![If-Then-Else](prog/images/functional/ifthenelse.svg)
 
 --
+
+```python
+def fibo(n):
+    fibPr, fib = 0, 1
+    for num in range(1, n):
+        fibPr, fib = fib, fib + fibPr
+    return fib
+```
+<!-- .element: style="padding:20px; background-color: #3f3f3f" -->
+
+![Fibonacci](prog/images/functional/fibonacci.svg)
+
+--
+
 
 Quelques conséquences de ne considérer que des arbres :
 
