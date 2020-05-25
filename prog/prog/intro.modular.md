@@ -1,4 +1,4 @@
-## Exemple de paradigme : le modulaire
+## Programmation modulaire
 
 * Brique élémentaire : le **module**
 
@@ -13,6 +13,9 @@
 * Représentant historique : CLU (1974)
 
 * Exemple emblématique : **OCaml** (1996, v4.10 : 2020)
+
+Note: la programmation modulaire n'est pas un paradigme, en tout cas
+n'a jamais été présentée en tant que tel historiquement.
 
 --
 
