@@ -194,3 +194,35 @@ Quels couplage ?
 
 Quelle dynamicité ?
 
+--
+
+## Le Paradigme Objet 
+
+Qu'est ce qu'un objet ?
+
+Comment programmer en objet  ?
+
+Architecture Orientée Objet ?
+
+--
+
+## Programmer des objets 
+
+Créer l'objet
+
+Lui donner ses données
+
+Lui donner ses traitements
+
+--
+
+## La Classe  
+
+Programmation de plusieurs objet
+
+Définition de la structuration des données
+
+Définition des traitements
+
+--
+
