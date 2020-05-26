@@ -338,6 +338,14 @@ Faire un template
 
 --
 
+## Surcharge et Polymorphisme
+
+Ajouter des paramètres aux méthodes
+
+Changer le body des méthodes
+
+--
+
 ## L'interface
 
 Définition d'un contrat d'usage
@@ -354,3 +362,23 @@ Masquer l'implémentation
 
 Inverser la dépendance
 
+
+--
+
+## Le Paradigme Objet 
+
+Qu'est ce qu'un objet ?
+
+Comment programmer en objet  ?
+
+Architecture Orientée Objet ?
+
+--
+
+## Conclusion
+
+Pensez Object (id, données, traitement)
+
+Coder les classes
+
+Améliorer la conception
