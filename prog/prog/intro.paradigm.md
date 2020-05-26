@@ -31,7 +31,6 @@
 |Impératif       | Instruction            |
 |Fonctionnel     | Expression, Fonction   |
 |Objet           | Objet, Message         |
-|Modulaire       | Module                 |
 |Logique         | Formule logique        |
 |Parallèle       | Algorithmes parallèles |
 |Événementiel    | Événement, Cible       |

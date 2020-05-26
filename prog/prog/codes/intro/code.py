@@ -5,8 +5,7 @@ import operator
 import matplotlib.pyplot as mp
 
 def fibo(n: int) -> int:
-    fibPr = 0
-    fib = 1
+    fibPr, fib = 0, 1
     for num in range(1, n+1):
         fibPr, fib = fib, fib + fibPr
     return fibPr
