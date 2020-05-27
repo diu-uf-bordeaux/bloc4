@@ -22,7 +22,9 @@
 
 ![Expression](prog/images/functional/expression.svg)
 
-Une représentation arborescente d'un calcul
+- L'expression est la représentation arborescente d'un calcul.
+
+- **Évaluer** une expression permet d'obtenir le résultat du calcul.
 
 --
 
@@ -68,18 +70,76 @@ def fibo(n):
 
 --
 
+## Propriétés
 
-Quelques conséquences de ne considérer que des arbres :
+La programmation fonctionnelle s'appuie sur deux principes&nbsp;:
 
-- Pas d'état et pas de variables (contrairement à l'impératif), sinon
-  on n'aurait plus une représentation arborescente&nbsp;:
+- **Pureté**&nbsp;: le résultat de l'évaluation d'une fonction ne
+  dépend que de la valeur de ses paramètres, et pas d'autre facteurs
+  externes (comme par exemple le moment du calcul).
 
-  **Pureté**
+- **Fonctions de 1ère classe**&nbsp;: les fonctions sont les briques
+  de base pour composer les expressions; elles peuvent apparaître en
+  tant que paramètres, retours ou même données du calcul.
 
-- Les fonctions sont les briques de base permettant de composer les
-  expressions&nbsp;:
+--
 
-  **Fonctions de 1ère classe**
+## Pureté (1/2)
+
+- Revient à considérer les fonctions comme leurs homologues
+  mathématiques : des **applications**.
+
+<div class="half">
+
+```python
+i = 0
+
+def f():
+    global i
+    i = i + 1
+    return i
+
+f() - f() # (1 - 2) ou (2 - 1) ?
+```
+</div>
+<div class="half">
+
+- En <span class="label">Python</span> : `-1`
+
+- En <span class="label">C</span> : `1` ou `-1`
+
+- En <span class="label">OCaml</span> : `1` ou `-1`
+
+</div>
+
+- Idée : rendre les calculs indépendants de toute influence externe
+
+- Dans cet exemple, le résultat de l'appel à `f()` dépend du moment où
+  on l'appelle.
+
+Note:
+- une application est telle qu'à un élément d'origine on associe un
+unique élément d'arrivée.
+- en C, la chose est plus facile à vérifier parce qu'il existe
+plusieurs compilateurs. en OCaml, il y a deux compilateurs mais tous
+les deux développés ensemble (bytecode et natif), et les versions
+récentes ont unifié le comportement, mais il est l'opposé de Python.
+
+--
+
+## Pureté (2/2)
+
+- Exemples d'influences externes&nbsp;:
+	* les générateurs aléatoires,
+	* les lectures/écritures de fichiers ou bases de données
+	* les interrogations dans des capteurs &hellip;
+
+- Parmi les facteurs entravant la pureté : la présence de **variables**.
+
+  $\Rightarrow$ Idée : manipuler et transformer des objets constants
+
+- Il n'est pas toujours simple d'écrire (uniquement) des fonctions
+  pures.
 
 
 --
