@@ -138,7 +138,16 @@ li.fill {
 }
 
 th {
-    background-color: rgb(255,230,200);
+  background-color: rgb(255,230,200);
+}
+
+.graph th {
+  display:none;   
+}
+
+.graph td, tr {
+  border: 1px solid;
+  min-width: 0.5em;
 }
 
 h2 {

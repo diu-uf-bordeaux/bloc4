@@ -128,14 +128,14 @@ Un <strong>arbre binaire</strong> est donc un arbre d'<strong>arité deux</stron
 
 ## Définition récursive
 
-- Un **arbre binaire** c’est :
+- Un **arbre binaire** c'est :
   - soit un **arbre vide**, noté ∆ ;
   - soit un **triplet** (*e*, *g*, *d*), appelé nœud, avec :
     -  *e* l'étiquette de la racine de l'arbre,
     -  *g* son sous-arbre binaire **gauche**,
     -  *d* son sous-arbre binaire **droit**.
 - <!-- .element: class="fragment" -->Définition <strong>récursive</strong> car un arbre binaire est défini par des arbres binaires.
-- <!-- .element: class="fragment" -->La première partie de la définition assure l’arrêt et donc la cohérence de la définition.
+- <!-- .element: class="fragment" -->La première partie de la définition assure l'arrêt et donc la cohérence de la définition.
 
 --
 
