@@ -89,6 +89,9 @@ La programmation fonctionnelle s'appuie sur deux principes&nbsp;:
 - Revient à considérer les fonctions comme leurs homologues
   mathématiques : des **applications**.
 
+- Dans l'exemple suivant, le résultat de l'appel à `f()` dépend du
+  moment où on l'appelle&nbsp;:
+
 <div class="half">
 
 ```python
@@ -113,9 +116,7 @@ f() - f() # (1 - 2) ou (2 - 1) ?
 </div>
 
 - Idée : rendre les calculs indépendants de toute influence externe
-
-- Dans cet exemple, le résultat de l'appel à `f()` dépend du moment où
-  on l'appelle.
+  (moment de l'appel, disponibilité des ressources &hellip;)
 
 Note:
 - une application est telle qu'à un élément d'origine on associe un
@@ -132,21 +133,36 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 - Exemples d'influences externes&nbsp;:
 	* les générateurs aléatoires,
 	* les lectures/écritures de fichiers ou bases de données
-	* les interrogations dans des capteurs &hellip;
+	* les mesure de capteurs électroniques &hellip;
 
-- Parmi les facteurs entravant la pureté : la présence de **variables**.
+- Parmi les facteurs entravant la pureté : la présence de
+  **variables** (et plus généralement la notion d'état).
 
   $\Rightarrow$ Idée : manipuler et transformer des objets constants
 
-- Il n'est pas toujours simple d'écrire (uniquement) des fonctions
-  pures.
+- Mais il n'est pas toujours simple d'écrire (uniquement) des
+  fonctions pures, il faut parfois transiger.
+
+--
+
+- Notion d'effets de bord, mutabilité
+
+- Exemple avec effet de bord et sans effet de bord
 
 
 --
 
-Style récursif
+## Récursivité
 
-Sans effets de bords, mutabilité
+- Lien avec l'écriture mathématique
+
+- Exemple avec Fibonacci
+
+- Pb : risque d'explosion de la pile
+
+- Notion de récursivité terminale
+
+--
 
 Exemple (genre exemple récurrent)
 
