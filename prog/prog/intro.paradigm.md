@@ -34,6 +34,6 @@
 |Logique         | Formule logique        |
 |Parallèle       | Algorithmes parallèles |
 |Événementiel    | Événement, Cible       |
-|||
+
 
 <!-- .element: class="stretch" -->
