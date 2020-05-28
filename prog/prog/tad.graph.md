@@ -113,7 +113,8 @@ Permettent de représenter différentes situations de la vie courante
 ![terminologie](prog/images/graphes/terminologie2.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
 
 - les arêtes peuvent être **orientées**, on parle alors d'**arcs**.
-- auquel cas, on définit l'ensemble des **successeurs** et **prédécesseurs** d'un sommet.
+- auquel cas, on définit l'ensemble des **successeurs** et
+  **prédécesseurs** d'un sommet.
 
 --
 
@@ -128,9 +129,10 @@ Permettent de représenter différentes situations de la vie courante
 
 ## Définition
 
-- Un **graph simple** est un couple (S,A) formé de :
-  - un ensemble S = {x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>} de sommets,
-  - un ensemble A = {a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>m</sub>} d'arêtes <br/>tel que a<sub>i</sub> = (x,y) ∈ S<sup>2</sup> ∧ x≠y.
+- Un **graphe simple** est un couple $(S,A)$ formé de :
+  - un ensemble $S = \\{ x_1, x_2, \dots, x_n \\} $ de sommets,
+  - un ensemble $A = \\{ a_1, a_2, \dots, a_m \\}$ d'arêtes
+  <br/>tel que $\forall i, a_i = (x,y) \in S^2 \wedge x \neq y$.
 
 --
 
@@ -147,18 +149,18 @@ Permettent de représenter différentes situations de la vie courante
 
 ```
  ajouter_arete : (Graphe * Sommet * Sommet) -> Graphe
-    # à partir d'un graphe (S,A) et des sommets s1 et s2 appartenant à S, 
-    # produit le graphe (S,A∪{(s1,s2)})
+    # à partir d'un graphe (S,A) et des sommets s1 et s2 appartenant à S,
+    # produit le graphe (S,A ∪ {(s1,s2)})
 ```
 
 3. Sélecteurs : <!-- .element: class="fragment" data-fragment-index="1" -->
-  
+
 ```python
  sommets : Graphe -> liste de Sommets
     # à partir d'un graphe (S,A), produit la liste de sommets S
  voisins : (Graphe * Sommet) -> liste de Sommets
-    # à partir du graphe (S,A) et du sommet s, 
-    # produit la liste des voisins de s 
+    # à partir du graphe (S,A) et du sommet s,
+    # produit la liste des voisins de s
 ```
 <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -170,11 +172,12 @@ Plusieurs implémentations possibles :
 
 1. **Matrice d'adjacence** <br/>&#x279E; paradigme impératif ou fonctionnel
 
-2. **Listes de succésseurs (ou de prédécesseurs)** <br/>&#x279E; paradigme impératif ou fonctionnel 
+2. **Listes de successeurs (ou de prédécesseurs)** <br/>&#x279E; paradigme impératif ou fonctionnel
 
 <br/>
 
-**Remarque** : sommets et/ou arêtes peuvent être représentés par des classes (paradigme objet), sin nécessaire
+**Remarque** : sommets et/ou arêtes peuvent être représentés par des
+classes (paradigme objet), si nécessaire
 
 --
 
@@ -183,8 +186,8 @@ Plusieurs implémentations possibles :
 Les arêtes sont représentées par un **tableau 2D** (matrice) :
   - **lignes** (d'indice i) : tous les sommets
   - **colonnes** (d'indice j) : tous les sommets
-  - **case(i,j)** : 
-    - 1 (ou sa valuation) si il existe un arc/une arête entre le sommet i et le sommet j, 
+  - **case(i,j)** :
+    - 1 (ou sa valuation) si il existe un arc/une arête entre le sommet i et le sommet j,
     - 0 sinon.
 
 <br/>
@@ -280,11 +283,11 @@ Exemple d'utilisation :
 
 --
 
-## Listes de succésseurs <br/>(ou de prédécesseurs)
+## Listes de successeurs <br/>(ou de prédécesseurs)
 
 Les arêtes sont représentées par un **dictionnaire** de **listes** :
   - **clés** du dictionnaire : tous les sommets
-  - **liste** associée à une clé : succésseurs (ou prédécesseurs) de ce sommet
+  - **liste** associée à une clé : successeurs (ou prédécesseurs) de ce sommet
 
 <br/>
 
@@ -292,7 +295,7 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 
 --
 
-## Listes de succésseurs
+## Listes de successeurs
 <!-- .slide: data-transition="fade" class="graph" -->
 
 <div class='half'>
@@ -303,19 +306,19 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 
 <div class='half'>
 
-- **a** : 
-- **b** : 
-- **c** : 
-- **d** : 
-- **e** : 
-- **f** : 
-- **g** : 
+- **a** :
+- **b** :
+- **c** :
+- **d** :
+- **e** :
+- **f** :
+- **g** :
 
 </div>
 
 --
 
-## Listes de succésseurs
+## Listes de successeurs
 <!-- .slide: data-transition="fade" class="graph" -->
 
 <div class='half'>
@@ -338,12 +341,12 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 
 --
 
-## Listes de succésseurs
+## Listes de successeurs
 
 ```python
   def creer_graphe(sommets):
     return (sommets, dict())
-        
+
   def ajouter_arete (graphe, x, y):
     if x in graphe[1]:
         graphe[1][x].add(y)
@@ -375,8 +378,8 @@ Exemple d'utilisation :
 |                  | matrice d'adjacence | liste de successeurs |
 |------------------|:-------------------:|:--------------------:|
 | **mémoire**      |    n<sup>2</sup>    |         n+m          |
-| peu d'arêtes     |          ✗          |          ✔︎           |
-| bcp d'arêtes     |          ✔︎          |          ✗           |
+| peu d'arêtes     |          <span style="color:red">✗</span>          |          <span style="color:green">✔︎</span>           |
+| bcp d'arêtes     |          <span style="color:green">✔</span>︎          |          <span style="color:red">✗</span>           |
 | **temps de calcul**                                           |
 | x et y voisins ? |          1          |      degré de x      |
 | x isolé ?        |          n          |          1           |
