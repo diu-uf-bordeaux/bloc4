@@ -1,4 +1,4 @@
-## Le Paradigme Objet 
+## Le Paradigme Objet
 
 Qu'est ce qu'un objet ?
 
@@ -20,8 +20,8 @@ Architecture Orientée Objet ?
 
 ## Définition : Objet
 
-1. Une **identité** unique 
-2. Des **données** propres 
+1. Une **identité** unique
+2. Des **données** propres
 3. Des **traitements** dont il est responsable
 
 ![Objet](prog/images/object/object.png)<!-- .element: class="stretch" style="max-width: 50%;" -->
@@ -50,9 +50,9 @@ Architecture Orientée Objet ?
 
 --
 
-## Un objet sans donnée ?
+## Un objet sans données ?
 
-1. Identité 
+1. Identité
 2. ~~Données~~
 3. Traitements
 
@@ -60,9 +60,9 @@ Architecture Orientée Objet ?
 
 --
 
-## Un objet sans traitement ?
+## Un objet sans traitements ?
 
-1. Identité 
+1. Identité
 2. Données
 3. ~~Traitements~~
 
@@ -72,9 +72,9 @@ Architecture Orientée Objet ?
 --
 
 
-## Encapsulation 
+## Encapsulation
 
-Un objet **protège ses données** 
+Un objet **protège ses données**
 
 Un objet **peut laisser d'autres objets lire** ses données
 
@@ -160,7 +160,7 @@ Chaque traitement fait intervenir **peu** d'autres objets
 
 Tout **objet peut créer des objets** !
 
-L'objet créateur **connait l'id** de l'objet créé.
+L'objet créateur **connaît l'id** de l'objet créé.
 
 Il peut alors **donner les ids** des objets qu'il a créé
 
@@ -168,9 +168,10 @@ Il peut alors **donner les ids** des objets qu'il a créé
 
 ## Suppression
 
-Avec **garbage collector** (ramasse miète) : les objets **innaccessibles** sont supprimés
+Avec un **garbage collector** (ramasse-miettes) : les objets
+**inaccessibles** sont supprimés
 
-Sans garbage collector : les objets doivent **se supprimer** 
+Sans garbage collector : les objets doivent **se supprimer**
 
 --
 
@@ -180,7 +181,7 @@ Plusieurs objets qui communiquent
 
 Certains objets communiquent avec l'extérieur
 
-=> Une configuration initiale 
+=> Une configuration initiale
 
 --
 
@@ -196,7 +197,7 @@ Quelle dynamicité ?
 
 --
 
-## Le Paradigme Objet 
+## Le Paradigme Objet
 
 ~~Qu'est ce qu'un objet ?~~
 
@@ -206,7 +207,7 @@ Architecture Orientée Objet ?
 
 --
 
-## Programmer des objets 
+## Programmer des objets
 
 Créer l'objet
 
@@ -216,17 +217,17 @@ Lui donner ses traitements
 
 --
 
-## La Classe  
+## La Classe
 
 Nom
 
-Définition des données 
+Définition des données
 
 Définition des traitements
 
 --
 
-## Exemple de Classe  
+## Exemple de Classe
 
 Pile
 
@@ -248,17 +249,17 @@ La classe précise les règles d'accès aux champs
 
 --
 
-## Valeurs et Getter / Setter  
+## Valeurs et Getter / Setter
 
 Affectation à la création
 
 Lecture (get_field)
 
-Ecriture (set_field)
+Écriture (set_field)
 
 --
 
-## Couplage et Classe  
+## Couplage et Classe
 
 Relations entre classes
 
@@ -268,7 +269,7 @@ Lien avec les traitements
 
 --
 
-## Exemple : UE, Etudiant et Examen  
+## Exemple : UE, Etudiant et Examen
 
 Une UE a deux examens
 
@@ -278,7 +279,7 @@ Un étudiant est inscrit à plusieurs UE
 
 --
 
-## Coherence  
+## Coherence
 
 Les méthodes **utilisent** les données
 
@@ -286,7 +287,7 @@ Une classe devrait être **insécable**
 
 --
 
-## Le Paradigme Objet 
+## Le Paradigme Objet
 
 ~~Qu'est ce qu'un objet ?~~
 
@@ -332,7 +333,7 @@ Les objets sont au moins conformes
 
 Réduire la redondance
 
-Etendre une classe
+Étendre une classe
 
 Faire un template
 
@@ -365,7 +366,7 @@ Inverser la dépendance
 
 --
 
-## Le Paradigme Objet 
+## Le Paradigme Objet
 
 Qu'est ce qu'un objet ?
 
