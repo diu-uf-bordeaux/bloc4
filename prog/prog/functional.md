@@ -76,11 +76,11 @@ La programmation fonctionnelle s'appuie sur deux principes&nbsp;:
 
 - **Pureté**&nbsp;: le résultat de l'évaluation d'une fonction ne
   dépend que de la valeur de ses paramètres, et pas d'autre facteurs
-  externes (comme par exemple le moment du calcul).
+  externes (comme par exemple le moment de l'appel).
 
 - **Fonctions de 1ère classe**&nbsp;: les fonctions sont les briques
   de base pour composer les expressions; elles peuvent apparaître en
-  tant que paramètres, retours ou même données du calcul.
+  tant que paramètres, retours ou même données d'un programme.
 
 --
 
@@ -130,7 +130,7 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 
 ## Pureté (2/2)
 
-- Exemples d'influences externes&nbsp;:
+- Exemples d'influences externes ou **effets de bord**&nbsp;:
 	* les générateurs aléatoires,
 	* les lectures/écritures de fichiers ou bases de données
 	* les mesure de capteurs électroniques &hellip;
@@ -138,21 +138,106 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 - Parmi les facteurs entravant la pureté : la présence de
   **variables** (et plus généralement la notion d'état).
 
-  $\Rightarrow$ Idée : manipuler et transformer des objets constants
+  $\Rightarrow$ Idée : manipuler et transformer des objets **constants**
 
 - Mais il n'est pas toujours simple d'écrire (uniquement) des
   fonctions pures, il faut parfois transiger.
 
 --
 
-- Notion d'effets de bord, mutabilité
+## Pureté : un exemple (1/2)
 
-- Exemple avec effet de bord et sans effet de bord
+- Transformation de code impératif $\rightarrow$ fonctionnel
 
+<div class="half">
+
+Avec effet de bord <!-- .element: class="title" -->
+
+```python
+cpt = 0       # global state
+def count_calls():
+	global cpt
+	cpt += 1
+	print("calls : {}".format(cpt))
+
+count_calls() # calls : 1
+count_calls() # calls : 2
+```
+
+</div>
+
+<div class="half">
+
+Sans effet de bord <!-- .element: class="title" -->
+
+```python
+def count_calls(cpt):
+	cpt += 1
+	print("calls : {}".format(cpt))
+	return cpt
+
+cpt1 = 0
+cpt2 = count_calls(cpt1) # calls : 1
+cpt3 = count_calls(cpt2) # calls : 2
+```
+
+</div>
+
+- Les valeurs des compteurs peuvent devenir des constantes.
+
+--
+
+## Pureté : un exemple (2/2)
+
+- Transformation de code impératif $\rightarrow$ fonctionnel
+
+<div class="half">
+
+Avec effet de bord <!-- .element: class="title" -->
+
+```python
+global_board = Board()  # global state
+
+def play(board, color):
+	m = board.get_move(color)
+	# Modify board 'in place'
+	board.moves.append(m)
+
+play(global_board, Color.WHITE)
+play(global_board, Color.BLACK)
+```
+
+</div>
+
+<div class="half">
+
+Sans effet de bord <!-- .element: class="title" -->
+
+```python
+def play(board, color):
+	m = board.get_move(color)
+	# Return new independent board
+	return Board(moves = \
+                    board.moves + [m])
+
+board1 = Board()
+board2 = play(board1, Color.WHITE)
+board3 = play(board2, Color.BLACK)
+```
+
+</div>
+
+- La version sans effet de bord permet de
+
+	* conserver les états intermédiaires
+	* jouer des coups et revenir en arrière
+	* envisager la construction de stratégies
 
 --
 
 ## Récursivité
+
+- Style de fonctionnement facilitant la pureté
 
 - Lien avec l'écriture mathématique
 
