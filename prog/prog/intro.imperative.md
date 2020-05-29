@@ -88,8 +88,7 @@ Calcul de la suite de Fibonacci en Python <!-- .element: class="title" -->
 
 ```python
 def fibo(n):
-    fibPr = 0
-    fib = 1
+    fibPr, fib = 0, 1
     for num in range(1, n+1):
         fibPr, fib = fib, fib + fibPr
     return fibPr

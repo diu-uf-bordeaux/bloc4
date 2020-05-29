@@ -1,3 +1,26 @@
+print("--IMPERATIVE")
+cpt = 0       # global state
+
+def count_calls():
+    global cpt
+    cpt += 1
+    print("calls : {}".format(cpt))
+
+count_calls() # calls : 1
+count_calls() # calls : 2
+
+print("--FUNCTIONAL")
+def count_calls(cpt):
+    new_cpt = cpt + 1
+    return new_cpt
+
+cpt1 = 0
+cpt2 = count_calls(cpt1)
+print("calls : {}".format(cpt2)) # calls : 1
+cpt3 = count_calls(cpt2)
+print("calls : {}".format(cpt3)) # calls : 2
+
+
 from enum import Enum
 
 class Color(Enum):

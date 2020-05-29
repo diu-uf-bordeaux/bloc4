@@ -26,6 +26,7 @@
 
 - **Évaluer** une expression permet d'obtenir le résultat du calcul.
 
+
 --
 
 ## Qu'est-ce qu'une fonction alors ?
@@ -38,7 +39,8 @@ def f(x,y):
 
 ![Fonction](prog/images/functional/function.svg)
 
-Un moyen de construire des expressions plus complexes
+Un moyen de construire des expressions plus complexes.
+
 
 --
 
@@ -68,6 +70,7 @@ def fibo(n):
 
 ![Fibonacci](prog/images/functional/fibonacci.svg)
 
+
 --
 
 ## Propriétés
@@ -81,6 +84,7 @@ La programmation fonctionnelle s'appuie sur deux principes&nbsp;:
 - **Fonctions de 1ère classe**&nbsp;: les fonctions sont les briques
   de base pour composer les expressions; elles peuvent apparaître en
   tant que paramètres, retours ou même données d'un programme.
+
 
 --
 
@@ -126,6 +130,7 @@ plusieurs compilateurs. en OCaml, il y a deux compilateurs mais tous
 les deux développés ensemble (bytecode et natif), et les versions
 récentes ont unifié le comportement, mais il est l'opposé de Python.
 
+
 --
 
 ## Pureté (2/2)
@@ -136,12 +141,13 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 	* les mesure de capteurs électroniques &hellip;
 
 - Parmi les facteurs entravant la pureté : la présence de
-  **variables** (et plus généralement la notion d'état).
+  **variables** ou de **boucles** (plus généralement la notion d'état).
 
   $\Rightarrow$ Idée : manipuler et transformer des objets **constants**
 
 - Mais il n'est pas toujours simple d'écrire (uniquement) des
   fonctions pures, il faut parfois transiger.
+
 
 --
 
@@ -149,41 +155,46 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 
 - Transformation de code impératif $\rightarrow$ fonctionnel
 
-<div class="half">
+<div class="half" style="width:47%; margin-top:10px">
 
 Avec effet de bord <!-- .element: class="title" -->
 
 ```python
 cpt = 0       # global state
+
 def count_calls():
 	global cpt
 	cpt += 1
-	print("calls : {}".format(cpt))
+	print("calls={}".format(cpt))
 
-count_calls() # calls : 1
-count_calls() # calls : 2
+count_calls() # calls=1
+count_calls() # calls=2
 ```
 
 </div>
 
-<div class="half">
+<div class="half" style="width:52%; margin-top:10px">
 
 Sans effet de bord <!-- .element: class="title" -->
 
 ```python
 def count_calls(cpt):
-	cpt += 1
-	print("calls : {}".format(cpt))
-	return cpt
+	new_cpt = cpt + 1
+	return new_cpt
 
 cpt1 = 0
-cpt2 = count_calls(cpt1) # calls : 1
-cpt3 = count_calls(cpt2) # calls : 2
+cpt2 = count_calls(cpt1)
+print("calls={}".format(cpt2)) # calls=1
+cpt3 = count_calls(cpt2)
+print("calls={}".format(cpt3)) # calls=2
 ```
 
 </div>
 
-- Les valeurs des compteurs peuvent devenir des constantes.
+- Idée : transformer le `cpt` global en plusieurs intermédiaires.
+
+- Chaque intermédiaire peut être considérée comme constant.
+
 
 --
 
@@ -191,7 +202,7 @@ cpt3 = count_calls(cpt2) # calls : 2
 
 - Transformation de code impératif $\rightarrow$ fonctionnel
 
-<div class="half">
+<div class="half" style="margin-top:10px">
 
 Avec effet de bord <!-- .element: class="title" -->
 
@@ -209,7 +220,7 @@ play(global_board, Color.BLACK)
 
 </div>
 
-<div class="half">
+<div class="half" style="margin-top:10px">
 
 Sans effet de bord <!-- .element: class="title" -->
 
@@ -227,28 +238,149 @@ board3 = play(board2, Color.BLACK)
 
 </div>
 
-- La version sans effet de bord permet de
+- La version sans effet de bord permet facilement de&nbsp;:
 
-	* conserver les états intermédiaires
-	* jouer des coups et revenir en arrière
-	* envisager la construction de stratégies
+	* conserver les états intermédiaires, <!-- .element: style="margin-top:-15px" -->
+	* jouer des coups et revenir en arrière,
+	* envisager la construction de stratégies &hellip;
+
 
 --
 
 ## Récursivité
 
-- Style de fonctionnement facilitant la pureté
+- Comment réaliser des calculs complexes sans effets de bords&nbsp;?
+  Solution classique&nbsp;: utiliser la récursivité.
 
-- Lien avec l'écriture mathématique
+- Une fonction est **récursive** si son code fait appel à elle-même.
 
-- Exemple avec Fibonacci
+<div class="half">
 
-- Pb : risque d'explosion de la pile
+Version impérative <!-- .element: class="title" -->
 
-- Notion de récursivité terminale
+```python
+def fibo(n):
+    fibPr, fib = 0, 1
+    for num in range(1, n+1):
+        fibPr, fib = fib, fib + fibPr
+    return fibPr
+```
+
+</div>
+
+<div class="half">
+
+Version récursive <!-- .element: class="title" -->
+
+```python
+def fibo(n):
+	if (n <= 1):
+		return n
+	else:
+		return fibo(n-1) + fibo(n-2)
+```
+
+</div>
+
+- La version récursive repose sur la définition mathématique&nbsp;:
+
+$$
+\begin{cases}
+f_0 = 0 \\\\
+f_1 = 1 \\\\
+f_n = f_{n-1} + f_{n-2} \quad \textrm{si}~n \geq 2
+\end{cases}
+$$
+<!-- .element: style="margin-top:-20px" -->
+
 
 --
 
-Exemple (genre exemple récurrent)
+- Toute boucle est convertible en appel récursif et vice versa.
 
-Exemple classique (pas trop effrayant, genre OCaml)
+- Problème : les appels récursifs parfois trop nombreux
+
+<div class="half">
+
+```python
+def fibo(n):
+    if (n <= 1):
+        return n
+    else:
+        return fibo(n-1) + fibo(n-2)
+```
+
+![Temps de calcul de fibo(n)](prog/images/functional/fibo_exp.png)
+ <!-- .element: class="stretch" style="max-width: 70%;margin-top: -20px" -->
+
+
+</div>
+
+<div class="half">
+
+Arbre des appels pour `fibo(5)`
+<!-- .element: class="title" style="font-size:22px; text-align:center" -->
+
+![Arbre d'appel pour fibo(5)](prog/images/functional/fiboexpcall.svg)
+
+</div>
+
+- Nombre d'appels exponentiel $\Rightarrow$ débordements de pile.
+
+
+--
+
+- En pratique, il s'agit de faire attention en construisant `fibo`&nbsp;:
+
+<div class="half" style="margin-top:20px">
+
+```python
+def fibo(n):
+    def fib_rec(a, b, n):
+		if n == 0:
+			return a
+		else:
+			return fib_rec(b, a+b, n-1)
+    return fib_rec(0, 1, n)
+```
+
+![Temps de calcul de fibo(n)](prog/images/functional/fibo_lin.png)
+<!-- .element: class="stretch" style="max-width: 70%;margin-left: 15%;margin-top: -20px" -->
+
+</div>
+
+<div class="half" style="margin-top:20px">
+
+Arbre des appels pour `fibo(5)`
+<!-- .element: class="title" style="font-size:22px; text-align:center" -->
+
+![Arbre d'appel pour fibo(5)](prog/images/functional/fibolincall.svg)
+<!-- .element: style="max-width:60%; margin-left:20%" -->
+
+</div>
+
+- Nombre d'appels linéaire <span style="color:green">✔</span>
+<!-- .element: style="margin-top:-20px" -->
+
+- Pas de duplication des calculs <span style="color:green">✔</span>
+
+
+--
+
+## Intérêts de la pureté
+
+- **Portabilité** de la fonction : indépendance du moment et de lieu
+  de l'appel.
+
+- Facilitation des tests : pas de nécessité de préparer un contexte
+  particulier à chaque fois.
+
+- Parallélisation possible du code : des appels indépendants peuvent
+  être faits sur des machines différentes.
+
+Il ne s'agit pas d'être dogmatique : on peut mélanger les styles purs
+et impurs.  <!-- .element: class="title" style="margin-top:50px" -->
+
+--
+
+## Fonctions de 1ère classe
