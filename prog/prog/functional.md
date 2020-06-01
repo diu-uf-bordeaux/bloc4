@@ -193,7 +193,7 @@ print("calls={}".format(cpt3)) # calls=2
 
 - Idée : transformer le `cpt` global en plusieurs intermédiaires.
 
-- Chaque intermédiaire peut être considérée comme constant.
+- Chaque intermédiaire peut être considéré comme constant.
 
 
 --
@@ -319,20 +319,20 @@ def fibo(n):
 <div class="half">
 
 Arbre des appels pour `fibo(5)`
-<!-- .element: class="title" style="font-size:22px; text-align:center" -->
+<!-- .element: class="title" style="font-size:24px; text-align:center" -->
 
 ![Arbre d'appel pour fibo(5)](prog/images/functional/fiboexpcall.svg)
 
 </div>
 
-- Nombre d'appels exponentiel $\Rightarrow$ débordements de pile.
+- Nombre d'appels exponentiel en `n` $\Rightarrow$ débordements de pile.
 
 
 --
 
 - En pratique, il s'agit de faire attention en construisant `fibo`&nbsp;:
 
-<div class="half" style="margin-top:20px">
+<div class="half" style="width:51%; margin-top:20px">
 
 ```python
 def fibo(n):
@@ -349,20 +349,24 @@ def fibo(n):
 
 </div>
 
-<div class="half" style="margin-top:20px">
+<div class="half" style="width:47%; margin-top:20px">
 
 Arbre des appels pour `fibo(5)`
-<!-- .element: class="title" style="font-size:22px; text-align:center" -->
+<!-- .element: class="title" style="font-size:24px; text-align:center" -->
 
 ![Arbre d'appel pour fibo(5)](prog/images/functional/fibolincall.svg)
 <!-- .element: style="max-width:60%; margin-left:20%" -->
 
+Version **récursive-terminale**
+<!-- .element: class="title" style="font-size:24px; text-align:center; margin-top:-30px" -->
+
 </div>
 
-- Nombre d'appels linéaire <span style="color:green">✔</span>
+- Nombre d'appels linéaire en `n` <span style="color:green">✔</span>
 <!-- .element: style="margin-top:-20px" -->
 
 - Pas de duplication des calculs <span style="color:green">✔</span>
+<!-- .element: style="margin-top:-20px" -->
 
 
 --
@@ -372,15 +376,171 @@ Arbre des appels pour `fibo(5)`
 - **Portabilité** de la fonction : indépendance du moment et de lieu
   de l'appel.
 
-- Facilitation des tests : pas de nécessité de préparer un contexte
-  particulier à chaque fois.
+- Facilitation des **tests** : pas de nécessité de préparer un
+  contexte particulier à chaque fois.
 
-- Parallélisation possible du code : des appels indépendants peuvent
-  être faits sur des machines différentes.
+- **Parallélisation** possible du code : des appels indépendants
+  peuvent être faits sur des machines différentes.
 
 Il ne s'agit pas d'être dogmatique : on peut mélanger les styles purs
-et impurs.  <!-- .element: class="title" style="margin-top:50px" -->
+et impurs, si on prend soin des effets de bords.
+<!-- .element: class="title" style="margin-top:50px" -->
 
 --
 
 ## Fonctions de 1ère classe
+
+- Considérer les fonctions comme des valeurs à part entière&nbsp;:
+
+	* apparaissant dans des structures de données,
+
+	* ou comme paramètres et retours d'autres fonctions.
+
+- Une fonction est alors une petite **unité de code**, que l'on peut
+  créer, transmettre et utiliser à la demande.
+
+- Exemple fondamental : les **lambda-expressions**.
+
+```python
+lambda x: x+1         # <function <lambda> at 0x7>
+```
+
+--
+
+## 1ère classe : création
+
+- Construire des fonctions en <span class="label">Python</span>&nbsp;:
+
+	* https://docs.python.org/3/reference/compound_stmts.html#function
+	<!-- .element: style="font-size:large" -->
+
+	* https://docs.python.org/3/reference/expressions.html#lambda
+	<!-- .element: style="font-size:large" -->
+
+<div class="half">
+
+Version nommée
+<!-- .element: class="title" -->
+
+```python
+def func(param1, param2):
+	return param1 - param2
+
+func         # <function func at 0x7>
+func(34,23)  # 11
+```
+
+</div>
+
+<div class="half">
+
+Version anonyme
+<!-- .element: class="title" -->
+
+```python
+lamb = lambda param1, param2: (
+	        param1 - param2 )
+
+lamb      # <function <lambda> at 0x7>
+lamb(34,23)  # 11
+```
+
+</div>
+
+- Caveat&nbsp;: le corps d'une lambda doit être une expression.
+
+- Les fonctions peuvent alors&nbsp;:
+
+	* être stockées dans des variables (comme `lamb`)
+   <!-- .element: style="margin-top:-10px" -->
+
+	* apparaître dans des structures : `[func, lamb]`
+   <!-- .element: style="margin-top:-20px" -->
+
+
+--
+
+## 1ère classe : Paramètre
+
+- Une fonction peut être paramétrée par une autre fonction.
+
+- Exemple : un algorithme de tri paramétrée par un ordre de tri
+
+<div class="half" style="width:51%">
+
+```python
+def sort(l, f): # Bubble Sort
+  n, nl = len(l), list(l)
+  for i in range(n):
+    for j in range(n - i - 1):
+      if f(nl[j], nl[j + 1]):
+        nl[j], nl[j+1] = nl[j+1], nl[j]
+  return nl
+```
+
+</div>
+
+<div class="half" style="width:47%">
+
+```python
+sort(range(10), lambda x,y: x>y)
+# -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+sort(range(10), lambda x,y: x<y)
+# ->[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+```
+
+</div>
+
+- Idée : déléguer une partie d'un algorithme à l'appelant.
+
+  De telles fonctions sont dites **génériques**.
+  <!-- .element: style="margin-top:-15px" -->
+
+- Exemples&nbsp;: `filter`, `map`, `min`, `max`, `sorted` (via `key`)
+
+--
+
+## 1ère classe : Retour
+
+- Une fonction peut renvoyer une autre fonction&nbsp;:
+
+- Exemple : un algorithme de dérivation de fonction
+
+<div class="half" style="width:51%">
+
+```python
+def derivate(f, h):
+    return lambda x: \
+		(f(x+h) - f(x)) / h
+```
+
+</div>
+
+<div class="half" style="width:47%">
+
+```python
+c = derivate(np.sin, 0.01)
+c(0)     # 0.9999833334166665
+c(np.pi) # -0.9999833334166452
+```
+
+</div>
+
+- Idée : créer un code paramétré applicable de manière différée
+
+- Exemples :
+
+	* spécialisation par application partielle (`partial`)
+
+	 ```python
+	 functools.partial(derivate, np.sin)
+	 ```
+	   <!-- .element: style="margin-top:-20px" -->
+
+	* contrôle de l'évaluation / évaluation paresseuse
+
+	 ```python
+	 timeit.timeit(lambda: fibo(100))
+	 ```
+	   <!-- .element: style="margin-top:-20px" -->
