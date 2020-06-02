@@ -5,21 +5,74 @@ récursifs. A chaque fois, on insiste sur la description formelle de la
 fonction à représenter, on discute les problèmes de terminaison, et de
 complexité.
 
+### 1ère partie : Exponentiation
 
-### 1ère partie : PGCD
+Les deux définitions suivantes permettent de calculer la fonction
+$\mathrm{pow}(a,n) = a^n$ &nbsp;:
+
+$$
+\begin{cases}
+\mathrm{pow}_1(a, 0) & = 1 \\
+\mathrm{pow}_1(a, n) & = a * \mathrm{pow}_1(a, n-1) \quad \textrm{si}~ n \geq 1
+\end{cases}
+$$
+
+$$
+\begin{cases}
+\mathrm{pow}_2(a, 0) & = 1 \\
+\mathrm{pow}_2(a, 1) & = a \\
+\mathrm{pow}_2(a, 2*n) & = \mathrm{pow}_2(a, n)^2 \quad \textrm{si}~ n \geq 1 \\
+\mathrm{pow}_2(a, 2*n+1) & = a * \mathrm{pow}_2(a, n)^2 \quad \textrm{si}~ n \geq 1
+\end{cases}
+$$
+
+Écrire chacun de ces algorithmes en Python. Évaluer pour chacun leur
+complexité. Expliquer pourquoi le second algorithme nécessite plus de
+cas pour sa définition que le premier.
+
+### 2ème partie : PGCD
 
 Une façon de calculer le plus grand commun diviseur entre deux nombres
 consiste à implémenter l'[algorithme
 d'Euclide](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide), dont
 on fournit une définition ici&nbsp;:
 
-{% raw %}
 $$
 \begin{cases}
-\mathrm{pgcd}(a, 0) & = a \\\\
-\mathrm{pgcd}(a, a) & = a \\\\
-\mathrm{pgcd}(a, b) & = \mathrm{pgcd}(b, a) \quad \textrm{si}~ a > b \\\\
-\mathrm{pgcd}(a, b) & = \mathrm{pgcd}(b, a modulo b) \quad \textrm{sinon} \\\\
+\mathrm{pgcd}(a, 0) & = a \\
+\mathrm{pgcd}(a, a) & = a \\
+\mathrm{pgcd}(a, b) & = \mathrm{pgcd}(b, a) \quad \textrm{si}~ a > b \\
+\mathrm{pgcd}(a, b) & = \mathrm{pgcd}(b, a \mod b) \quad \textrm{sinon}
 \end{cases}
 $$
-{% endraw %}
+
+Écrire cet algorithme en Python, d'abord avec une boucle, et ensuite
+de manière récursive. Dessiner sur un quart de plan le chemin réalisé
+par le calcul de $\mathrm{pgcd}(7,5)$. Donner une borne supérieure de
+sa complexité.
+
+### 3ème partie : suite de Syracuse
+
+La suite de Syracuse est une suite d'entiers naturels paramétrée par
+une valeur de départ donnée, qui peut être construite à l'aide de la
+fonction suivante&nbsp;:
+
+$$
+\begin{cases}
+\mathrm{syra}(1) & = 1 \\
+\mathrm{syra}(n) & = \mathrm{syra}(n/2) \quad \textrm{si}~ n ~\textrm{est pair et} \geq 1\\
+\mathrm{syra}(n) & = \mathrm{syra}(3*n+1) \quad \textrm{sinon}
+\end{cases}
+$$
+
+Cette suite est connue pour la fameuse [conjecture de
+Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) qui
+lui est associée. En 2017, il a été vérifié que pour tout entier $n \leq
+87×2^{60}$, $\mathrm{syra}(n) = 1$.
+
+Écrire le code en Python calculant la fonction précédente. Écrire le
+code calculant la liste des valeurs atteintes lors du calcul de
+$\mathrm{syra}(n)$, aussi appelé $\matrhrm{vol}(n)$. Par exemple, pour
+$n=12$&nbsp;:
+
+$$ \mathrm{vol}(12) = [12, 6, 3, 10, 5, 16, 8, 4, 2, 1] $$
