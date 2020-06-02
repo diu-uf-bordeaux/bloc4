@@ -10,7 +10,7 @@ complexité.
 Une façon de calculer le plus grand commun diviseur entre deux nombres
 consiste à implémenter l'[algorithme
 d'Euclide](https://fr.wikipedia.org/wiki/Algorithme_d%27Euclide), dont
-ou fournit une définition ici&nbsp;:
+on fournit une définition ici&nbsp;:
 
 $$
 \\begin{cases}
