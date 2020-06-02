@@ -4,6 +4,10 @@ title: "Exercices sur la programmation fonctionnelle"
 permalink: /td/functional/
 ---
 
+- [Recursivity](./td_recursivity.md)
+
+- [Characteristic](./td_characteristic.md)
+
 ## Exercice 1 : la chanson
 
 Ah la la la la
