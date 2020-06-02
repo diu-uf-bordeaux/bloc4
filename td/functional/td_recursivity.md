@@ -46,10 +46,10 @@ $$
 \end{cases}
 $$
 
-Écrire cet algorithme en Python, d'abord avec une boucle, et ensuite
-de manière récursive. Dessiner sur un quart de plan le chemin réalisé
-par le calcul de $\mathrm{pgcd}(7,5)$. Donner une borne supérieure de
-sa complexité.
+Écrire cet algorithme en Python, d'abord avec une boucle `for`, et
+ensuite de manière récursive. Dessiner sur un quart de plan le chemin
+réalisé par le calcul de $\mathrm{pgcd}(7,5)$. Donner une borne
+supérieure de sa complexité.
 
 ### 3ème partie : suite de Syracuse
 
@@ -72,7 +72,36 @@ lui est associée. En 2017, il a été vérifié que pour tout entier $n \leq
 
 Écrire le code en Python calculant la fonction précédente. Écrire le
 code calculant la liste des valeurs atteintes lors du calcul de
-$\mathrm{syra}(n)$, aussi appelé $\matrhrm{vol}(n)$. Par exemple, pour
+$\mathrm{syra}(n)$, aussi appelé $\mathrm{vol}(n)$. Par exemple, pour
 $n=12$&nbsp;:
 
 $$ \mathrm{vol}(12) = [12, 6, 3, 10, 5, 16, 8, 4, 2, 1] $$
+
+### 4ème partie : récursivité et listes
+
+Les listes sont des types de données que l'on peut appeler
+**inductifs**, signifiant ainsi qu'ils peuvent être pensés d'une
+manière récursive. En effet, une liste `l` est :
+
+- soit la liste vide (`[]`),
+
+- soit composée d'un premier élément (la tête, `l[0]`), et d'une
+  sous-liste de taille plus petite (la queue, `l[1:]`).
+
+Écrire un code en Python recherchant de manière récursive si un
+élément appartient à une liste Python.
+
+$$
+\begin{cases}
+\mathrm{search}([], x) & = False \\
+\mathrm{search}(l, x)  & = True \quad \textrm{si}~ l ~\textrm{est non vide et}~ x = l[0] \\
+\mathrm{search}(l, x)  & = \mathrm{search}(l[1:], x) \quad \textrm{sinon}
+\end{cases}
+$$
+
+Comparer au code réalisant la même chose avec une boucle `for`.
+
+Adapter ce code pour compter le nombre d'occurrences d'un élément
+apparaissant dans une liste, cela d'abord de manière récursive, puis
+avec une boucle `for`. Déterminer parmi les fonctions que vous venez
+d'écrire celles qui sont pures et celles qui font des effets de bord.
