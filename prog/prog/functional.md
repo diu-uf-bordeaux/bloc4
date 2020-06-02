@@ -59,6 +59,9 @@ def abs(x):
 
 --
 
+## Un exemple plus compliqué
+<!-- .element: style="display:none" -->
+
 ```python
 def fibo(n):
     fibPr, fib = 0, 1
@@ -155,7 +158,7 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 
 - Transformation de code impératif $\rightarrow$ fonctionnel
 
-<div class="half" style="width:47%; margin-top:10px">
+<div class="half" style="width:46%; margin-top:10px">
 
 Avec effet de bord <!-- .element: class="title" -->
 
@@ -173,7 +176,7 @@ count_calls() # calls=2
 
 </div>
 
-<div class="half" style="width:52%; margin-top:10px">
+<div class="half" style="width:53%; margin-top:10px">
 
 Sans effet de bord <!-- .element: class="title" -->
 
@@ -207,7 +210,7 @@ print("calls={}".format(cpt3)) # calls=2
 Avec effet de bord <!-- .element: class="title" -->
 
 ```python
-global_board = Board()  # global state
+global_board = Board() # global state
 
 def play(board, color):
 	m = board.get_move(color)
@@ -229,7 +232,7 @@ def play(board, color):
 	m = board.get_move(color)
 	# Return new independent board
 	return Board(moves = \
-                    board.moves + [m])
+                   board.moves + [m])
 
 board1 = Board()
 board2 = play(board1, Color.WHITE)
@@ -296,6 +299,9 @@ $$
 
 --
 
+## Récursivité : débordements de pile
+<!-- .element: style="display:none" -->
+
 - Toute boucle est convertible en appel récursif et vice versa.
 
 - Problème : les appels récursifs parfois trop nombreux
@@ -330,6 +336,9 @@ Arbre des appels pour `fibo(5)`
 
 --
 
+## Récursivité terminale
+<!-- .element: style="display:none" -->
+
 - En pratique, il s'agit de faire attention en construisant `fibo`&nbsp;:
 
 <div class="half" style="width:51%; margin-top:20px">
@@ -340,7 +349,7 @@ def fibo(n):
 		if n == 0:
 			return a
 		else:
-			return fib_rec(b, a+b, n-1)
+			return fib_rec(b,a+b,n-1)
     return fib_rec(0, 1, n)
 ```
 
@@ -404,6 +413,8 @@ et impurs, si on prend soin des effets de bords.
 ```python
 lambda x: x+1         # <function <lambda> at 0x7>
 ```
+<!-- .element: style="padding:20px; background-color: #3f3f3f" -->
+
 
 --
 
@@ -438,10 +449,10 @@ Version anonyme
 <!-- .element: class="title" -->
 
 ```python
-lamb = lambda param1, param2: (
-	        param1 - param2 )
+lamb = lambda param1, param2: \
+	        param1 - param2
 
-lamb      # <function <lambda> at 0x7>
+lamb    # <function <lambda> at 0x7>
 lamb(34,23)  # 11
 ```
 
@@ -469,11 +480,11 @@ lamb(34,23)  # 11
 <div class="half" style="width:51%">
 
 ```python
-def sort(l, f): # Bubble Sort
+def sort(l, cmp): # generic Bubble Sort
   n, nl = len(l), list(l)
   for i in range(n):
     for j in range(n - i - 1):
-      if f(nl[j], nl[j + 1]):
+      if cmp(nl[j], nl[j + 1]):
         nl[j], nl[j+1] = nl[j+1], nl[j]
   return nl
 ```
@@ -487,7 +498,7 @@ sort(range(10), lambda x,y: x>y)
 # -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 sort(range(10), lambda x,y: x<y)
-# ->[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+# -> [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 ```
 
 </div>
@@ -544,3 +555,24 @@ c(np.pi) # -0.9999833334166452
 	 timeit.timeit(lambda: fibo(100))
 	 ```
 	   <!-- .element: style="margin-top:-20px" -->
+
+
+--
+
+## Intérêts de la 1ère classe
+
+- Considérer les fonctions comme des valeurs ayant les mêmes
+  possibilités d'utilisation que les entiers, les objets&hellip;
+
+- Leur vocation : représenter des calculs paramétrés.
+
+- Exemples d'application :
+
+	* la représentation des données par les fonctions <br/>
+	  (cf. `characteristic`)
+
+	* la parallèlisation automatique des calculs <br/>
+	  (cf. `mapreduce`)
+
+	* le contrôle de l'évaluation et la paresse<br/>
+	  (cf. `laziness`)

@@ -45,6 +45,8 @@ Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
 
 --
 
+## Pour quelques qualités de plus&hellip;
+
 - Combinées, les deux dernières propriétés permettent d'envisager de
   nombreuses techniques&nbsp;:
 

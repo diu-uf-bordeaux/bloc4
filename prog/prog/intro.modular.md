@@ -36,6 +36,9 @@ n'a jamais été présentée en tant que tel historiquement.
 
 --
 
+## Exemple de décomposition modulaire
+<!-- .element: style="display:none" -->
+
 ![Décomposition modulaire](prog/images/intro/modules.svg)<!-- .element: class="stretch" style="max-width: 80%;" -->
 
 
