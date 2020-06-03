@@ -1,4 +1,6 @@
 
+[Retour aux exercices de programmation fonctionnelle](./td_functional.md)
+
 Cette page contient un ensemble de fonctions qu'il est possible de
 programmer de manière fonctionnelle pure, en utilisant des algorithmes
 récursifs. A chaque fois, on insiste sur la description formelle de la

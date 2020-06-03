@@ -1,4 +1,6 @@
 
+[Retour aux exercices de programmation fonctionnelle](./td_functional.md)
+
 Cette page contient des exercices mettant en valeur les fonctions
 comme capables de représenter des données. L'exemple mis en place ici
 est celui des [fonctions

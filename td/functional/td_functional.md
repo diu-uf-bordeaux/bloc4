@@ -4,6 +4,8 @@ title: "Exercices sur la programmation fonctionnelle"
 permalink: /td/functional/
 ---
 
+[Retour à l'ensemble des exercices](../td_prog.md)
+
 - [Recursivity](./td_recursivity.md) : des exemples d'utilisation de
   la récursivité.
 

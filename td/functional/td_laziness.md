@@ -1,4 +1,6 @@
 
+[Retour aux exercices de programmation fonctionnelle](./td_functional.md)
+
 Cette page donne des exemples de contrôle de l'évaluation sous la
 forme d'une technique de programmation faisant appel à de
 l'[évaluation
