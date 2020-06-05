@@ -6,4 +6,4 @@ permalink: /td/
 
 - [Programmation Fonctionnelle](./functional/)
 
-- [Arbres](./arbres/)
+- [Arbres binaires](./arbres/)

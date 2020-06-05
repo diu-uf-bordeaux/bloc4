@@ -1,3 +1,5 @@
 header:
-  - title: Programmation
+  - title: Cours
     url: /prog/prog.html
+  - title: Exercices
+    url: /td/
