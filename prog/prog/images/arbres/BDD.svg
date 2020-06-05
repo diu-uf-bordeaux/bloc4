@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 700 350" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g id="node2" transform="matrix(2.37713,0,0,2.37713,246.642,-25.6626)">
+        <g transform="matrix(0.834862,0,0,1.001,11.9599,0.973943)">
+            <ellipse cx="70.789" cy="36.996" rx="13.745" ry="10.996" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,71.2789,41.4987)">
+            <text x="-5.729px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;fill:rgb(255,100,0);">x1</text>
+        </g>
+    </g>
+    <g id="node21" serif:id="node2" transform="matrix(2.37713,0,0,2.37713,102.982,55.8643)">
+        <g transform="matrix(0.834862,0,0,1.001,11.9599,0.973943)">
+            <ellipse cx="70.789" cy="36.996" rx="13.745" ry="10.996" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,71.2789,41.4987)">
+            <text x="-5.729px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;fill:rgb(255,100,0);">x2</text>
+        </g>
+    </g>
+    <g id="node22" serif:id="node2" transform="matrix(2.37713,0,0,2.37713,391.067,55.8643)">
+        <g transform="matrix(0.834862,0,0,1.001,11.9599,0.973943)">
+            <ellipse cx="70.789" cy="36.996" rx="13.745" ry="10.996" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,71.2789,41.4987)">
+            <text x="-5.729px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;fill:rgb(255,100,0);">x2</text>
+        </g>
+    </g>
+    <g id="node23" serif:id="node2" transform="matrix(2.37713,0,0,2.37713,30.2218,136.839)">
+        <g transform="matrix(0.834862,0,0,1.001,11.9599,0.973943)">
+            <ellipse cx="70.789" cy="36.996" rx="13.745" ry="10.996" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,71.2789,41.4987)">
+            <text x="-5.729px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;fill:rgb(255,100,0);">x3</text>
+        </g>
+    </g>
+    <g id="node24" serif:id="node2" transform="matrix(2.37713,0,0,2.37713,174.971,136.839)">
+        <g transform="matrix(0.834862,0,0,1.001,11.9599,0.973943)">
+            <ellipse cx="70.789" cy="36.996" rx="13.745" ry="10.996" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,71.2789,41.4987)">
+            <text x="-5.729px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;fill:rgb(255,100,0);">x3</text>
+        </g>
+    </g>
+    <g id="node25" serif:id="node2" transform="matrix(2.37713,0,0,2.37713,318.887,136.839)">
+        <g transform="matrix(0.834862,0,0,1.001,11.9599,0.973943)">
+            <ellipse cx="70.789" cy="36.996" rx="13.745" ry="10.996" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,71.2789,41.4987)">
+            <text x="-5.729px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;fill:rgb(255,100,0);">x3</text>
+        </g>
+    </g>
+    <g id="node26" serif:id="node2" transform="matrix(2.37713,0,0,2.37713,463.637,136.839)">
+        <g transform="matrix(0.834862,0,0,1.001,11.9599,0.973943)">
+            <ellipse cx="70.789" cy="36.996" rx="13.745" ry="10.996" style="fill:none;stroke:black;stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,71.2789,41.4987)">
+            <text x="-5.729px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;fill:rgb(255,100,0);">x3</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,372.585,29.9292)">
+        <g transform="matrix(1,-0,-0,1,-372.585,-29.9292)">
+            <path d="M528.836,126.483L535.112,133.597L525.822,131.672L528.836,126.483Z" style="fill-rule:nonzero;"/>
+            <path d="M439.25,77.922C439.25,77.922 507.631,117.637 528.886,129.981" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(-1,0,0,1,458.857,29.9292)">
+        <g transform="matrix(-1,0,0,1,458.857,-29.9292)">
+            <path d="M305.619,131.672L296.329,133.597L302.605,126.483L305.619,131.672Z" style="fill-rule:nonzero;"/>
+            <path d="M392.191,77.922C392.191,77.922 323.81,117.637 302.556,129.981" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-dasharray:4,4,0,0;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,221.182,118.756)">
+        <g transform="matrix(1,-0,-0,1,-221.182,-118.756)">
+            <path d="M322.136,198.876L325.938,207.568L317.681,202.895L322.136,198.876Z" style="fill-rule:nonzero;"/>
+            <path d="M289.569,167.262C289.569,167.262 311.224,191.261 321.114,202.222" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,284.532,202.73)">
+        <g transform="matrix(1,-0,-0,1,-284.532,-202.73)">
+            <path d="M365.879,271.451L367.043,280.866L360.463,274.033L365.879,271.451Z" style="fill-rule:nonzero;"/>
+            <path d="M352.919,251.236C352.919,251.236 359.788,265.645 363.945,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(-1,0,0,1,401.43,202.73)">
+        <g transform="matrix(-1,0,0,1,401.43,-202.73)">
+            <path d="M325.5,274.033L318.919,280.866L320.084,271.451L325.5,274.033Z" style="fill-rule:nonzero;"/>
+            <path d="M333.043,251.236C333.043,251.236 326.175,265.645 322.017,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-dasharray:4,4,0,0;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,141.837,202.73)">
+        <g transform="matrix(1,-0,-0,1,-141.837,-202.73)">
+            <path d="M223.183,271.451L224.348,280.866L217.767,274.033L223.183,271.451Z" style="fill-rule:nonzero;"/>
+            <path d="M210.223,251.236C210.223,251.236 217.092,265.645 221.249,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(-1,0,0,1,258.734,202.73)">
+        <g transform="matrix(-1,0,0,1,258.734,-202.73)">
+            <path d="M182.804,274.033L176.223,280.866L177.388,271.451L182.804,274.033Z" style="fill-rule:nonzero;"/>
+            <path d="M190.348,251.236C190.348,251.236 183.479,265.645 179.321,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-dasharray:4,4,0,0;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,571.423,202.73)">
+        <g transform="matrix(1,-0,-0,1,-571.423,-202.73)">
+            <path d="M652.769,271.451L653.934,280.866L647.353,274.033L652.769,271.451Z" style="fill-rule:nonzero;"/>
+            <path d="M639.81,251.236C639.81,251.236 646.678,265.645 650.836,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(-1,0,0,1,688.321,202.73)">
+        <g transform="matrix(-1,0,0,1,688.321,-202.73)">
+            <path d="M612.391,274.033L605.81,280.866L606.974,271.451L612.391,274.033Z" style="fill-rule:nonzero;"/>
+            <path d="M619.934,251.236C619.934,251.236 613.066,265.645 608.908,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-dasharray:4,4,0,0;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,428.727,202.73)">
+        <g transform="matrix(1,-0,-0,1,-428.727,-202.73)">
+            <path d="M510.074,271.451L511.238,280.866L504.658,274.033L510.074,271.451Z" style="fill-rule:nonzero;"/>
+            <path d="M497.114,251.236C497.114,251.236 503.983,265.645 508.14,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(-1,0,0,1,545.625,202.73)">
+        <g transform="matrix(-1,0,0,1,545.625,-202.73)">
+            <path d="M469.695,274.033L463.114,280.866L464.279,271.451L469.695,274.033Z" style="fill-rule:nonzero;"/>
+            <path d="M477.238,251.236C477.238,251.236 470.37,265.645 466.212,274.367" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-dasharray:4,4,0,0;"/>
+        </g>
+    </g>
+    <g id="node11" transform="matrix(2.20729,0,0,2.20729,-13.917,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">1</text>
+        </g>
+    </g>
+    <g id="node111" serif:id="node11" transform="matrix(2.20729,0,0,2.20729,202.042,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">1</text>
+        </g>
+    </g>
+    <g id="node112" serif:id="node11" transform="matrix(2.20729,0,0,2.20729,57.8655,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">0</text>
+        </g>
+    </g>
+    <g id="node113" serif:id="node11" transform="matrix(2.20729,0,0,2.20729,129.865,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">0</text>
+        </g>
+    </g>
+    <g id="node114" serif:id="node11" transform="matrix(2.20729,0,0,2.20729,417.969,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">1</text>
+        </g>
+    </g>
+    <g id="node115" serif:id="node11" transform="matrix(2.20729,0,0,2.20729,489.616,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">1</text>
+        </g>
+    </g>
+    <g id="node116" serif:id="node11" transform="matrix(2.20729,0,0,2.20729,345.791,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">0</text>
+        </g>
+    </g>
+    <g id="node117" serif:id="node11" transform="matrix(2.20729,0,0,2.20729,274.033,-158.983)">
+        <g transform="matrix(1,0,0,1,23,25)">
+            <path d="M69.84,178.754C69.84,176.531 68.035,174.726 65.812,174.726L49.238,174.726C47.015,174.726 45.21,176.531 45.21,178.754L45.21,186.81C45.21,189.033 47.015,190.838 49.238,190.838L65.812,190.838C68.035,190.838 69.84,189.033 69.84,186.81L69.84,178.754Z" style="fill:none;stroke:black;stroke-width:1px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,81.0982,211.273)">
+            <text x="-2.903px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:10.996px;">0</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,509.019,118.434)">
+        <g transform="matrix(1,-0,-0,1,-509.019,-118.434)">
+            <path d="M609.972,198.554L613.774,207.245L605.518,202.573L609.972,198.554Z" style="fill-rule:nonzero;"/>
+            <path d="M577.406,166.939C577.406,166.939 599.061,190.939 608.951,201.9" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(-1,0,0,1,610.082,118.434)">
+        <g transform="matrix(-1,0,0,1,610.082,-118.434)">
+            <path d="M513.583,202.573L505.327,207.245L509.129,198.554L513.583,202.573Z" style="fill-rule:nonzero;"/>
+            <path d="M541.695,166.939C541.695,166.939 520.04,190.939 510.15,201.9" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-dasharray:4,4,0,0;"/>
+        </g>
+    </g>
+    <g transform="matrix(-1,0,0,1,322.137,118.434)">
+        <g transform="matrix(-1,0,0,1,322.137,-118.434)">
+            <path d="M225.638,202.573L217.381,207.245L221.183,198.554L225.638,202.573Z" style="fill-rule:nonzero;"/>
+            <path d="M253.75,166.939C253.75,166.939 232.095,190.939 222.205,201.9" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;stroke-dasharray:4,4,0,0;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,340.641,101.522)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,230.265,182.943)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,519.332,182.943)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,176.495,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,222.682,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,319.692,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365.88,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,463.776,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,509.964,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,463.776,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,509.964,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,489.844,101.522)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,311.89,182.943)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,597.927,182.943)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,606.069,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">0</text>
+    </g>
+    <g transform="matrix(1,0,0,1,652.257,263.712)">
+        <text x="-3.432px" y="0px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:13px;">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-163.56,-14.7381)">
+        <text x="172.813px" y="37.461px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;fill:rgb(255,100,0);">x1</text>
+        <text x="213.149px" y="37.461px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;fill:rgb(255,100,0);">x2</text>
+        <text x="253.485px" y="37.461px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;fill:rgb(255,100,0);">x3</text>
+        <text x="302.401px" y="37.461px" style="font-family:'SourceSansPro-BoldItalic', 'Source Sans Pro', sans-serif;font-weight:700;font-style:italic;font-size:24px;fill:rgb(255,100,0);">f</text>
+        <text x="178.981px" y="62.225px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="219.317px" y="62.225px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="259.653px" y="62.225px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="299.989px" y="62.225px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="178.981px" y="86.989px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="219.317px" y="86.989px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="259.653px" y="86.989px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="299.989px" y="86.989px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="178.981px" y="111.754px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="219.317px" y="111.754px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="259.653px" y="111.754px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="299.989px" y="111.754px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="178.981px" y="136.518px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="219.317px" y="136.518px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="259.653px" y="136.518px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="299.989px" y="136.518px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="178.981px" y="161.282px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="219.317px" y="161.282px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="259.653px" y="161.282px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="299.989px" y="161.282px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="178.981px" y="186.047px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="219.317px" y="186.047px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="259.653px" y="186.047px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="299.989px" y="186.047px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="178.981px" y="210.811px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="219.317px" y="210.811px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="259.653px" y="210.811px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">0</text>
+        <text x="299.989px" y="210.811px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="178.981px" y="235.576px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="219.317px" y="235.576px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="259.653px" y="235.576px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <text x="299.989px" y="235.576px" style="font-family:'SourceSansPro-Bold', 'Source Sans Pro', sans-serif;font-weight:700;font-size:24px;">1</text>
+        <path d="M286.157,16.666L286.157,239.546M165.15,41.431L326.492,41.431" style="fill:none;stroke:black;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:2;"/>
+    </g>
+</svg>

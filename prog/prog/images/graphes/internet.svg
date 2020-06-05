@@ -4,21 +4,20 @@
     <use id="Background" xlink:href="#_Image1" x="0" y="0" width="1000px" height="800px"/>
     <g transform="matrix(0.512039,0,0,2.08021,4.17413,-740.58)">
         <g transform="matrix(1.95298,0,0,0.480721,-24.6167,338.83)">
-            <rect x="25.831" y="652.501" width="148.031" height="27.659" style="fill:rgb(131,244,10);"/>
-            <rect x="25.831" y="680.16" width="148.031" height="27.659" style="fill:rgb(18,80,203);"/>
-            <rect x="25.831" y="707.819" width="148.031" height="27.659" style="fill:rgb(182,21,250);"/>
-            <rect x="25.831" y="735.478" width="148.031" height="27.659" style="fill:rgb(163,17,56);"/>
-            <rect x="25.831" y="763.137" width="148.031" height="27.659" style="fill:rgb(255,166,29);"/>
-            <rect x="25.831" y="790.796" width="148.031" height="27.659" style="fill:white;"/>
+            <rect x="25.831" y="652.501" width="158.031" height="27.659" style="fill:rgb(131,244,10);"/>
+            <rect x="25.831" y="680.16" width="158.031" height="27.659" style="fill:rgb(18,80,203);"/>
+            <rect x="25.831" y="707.819" width="158.031" height="27.659" style="fill:rgb(182,21,250);"/>
+            <rect x="25.831" y="735.478" width="158.031" height="27.659" style="fill:rgb(163,17,56);"/>
+            <rect x="25.831" y="763.137" width="158.031" height="27.659" style="fill:rgb(255,166,29);"/>
+            <rect x="25.831" y="790.796" width="158.031" height="27.659" style="fill:white;"/>
         </g>
         <g transform="matrix(1.95298,0,0,0.480721,-24.6167,338.83)">
-            <text x="30.431px" y="672.739px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;">Eur<tspan x="55.775px " y="672.739px ">o</tspan>pe</text>
-            <text x="30.431px" y="700.398px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">Amérique du nor<tspan x="156.107px " y="700.398px ">d</tspan></text>
-            <text x="30.431px" y="728.057px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">Amérique la<tspan x="120.467px " y="728.057px ">t</tspan>ine</text>
-            <text x="30.431px" y="755.716px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">A<tspan x="40.637px " y="755.716px ">s</tspan>ie P<tspan x="74.549px " y="755.716px ">a</tspan>cifique</text>
-            <text x="30.431px" y="783.375px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">A<tspan x="40.043px " y="783.375px ">f</tspan>rique</text>
-            <text x="30.431px" y="811.034px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;">“Backbones<tspan x="120.683px " y="811.034px ">”</tspan></text>
-            <path d="M25.831,652.251L25.831,818.705M173.862,652.251L173.862,818.705M25.831,652.501L173.862,652.501M25.831,680.16L173.862,680.16M25.831,707.819L173.862,707.819M25.831,735.478L173.862,735.478M25.831,763.137L173.862,763.137M25.831,790.796L173.862,790.796M25.831,818.455L173.862,818.455" style="fill:none;stroke:black;stroke-width:0.5px;"/>
+            <text x="30.431px" y="672.739px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;">Europe</text>
+            <text x="30.431px" y="700.398px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">Amérique du nord</text>
+            <text x="30.431px" y="728.057px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">Amérique latine</text>
+            <text x="30.431px" y="755.716px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">Asie Pacifique</text>
+            <text x="30.431px" y="783.375px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;fill:white;">Afrique</text>
+            <text x="30.431px" y="811.034px" style="font-family:'SourceSansPro-Regular', 'Source Sans Pro', sans-serif;font-size:18px;">“Backbones”</text>            
         </g>
     </g>
     <defs>
