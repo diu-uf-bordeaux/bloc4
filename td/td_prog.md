@@ -7,3 +7,5 @@ permalink: /td/
 - [Programmation Fonctionnelle](./functional/)
 
 - [Arbres binaires](./arbres/)
+
+- [Graphes](./graphes/)

@@ -5,3 +5,33 @@
   padding: 1px 4px 1px 4px;
   border-radius: 4px;
 }
+
+.list {
+  padding-inline-start: 40px;
+}
+
+.list_alpha_inline {
+  padding-inline-start: 40px;
+  list-style-type: lower-alpha;
+  display:flex;
+}
+.list_alpha_inline li {
+  margin-right: 50px;
+}
+.list_alpha {
+  padding-inline-start: 40px;
+  list-style-type: lower-alpha;
+}
+.list_alpha li {
+  margin-bottom: 10px;
+}
+
+.graph {
+  border-collapse: collapse;
+}
+.graph table, td, th {
+    border: 1px solid black;
+    padding: 4px;
+    font-weight: normal;
+    text-align: left;
+}

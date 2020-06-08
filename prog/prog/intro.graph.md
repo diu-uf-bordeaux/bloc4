@@ -185,6 +185,18 @@ un graphe **simple** ne contient ni boucles, ni arêtes multiples.
 ## Définition
 
 - Un **graphe simple** est un couple $(S,A)$ formé de :
-  - un ensemble $S = \\{ x_1, x_2, \dots, x_n \\} $ de sommets,
+  - un ensemble $S = \\{ x_1, x_2, \dots, x_n \\}$ de sommets,
   - un ensemble $A = \\{ a_1, a_2, \dots, a_m \\}$ d'arêtes
   <br/>tel que $\forall i, a_i = (x,y) \in S^2 \wedge x \neq y$.
+
+- **Remarque :** pour un graphe orienté, l'arête $(x,y)$ _part_ du sommet $x$ et _arrive_ au sommet $y$.
+
+--
+
+## Exemple
+
+![terminologie](prog/images/graphes/terminologie4.svg)<!-- .element: style="max-width: 50%;" -->
+
+- Graphe $(S,A)$ avec :
+  - $S = \\{ a, b, c, d, e, f, g \\}$
+  - $A = \\{ (e,b), (b,a), (b,c), (c,a), (c,f), (c,g), (a,f), (f,g) \\}$

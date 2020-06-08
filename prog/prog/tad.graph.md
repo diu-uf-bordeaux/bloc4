@@ -44,7 +44,7 @@ Les arêtes sont représentées par un **tableau 2D** (matrice) :
   - **lignes** (d'indice i) : tous les sommets
   - **colonnes** (d'indice j) : tous les sommets
   - **case(i,j)** :
-    - 1 (ou sa valuation) si il existe un arc/une arête <br/>entre le sommet i et le sommet j,
+    - 1 (ou sa valuation) si il existe un arc (une arête) <br/> partant du sommet i et arrivant au sommet j,
     - 0 sinon.
 
 <br/>
@@ -124,8 +124,8 @@ Les arêtes sont représentées par un **tableau 2D** (matrice) :
   return graphe[0]
 
  def voisins(graphe, sommet):
-  i = self.sommets.index(sommet)
-  return [graphe[0][j] for j in range (len(graphe[0])) if graphe[1][i][j]==1]
+  i = sommets(graphe).index(sommet)
+  return [sommets(graphe)[j] for j in range (len(sommets(graphe))) if graphe[1][i][j]==1]
 ```
 <!-- .element: style="width:95%" -->
 
@@ -137,11 +137,11 @@ Exemple d'utilisation :
 
 ```python
  G = creer_graphe(['a', 'b', 'c', 'd'])
- G.ajouter_arete('a', 'b')
- G.ajouter_arete('a', 'c')
- G.ajouter_arete('c', 'd')
- print(G.voisins('c'))
- print(graphe[1])
+ ajouter_arete(G, 'a', 'b')
+ ajouter_arete(G, 'a', 'c')
+ ajouter_arete(G, 'c', 'd')
+ print(voisins(G, 'c'))
+ print(G)
 ```
 
 --
@@ -272,20 +272,18 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 <!-- .slide: data-transition="fade" -->
 
 ```python
-  def creer_graphe(sommets):
-    return (sommets, dict())
+ def creer_graphe(sommets):
+   return {key: [] for key in sommets}
 
-  def ajouter_arete (graphe, x, y):
-    if x in graphe[1]:
-        graphe[1][x].add(y)
-    else:
-        graphe[1][x]={y}
+ def ajouter_arete (graphe, x, y):
+   if x in graphe and y in graphe:
+       graphe[x].add(y)
 
-  def sommets (graphe):
-    return graphe[0]
+ def sommets (graphe):
+   return list(graphe.keys())
 
-  def voisins (graphe, sommet):
-    return list(graphe[1][sommet])
+ def voisins (graphe, sommet):
+   return list(graphe[sommet])
 ```
 
 --
@@ -296,12 +294,12 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 Exemple d'utilisation :
 
 ```python
-  G = creer_graphe(['a', 'b', 'c', 'd'])
-  G.ajouter_arete('a', 'b')
-  G.ajouter_arete('a', 'c')
-  G.ajouter_arete('c', 'd')
-  print(G.voisins('c'))
-  print(graphe[1])
+ G = creer_graphe(['a', 'b', 'c', 'd'])
+ ajouter_arete(G, 'a', 'b')
+ ajouter_arete(G, 'a', 'c')
+ ajouter_arete(G, 'c', 'd')
+ print(G)
+ print(voisins(G, 'c'))
 ```
 
 --
