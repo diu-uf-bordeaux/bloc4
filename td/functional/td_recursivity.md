@@ -1,3 +1,7 @@
+---
+layout: page_ext
+title: "Récursivité"
+---
 
 [Retour aux exercices de programmation fonctionnelle](./td_functional.md)
 
@@ -41,10 +45,10 @@ on fournit une définition ici&nbsp;:
 
 $$
 \begin{cases}
-\mathrm{pgcd}(a, 0) & = a \\
-\mathrm{pgcd}(a, a) & = a \\
+\mathrm{pgcd}(0, b) & = b \\
+\mathrm{pgcd}(b, b) & = b \\
 \mathrm{pgcd}(a, b) & = \mathrm{pgcd}(b, a) \quad \textrm{si}~ a > b \\
-\mathrm{pgcd}(a, b) & = \mathrm{pgcd}(b, a \mod b) \quad \textrm{sinon}
+\mathrm{pgcd}(a, b) & = \mathrm{pgcd}(b \mod a, a) \quad \textrm{sinon}
 \end{cases}
 $$
 
