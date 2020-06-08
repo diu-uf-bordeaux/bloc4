@@ -84,6 +84,53 @@ Permettent de représenter différentes situations de la vie courante
 
 --
 
+## Exemple : examens de spécialité
+<!-- .slide: data-transition="fade" -->
+
+- Les élèves d'une classe de terminal passent leurs examens de spécialité, à choisir parmi : Maths (M), Humanité (H), NSI (N), Physique-Chimie (P), SVT (S) et Langues (L).
+- Certains passent M, H, N, d'autres N, P, S et d'autres S, L, P.
+- Tous les examens sont d'une durée de 2h.
+
+- **Question :** Quelle est la durée la plus courte pour organiser ces examens ?
+
+--
+
+## Exemple : examens de spécialité
+<!-- .slide: data-transition="fade" -->
+
+1. On crée un graphe avec comme **sommets** M,H,N,P,S,L.
+   - Si un élèves doit passer deux des examens, les épreuves ne peuvent avoir lieu en même temps<br/>&#x279E; les sommets correspondants sont **incompatibles**.
+   - On forme le graphe en reliant 2 sommets s'ils sont incompatibles.
+
+![examens](prog/images/graphes/examens1.svg)<!-- .element: class="fragment" style="max-width: 50%; margin:0" -->
+
+--
+
+## Exemple : examens de spécialité
+<!-- .slide: data-transition="fade" -->
+
+2. On cherche à attribuer à chaque examen un créneau horaire.
+   - On **colorie** des sommets adjacents avec des couleurs différentes.
+   - On souhaite utiliser un nombre **minimum** de couleurs.
+
+![examens](prog/images/graphes/examens1.svg)<!-- .element: style="max-width: 50%; margin:0" -->
+
+--
+
+## Exemple : examens de spécialité
+<!-- .slide: data-transition="fade" -->
+
+2. On cherche à attribuer à chaque examen un créneau horaire.
+   - On **colorie** des sommets adjacents avec des couleurs différentes.
+   - On souhaite utiliser un nombre **minimum** de couleurs.
+
+![examens](prog/images/graphes/examens2.svg)<!-- .element: style="max-width: 50%; margin:0" -->
+
+**Solution :** 3 couleurs &#x279E; on peut organiser les examens en 3 x 2h.
+<!-- .element: class="fragment" -->
+
+--
+
 ## Terminologie
 <!-- .slide: data-transition="fade" -->
 

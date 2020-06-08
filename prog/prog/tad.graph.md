@@ -93,12 +93,12 @@ Les arêtes sont représentées par un **tableau 2D** (matrice) :
 |   |   |   |   |   |   |   |   |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 |   | **a** | **b** | **c** | **d** | **e** | **f** | **g** |
-| **a** | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
-| **b** | 1 | 0 | 1 | 0 | 0 | 0 | 0 |
-| **c** | 1 | 0 | 0 | 0 | 0 | 1 | 1 |
+| **a** | 0 | 0 | 0 | 0 | 0 | `1` | 0 |
+| **b** | `1` | 0 | `1` | 0 | 0 | 0 | 0 |
+| **c** | `1` | 0 | 0 | 0 | 0 | `1` | `1` |
 | **d** | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| **e** | 0 | 1 | 0 | 0 | 1 | 0 | 0 |
-| **f** | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+| **e** | 0 | `1` | 0 | 0 | `1` | 0 | 0 |
+| **f** | 0 | 0 | 0 | 0 | 0 | 0 | `1` |
 | **g** | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 </div>
@@ -170,7 +170,9 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 
 <br/>
 
-**Remarque** : dans le cas non-orienté, listes des **voisins** du sommet
+**Remarques** : 
+1. dans le cas non-orienté, listes des **voisins** du sommet
+2. pour les arcs/arêtes valués, dictionnaire de dictionnaires
 
 --
 
@@ -220,6 +222,52 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 
 --
 
+## Listes de prédécesseurs
+<!-- .slide: data-transition="fade" class="graph" -->
+
+<div class='half'>
+
+![graphe orienté simple](prog/images/graphes/oriented_simple_graphe.svg)<!-- .element: class="stretch" style="max-width: 90%;"-->
+
+</div>
+
+<div class='half'>
+
+- **a** :
+- **b** :
+- **c** :
+- **d** :
+- **e** :
+- **f** :
+- **g** :
+
+</div>
+
+--
+
+## Listes de prédécesseurs
+<!-- .slide: data-transition="fade" class="graph" -->
+
+<div class='half'>
+
+![graphe orienté simple](prog/images/graphes/oriented_simple_graphe.svg)<!-- .element: class="stretch" style="max-width: 90%;"-->
+
+</div>
+
+<div class='half'>
+
+- **a** : [b,c]
+- **b** : [e]
+- **c** : [b]
+- **d** : []
+- **e** : [e]
+- **f** : [a,c]
+- **g** : [c,f]
+
+</div>
+
+--
+
 ## Listes de successeurs
 <!-- .slide: data-transition="fade" -->
 
@@ -259,12 +307,47 @@ Exemple d'utilisation :
 --
 
 ## Comparaison
+<!-- .slide: data-transition="fade" -->
+
+|                  | matrice d'adjacence | liste de successeurs |
+|------------------|:-------------------:|:--------------------:|
+| **mémoire**      |                     |                      |
+| peu d'arêtes     |                     |                      |
+| bcp d'arêtes     |                     |                      |
+| **temps de calcul**                                           |
+| $x$ et $y$ voisins ? |                 |                      |
+| $x$ isolé ?      |                     |                      |
+| nb arêtes ?      |                     |                      |
+
+avec $n$ le nombre de sommets et $m$ le nombre d'arêtes.
+
+--
+
+## Comparaison
+<!-- .slide: data-transition="fade" -->
+
+|                  | matrice d'adjacence | liste de successeurs |
+|------------------|:-------------------:|:--------------------:|
+| **mémoire**      |        $n^2$        |         $n+m$        |
+| peu d'arêtes     |<span style="color:red">✗</span>|<span style="color:green">✔︎</span>|
+| bcp d'arêtes     |<span style="color:green">✔︎</span>|<span style="color:red">✗</span>|
+| **temps de calcul**                                           |
+| $x$ et $y$ voisins ? |                 |                      |
+| $x$ isolé ?      |                     |                      |
+| nb arêtes ?      |                     |                      |
+
+avec $n$ le nombre de sommets et $m$ le nombre d'arêtes.
+
+--
+
+## Comparaison
+<!-- .slide: data-transition="fade" -->
 
 |                  | matrice d'adjacence | liste de successeurs |
 |------------------|:-------------------:|:--------------------:|
 | **mémoire**      |    $n^2$    |         $n+m$          |
 | peu d'arêtes     |          <span style="color:red">✗</span>          |          <span style="color:green">✔︎</span>           |
-| bcp d'arêtes     |          <span style="color:green">✔</span>︎          |          <span style="color:red">✗</span>           |
+| bcp d'arêtes     |          <span style="color:green">✔︎</span>          |          <span style="color:red">✗</span>           |
 | **temps de calcul**                                           |
 | $x$ et $y$ voisins ? |          $1$          |      degré de $x$      |
 | $x$ isolé ?        |          $n$          |          $1$           |
