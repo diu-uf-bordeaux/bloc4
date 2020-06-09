@@ -3,7 +3,9 @@ layout: page_ext
 title: "Récursivité"
 ---
 
-[Retour aux exercices de programmation fonctionnelle](./td_functional.md)
+- [Retour aux exercices de programmation fonctionnelle](./td_functional.md)
+
+- [Accès aux solutions](./td_recursivity.solutions.md)
 
 Cette page contient un ensemble de fonctions qu'il est possible de
 programmer de manière fonctionnelle pure, en utilisant des algorithmes
@@ -11,7 +13,7 @@ récursifs. A chaque fois, on insiste sur la description formelle de la
 fonction à représenter, on discute les problèmes de terminaison, et de
 complexité.
 
-### 1ère partie : Exponentiation
+### 1ère partie : Calcul de puissance
 
 Les deux définitions suivantes permettent de calculer la fonction
 $\mathrm{pow}(a,n) = a^n$ &nbsp;:
@@ -52,10 +54,10 @@ $$
 \end{cases}
 $$
 
-Écrire cet algorithme en Python, d'abord avec une boucle `for`, et
-ensuite de manière récursive. Dessiner sur un quart de plan le chemin
-réalisé par le calcul de $\mathrm{pgcd}(7,5)$. Donner une borne
-supérieure de sa complexité.
+Dessiner sur un quart de plan le chemin réalisé par le calcul de
+$\mathrm{pgcd}(7,5)$. Donner une borne supérieure de la complexité du
+calcul de $\mathrm{pgcd}(a,b)$. Écrire cet algorithme en Python,
+d'abord de manière récursive, et ensuite avec une boucle `for`.
 
 ### 3ème partie : suite de Syracuse
 
@@ -82,6 +84,9 @@ $\mathrm{syra}(n)$, aussi appelé $\mathrm{vol}(n)$. Par exemple, pour
 $n=12$&nbsp;:
 
 $$ \mathrm{vol}(12) = [12, 6, 3, 10, 5, 16, 8, 4, 2, 1] $$
+
+<span class="label">Plus difficile</span>Calculer l'entier ayant le
+vol le plus long compris entre $1$ et un entier $n$ donné.
 
 ### 4ème partie : récursivité et listes
 
