@@ -26,7 +26,7 @@ Améliorer la sécurité
 
 Coder pour être **réutilisé**
 
-=> Héritage / Interface
+$\Rightarrow$ Héritage / Interface
 
 --
 
@@ -36,7 +36,8 @@ Une classe **hérite** d'une autre classe
 
 Les objets sont au moins **conformes** / **substituables**
 
-=> Les objets instances de la sous-classe héritent des données et des méthodes définis dans la super-classe.
+$\Rightarrow$ Les objets instances de la sous-classe héritent des
+données et des méthodes définies dans la super-classe.
 
 --
 
@@ -68,7 +69,7 @@ Définition d'un contrat d'usage
 
 Limite la dépendance de l'utilisateur
 
-=> Contrat appelant / appelé
+$\Rightarrow$ Contrat appelant / appelé
 
 --
 

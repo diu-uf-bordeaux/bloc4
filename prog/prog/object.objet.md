@@ -1,5 +1,24 @@
 ## Le Paradigme Objet
 
+- Brique élémentaire : l'**objet**
+
+- Idée générale :
+
+	* un objet est une entité rassemblant des données (dont il est
+      responsable) et des traitements sur ces données;
+
+	* les objets échangent entre eux à travers des messages;
+
+	* la décomposition en objets structure les responsabilités.
+
+* Représentants historiques : **Simula** (1967), **Smalltalk** (1971)
+
+* Exemple emblématique : **Java** (1996, Java SE 14 date de 2020)
+
+--
+
+## Le Paradigme Objet
+
 Qu'est ce qu'un objet ?
 
 ~~Comment programmer en objet  ?~~
@@ -47,7 +66,7 @@ Qu'est ce qu'un objet ?
 
 ![Objet](prog/images/object/object.png)<!-- .element: class="stretch" style="max-width: 50%;" -->
 
-C'est possible, objet **autonome** et **anonmyme**
+C'est possible, objet **autonome** et **anonyme**
 
 --
 
@@ -101,11 +120,11 @@ Il peut utiliser (les traitements) d'autres objets
 
 ## Cohérence
 
-Un objet propose **peu** de traitements (liées entre eux)
+Un objet propose **peu** de traitements (liés entre eux)
 
 Les traitements **partagent** des données
 
-=> Couper un objet en deux ne devrait pas avoir de sens
+$\Rightarrow$ Couper un objet en deux ne devrait pas avoir de sens
 
 --
 
@@ -154,7 +173,7 @@ Un objet communique avec **peu** d'autres objets
 
 Chaque traitement fait intervenir **peu** d'autres objets
 
-=> Limiter les chaînes et interdir les boucles !
+$\Rightarrow$ Limiter les chaînes et interdir les boucles !
 
 --
 
@@ -183,7 +202,7 @@ Plusieurs objets qui communiquent
 
 Certains objets communiquent avec l'extérieur
 
-=> Une configuration initiale
+$\Rightarrow$ Une configuration initiale
 
 --
 
@@ -196,5 +215,3 @@ Quelles cohérence ?
 Quels couplage ?
 
 Quelle dynamicité ?
-
---

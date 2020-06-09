@@ -10,13 +10,13 @@ Comment programmer en objet  ?
 
 ## Peut-on programmer des objets ?
 
-Le programme créer l'objet
+Le programme crée l'objet
 
 Lui donne ses données
 
 Lui donne ses traitements
 
-=> Programmer plusieurs objets : programmer des classes !
+$\Rightarrow$ Programmer plusieurs objets : programmer des classes !
 
 --
 
@@ -28,7 +28,7 @@ Elle définit les données associées à ses objets: les **propriétés**
 
 Elle définit les traitements des objets: les **méthodes**
 
-=> Un objets est instance d'une classe !
+$\Rightarrow$ Un objet est instance d'une classe !
 
 --
 
@@ -40,7 +40,7 @@ données: liste de caractères
 
 méthodes: empiler, dépiler
 
-=> Une pile: p = Pile()
+$\Rightarrow$ Une pile: p = Pile()
 
 --
 
@@ -82,15 +82,12 @@ Une UE a deux examens
 
 Un étudiant est inscrit à plusieurs UE
 
-=> Calcul de la moyenne pour une UE
+$\Rightarrow$ Calcul de la moyenne pour une UE
 
 --
 
-## Coherence
+## Cohérence
 
 Les méthodes **utilisent** les données
 
 Une classe devrait être **insécable**
-
---
-
