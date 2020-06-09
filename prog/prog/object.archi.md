@@ -1,4 +1,4 @@
-## Le Paradigme Objet
+## Le Paradigme Objet (Optionnel)
 
 ~~Qu'est ce qu'un objet ?~~
 
@@ -34,10 +34,10 @@ $\Rightarrow$ Héritage / Interface
 
 Une classe **hérite** d'une autre classe
 
-Les objets sont au moins **conformes** / **substituables**
+Relation de **conformité** / **substituabilité** entre les objets
 
-$\Rightarrow$ Les objets instances de la sous-classe héritent des
-données et des méthodes définies dans la super-classe.
+$\Rightarrow$ Les objets instances de la sous-classe ont les
+données et les traitements définis dans la super-classe.
 
 --
 
@@ -51,11 +51,7 @@ Faire un template pour un autre développeur
 
 --
 
-## Méthode & Héritage : Surcharge et Polymorphisme
-
-**Signature** : nom, paramètres d'entrée et de sortie
-
-**Corps** : code du traitement réalisé
+## Méthode & Héritage
 
 **Surcharge** : la sous-classe définit une méthode avec une signature similaire (au moins le même nom)
 
@@ -69,7 +65,7 @@ Définition d'un contrat d'usage
 
 Limite la dépendance de l'utilisateur
 
-$\Rightarrow$ Contrat appelant / appelé
+$\Rightarrow$ Contrat appelant / appelé sur la signature
 
 --
 

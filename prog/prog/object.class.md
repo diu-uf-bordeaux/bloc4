@@ -32,6 +32,27 @@ $\Rightarrow$ Un objet est instance d'une classe !
 
 --
 
+## Propriété
+
+Un **nom** unique parmis les propriétés
+
+(Un **type** qui définit la structure des données)
+
+(Une valeur par défaut donnée lors de la création)
+
+--
+
+## Méthode
+
+Une **signature**: nom, paramètres entrée et sortie 
+
+Un **corps**: le code du traitement (**this** ou **self** référence l'objet lui même)  
+
+(Des exceptions qui peuvent être levée)
+
+--
+
+
 ## Exemple de Classe
 
 nom: Pile

@@ -1,15 +1,14 @@
 ## Le Paradigme Objet
 
-- Brique élémentaire : l'**objet**
+- Brique élémentaire : l'**objet** (la **classe**)
 
 - Idée générale :
 
-	* un objet est une entité rassemblant des données (dont il est
-      responsable) et des traitements sur ces données;
+	* un objet est une entité rassemblant des données et des traitements sur ces données;
 
 	* les objets échangent entre eux à travers des messages;
 
-	* la décomposition en objets structure les responsabilités.
+	* la décomposition en objets/classes structure le code.
 
 * Représentants historiques : **Simula** (1967), **Smalltalk** (1971)
 
