@@ -1,5 +1,8 @@
 ## Pureté (1/2)
 
+- Idée : le résultat de l'évaluation d'une fonction ne dépend que de
+  la valeur de ses paramètres, sans aucun facteur externe.
+
 - Revient à considérer les fonctions comme leurs homologues
   mathématiques : des **applications**.
 
@@ -16,9 +19,11 @@ def f():
     i = i + 1
     return i
 
-f() - f() # (1 - 2) ou (2 - 1) ?
+f() - f() # (1 - 2) or (2 - 1) ?
 ```
 </div>
+<!-- .element: style="margin-top:-10px; background-color: #3f3f3f" -->
+
 <div class="half">
 
 - En <span class="label">Python</span> : `-1`
@@ -28,9 +33,7 @@ f() - f() # (1 - 2) ou (2 - 1) ?
 - En <span class="label">OCaml</span> : `1` ou `-1`
 
 </div>
-
-- Idée : rendre les calculs indépendants de toute influence externe
-  (moment de l'appel, disponibilité des ressources &hellip;)
+<!-- .element: style="margin-top:-10px;" -->
 
 Note:
 - une application est telle qu'à un élément d'origine on associe un
@@ -45,18 +48,24 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 
 ## Pureté (2/2)
 
-- Exemples d'influences externes ou **effets de bord**&nbsp;:
-	* les générateurs aléatoires,
-	* les lectures/écritures de fichiers ou bases de données
-	* les mesure de capteurs électroniques &hellip;
+- Une fonction "impure" produisant ou dépendant de facteurs externes
+  est dite réaliser des **effets de bords**.
 
-- Parmi les facteurs entravant la pureté : la présence de
-  **variables** ou de **boucles** (plus généralement la notion d'état).
+
+- La présence de **variables** ou de **boucles**, et plus généralement
+  la notion d'**état** (<a href="#/intro.imperative">impératif</a>)
+  sont propices aux effets de bords.
 
   $\Rightarrow$ Idée : manipuler et transformer des objets **constants**
 
-- Mais il n'est pas toujours simple d'écrire (uniquement) des
-  fonctions pures, il faut parfois transiger.
+- Exemples d'effets de bord&nbsp;:
+	* lecture/écriture dans un fichier, une base de données
+<!-- .element: style="margin-top:-10px;" -->
+	* dépendance à un générateur aléatoire,
+	* dépendance à une mesure externe (heure, lieu &hellip;)
+
+- Il n'est pas toujours simple d'écrire des fonctions pures, il faut
+  parfois transiger.
 
 
 --
@@ -67,7 +76,7 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 
 <div class="half" style="width:46%; margin-top:10px">
 
-Avec effet de bord <!-- .element: class="title" -->
+Avec effet de bord (imp)<!-- .element: class="title" -->
 
 ```python
 cpt = 0       # global state
@@ -85,7 +94,7 @@ count_calls() # calls=2
 
 <div class="half" style="width:53%; margin-top:10px">
 
-Sans effet de bord <!-- .element: class="title" -->
+Sans effet de bord (fonc)<!-- .element: class="title" -->
 
 ```python
 def count_calls(cpt):
@@ -114,7 +123,7 @@ print("calls={}".format(cpt3)) # calls=2
 
 <div class="half" style="margin-top:10px">
 
-Avec effet de bord <!-- .element: class="title" -->
+Avec effet de bord (imp)<!-- .element: class="title" -->
 
 ```python
 global_board = Board() # global state
@@ -132,7 +141,7 @@ play(global_board, Color.BLACK)
 
 <div class="half" style="margin-top:10px">
 
-Sans effet de bord <!-- .element: class="title" -->
+Sans effet de bord (fonc)<!-- .element: class="title" -->
 
 ```python
 def play(board, color):
@@ -153,3 +162,31 @@ board3 = play(board2, Color.BLACK)
 	* conserver les états intermédiaires, <!-- .element: style="margin-top:-15px" -->
 	* jouer des coups et revenir en arrière,
 	* envisager la construction de stratégies &hellip;
+
+--
+
+## Coder sans effets de bords
+
+- Comment organiser un calcul (non trivial) sans variables ?
+
+```python
+play(                                    \
+	play(                                \
+		play(                            \
+			play(board,                  \
+				 Color.WHITE),           \
+			Color.BLACK),                \
+		Color.WHITE),                    \
+	Color.BLACK)
+```
+
+- Solution possible : écrire des fonctions récursives.
+
+```python
+def play_rec(board, n):
+    if (n == 0):
+        return board
+    else:
+        next_board = play(play(board, Color.WHITE), Color.BLACK)
+        return play_rec(next_board, n-1)
+```

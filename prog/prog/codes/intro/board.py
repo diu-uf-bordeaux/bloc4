@@ -80,3 +80,13 @@ board3 = play(board2, Color.BLACK)
 print(board1)
 print(board2)
 print(board3)
+
+def play_rec(board, n):
+    print(board)
+    if (n == 0):
+        return board
+    else:
+        next_board = play(play(board, Color.WHITE), Color.BLACK)
+        return play_rec(next_board, n-1)
+
+play_rec(board1, 10)

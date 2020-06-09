@@ -1,8 +1,5 @@
 ## Récursivité
 
-- Comment réaliser des calculs complexes sans effets de bords&nbsp;?
-  Solution classique&nbsp;: utiliser la récursivité.
-
 - Une fonction est **récursive** si son code fait appel à elle-même.
 
 <div class="half">
@@ -47,10 +44,47 @@ $$
 
 --
 
-## Récursivité : débordements de pile
-<!-- .element: style="display:none" -->
+## Récursivité : cas d'application
+
+- Quand écrire des fonctions récursives&nbsp;?
+
+	* pour des calculs mettant en jeu des structures de données
+      récursives (listes, arbres &hellip;)
+
+	* pour des algorithmes du type "diviser pour régner"
 
 - Toute boucle est convertible en appel récursif et vice versa.
+
+<div class="half" style="width:44%">
+
+```python
+def fun_with_loop(n):
+	res = 0
+	for i in range(n):
+		res += i
+	return res
+```
+
+</div>
+
+<div class="half" style="width:53%">
+
+```python
+def fun_with_rec(n):
+    def f_rec(res, i):
+        if (i < n):
+            return f_rec(res+i, i+1)
+        else:
+            return res
+    return f_rec(0, 0)
+```
+
+</div>
+
+
+--
+
+## Récursivité : débordements de pile
 
 - Problème : les appels récursifs parfois trop nombreux
 
@@ -85,11 +119,10 @@ Arbre des appels pour `fibo(5)`
 --
 
 ## Récursivité terminale
-<!-- .element: style="display:none" -->
 
 - En pratique, il s'agit de faire attention en construisant `fibo`&nbsp;:
 
-<div class="half" style="width:51%; margin-top:20px">
+<div class="half" style="width:51%">
 
 ```python
 def fibo(n):
@@ -106,7 +139,7 @@ def fibo(n):
 
 </div>
 
-<div class="half" style="width:47%; margin-top:20px">
+<div class="half" style="width:47%">
 
 Arbre des appels pour `fibo(5)`
 <!-- .element: class="title" style="font-size:24px; text-align:center" -->
