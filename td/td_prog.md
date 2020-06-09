@@ -10,4 +10,4 @@ permalink: /td/
 
 - [Graphes](./graphes/)
 
-- [Programmation Objet](./objet/)
+- [Programmation Objet](./poo/)
