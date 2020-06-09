@@ -46,6 +46,8 @@ Un moyen de construire des expressions plus complexes.
 
 ## Un if-then-else ?
 
+<div class="half">
+
 ```python
 def abs(x):
 	if (x > 0):
@@ -54,6 +56,20 @@ def abs(x):
 		return -x
 ```
 <!-- .element: style="padding:20px; background-color: #3f3f3f" -->
+
+</div>
+
+<div class="half">
+
+```python
+def abs(x):
+	return (                     \
+		x if (x > 0) else -x     \
+	)
+```
+<!-- .element: style="padding:25px 20px 25px 20px; background-color: #3f3f3f" -->
+
+</div>
 
 ![If-Then-Else](prog/images/functional/ifthenelse.svg)
 
@@ -80,10 +96,11 @@ def fibo(n):
 
 La programmation fonctionnelle s'appuie sur deux principes&nbsp;:
 
-- **Pureté**&nbsp;: le résultat de l'évaluation d'une fonction ne
-  dépend que de la valeur de ses paramètres, et pas d'autre facteurs
-  externes (comme par exemple le moment de l'appel).
+- <a href="#/functional.purity">**Pureté**</a>&nbsp;: le résultat de
+  l'évaluation d'une fonction ne dépend que de la valeur de ses
+  paramètres, pas de facteurs externes;
 
-- **Fonctions de 1ère classe**&nbsp;: les fonctions sont les briques
-  de base pour composer les expressions; elles peuvent apparaître en
-  tant que paramètres, retours ou même données d'un programme.
+- <a href="#/functional.firstclass">**Fonctions de 1ère
+  classe**</a>&nbsp;: les fonctions sont les briques de base pour
+  composer les expressions; elles peuvent apparaître comme
+  paramètres, retours ou données d'un programme.

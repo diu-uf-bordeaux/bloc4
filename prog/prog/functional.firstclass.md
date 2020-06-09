@@ -1,8 +1,9 @@
 ## Fonctions de 1ère classe
 
-- Considérer les fonctions comme des valeurs à part entière&nbsp;:
+- Les fonctions sont les briques de base pour composer les
+  expressions. Elles peuvent apparaître&nbsp;:
 
-	* apparaissant dans des structures de données,
+	* dans des structures de données,
 
 	* ou comme paramètres et retours d'autres fonctions.
 
@@ -16,6 +17,7 @@ lambda x: x+1         # <function <lambda> at 0x7>
 ```
 <!-- .element: style="padding:20px; background-color: #3f3f3f" -->
 
+  en tant qu'exemple de fonction anonyme.
 
 --
 
@@ -81,7 +83,7 @@ lamb(34,23)  # 11
 <div class="half" style="width:51%">
 
 ```python
-def sort(l, cmp): # generic Bubble Sort
+def sort(l, cmp): # Generic Bubble Sort
   n, nl = len(l), list(l)
   for i in range(n):
     for j in range(n - i - 1):
@@ -122,7 +124,7 @@ sort(range(10), lambda x,y: x<y)
 <div class="half" style="width:51%">
 
 ```python
-def derivate(f, h):
+def derivate(h, f):
     return lambda x: \
 		(f(x+h) - f(x)) / h
 ```
@@ -132,7 +134,7 @@ def derivate(f, h):
 <div class="half" style="width:47%">
 
 ```python
-c = derivate(np.sin, 0.01)
+c = derivate(0.01, np.sin)
 c(0)     # 0.9999833334166665
 c(np.pi) # -0.9999833334166452
 ```
@@ -146,7 +148,7 @@ c(np.pi) # -0.9999833334166452
 	* spécialisation par application partielle (`partial`)
 
 	 ```python
-	 functools.partial(derivate, np.sin)
+	 functools.partial(derivate, 0.01)   # derivation operator
 	 ```
 	   <!-- .element: style="margin-top:-20px" -->
 
@@ -170,10 +172,10 @@ c(np.pi) # -0.9999833334166452
 - Exemples d'application :
 
 	* la représentation des données par les fonctions <br/>
-	  (cf. `characteristic`)
+	  (cf. [characteristic](../td/functional/td_characteristic.html))
 
 	* la parallèlisation automatique des calculs <br/>
-	  (cf. `mapreduce`)
+	  (cf. [mapreduce](../td/functional/td_mapreduce.html))
 
 	* le contrôle de l'évaluation et la paresse<br/>
-	  (cf. `laziness`)
+	  (cf. [laziness](../td/functional/td_laziness.html))
