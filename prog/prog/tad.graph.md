@@ -33,7 +33,7 @@
 
 Plusieurs implémentations possibles :
 
-1. **Matrice d'adjacence** <br/>&#x279E; paradigme impératif ou fonctionnel
+1. **Matrice d'adjacence** <br/>&#x279E; paradigme impératif
 
 --
 
@@ -97,7 +97,7 @@ Les arêtes sont représentées par un **tableau 2D** (matrice) :
 | **b** | `1` | 0 | `1` | 0 | 0 | 0 | 0 |
 | **c** | `1` | 0 | 0 | 0 | 0 | `1` | `1` |
 | **d** | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| **e** | 0 | `1` | 0 | 0 | `1` | 0 | 0 |
+| **e** | 0 | `1` | 0 | 0 | 0 | 0 | 0 |
 | **f** | 0 | 0 | 0 | 0 | 0 | 0 | `1` |
 | **g** | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
@@ -150,9 +150,9 @@ Exemple d'utilisation :
 
 Plusieurs implémentations possibles :
 
-1. **Matrice d'adjacence** <br/>&#x279E; paradigme impératif ou fonctionnel
+1. **Matrice d'adjacence** <br/>&#x279E; paradigme impératif
 
-2. **Listes de successeurs (ou de prédécesseurs)** <br/>&#x279E; paradigme impératif ou fonctionnel
+2. **Listes de successeurs (ou de prédécesseurs)** <br/>&#x279E; paradigme fonctionnel
 
 <br/>
 

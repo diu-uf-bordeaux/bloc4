@@ -74,7 +74,11 @@ Permettent de représenter différentes situations de la vie courante
 
 - **Problèmes de la vie courante** <br/>&#x279E; questions à résoudre sur les graphes
 
-- **Algorithme sur les graphes** (cf. Bloc 5) <br/>&#x279E; réponse informatique à des problèmes concrets
+<!-- .element: class="fragment" -->
+
+- **Algorithme sur les graphes** (cf. Bloc 5) <br/>&#x279E; réponse informatique à des problèmes concrets
+
+<!-- .element: class="fragment" -->
 
 ![caffeine](prog/images/graphes/what-is-math.png)<!-- .element: class="stretch" style="max-width: 60%; margin:0" -->
 <br/>
@@ -98,9 +102,8 @@ Permettent de représenter différentes situations de la vie courante
 ## Exemple : examens de spécialité
 <!-- .slide: data-transition="fade" -->
 
-1. On crée un graphe avec comme **sommets** M,H,N,P,S,L.
-   - Si un élèves doit passer deux des examens, les épreuves ne peuvent avoir lieu en même temps<br/>&#x279E; les sommets correspondants sont **incompatibles**.
-   - On forme le graphe en reliant 2 sommets s'ils sont incompatibles.
+- **Ensemble** : examens {M, H, N, P, S, L}
+- **Relation** : incompatibilité entre deux examens <br/>&#x279E; si un élèves doit passer deux des examens, les épreuves ne peuvent avoir lieu en même temps
 
 ![examens](prog/images/graphes/examens1.svg)<!-- .element: class="fragment" style="max-width: 50%; margin:0" -->
 
@@ -109,22 +112,9 @@ Permettent de représenter différentes situations de la vie courante
 ## Exemple : examens de spécialité
 <!-- .slide: data-transition="fade" -->
 
-2. On cherche à attribuer à chaque examen un créneau horaire.
-   - On **colorie** des sommets adjacents avec des couleurs différentes.
-   - On souhaite utiliser un nombre **minimum** de couleurs.
+- On cherche à attribuer à chaque examen un créneau horaire <br/>&#x279E; on veut **colorier** les sommets adjacents avec des couleurs différentes en utilisant un **minimum** de couleurs.
 
-![examens](prog/images/graphes/examens1.svg)<!-- .element: style="max-width: 50%; margin:0" -->
-
---
-
-## Exemple : examens de spécialité
-<!-- .slide: data-transition="fade" -->
-
-2. On cherche à attribuer à chaque examen un créneau horaire.
-   - On **colorie** des sommets adjacents avec des couleurs différentes.
-   - On souhaite utiliser un nombre **minimum** de couleurs.
-
-![examens](prog/images/graphes/examens2.svg)<!-- .element: style="max-width: 50%; margin:0" -->
+![examens](prog/images/graphes/examens2.svg)<!-- .element: class="fragment" style="max-width: 50%; margin:0" -->
 
 **Solution :** 3 couleurs &#x279E; on peut organiser les examens en 3 x 2h.
 <!-- .element: class="fragment" -->
@@ -145,20 +135,20 @@ Permettent de représenter différentes situations de la vie courante
 ## Terminologie
 <!-- .slide: data-transition="fade" -->
 
-![terminologie](prog/images/graphes/terminologie1.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
+![terminologie](prog/images/graphes/terminologie3.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
 
-- le **degré** d'un sommet est le nombre d’arêtes qui lui sont incidentes.
-- un sommet de degré zéro est dit **isolé**
+- une **boucle** est une arête reliant un sommet à lui-même.
+- des **arêtes multiples** relient les mêmes sommets.
 
 --
 
 ## Terminologie
 <!-- .slide: data-transition="fade" -->
 
-![terminologie](prog/images/graphes/terminologie3.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
+![terminologie](prog/images/graphes/terminologie1.svg)<!-- .element: class="stretch" style="max-width: 50%;" -->
 
-- une **boucle** est une arête reliant un sommet à lui-même.
-- des **arêtes multiples** relient les mêmes sommets.
+- le **degré** d'un sommet est le nombre d’arêtes qui lui sont incidentes.
+- un sommet de degré zéro est dit **isolé**
 
 --
 
