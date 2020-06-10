@@ -3,9 +3,9 @@
 * Brique élémentaire : le **module**
 
 * Idée générale :
-  - le code est réparti dans des composants séparés
-  - ces modules sont reliés par des liens de dépendance.
-  - chaque module peut être remplacé aisément
+  - le code est réparti dans des composants séparés,
+  - ces modules sont reliés par des liens de dépendance,
+  - chaque module peut être remplacé aisément.
 
 * Qualités : les dépendances entre modules doivent être **faibles**, les
   dépendances à l'intérieur doivent être **fortes**
@@ -46,8 +46,7 @@ n'a jamais été présentée en tant que tel historiquement.
 
 ## Code modulaire : Python
 
-<div class="half">
-
+<div class="half" style="width:46%">
 
 sequences.py <!-- .element: class="title" -->
 ```
@@ -57,7 +56,7 @@ def fibo(n: int) -> int:
     fibPr = 0
     fib = 1
     for num in range(1, n+1):
-        fibPr, fib = fib, fib + fibPr
+        fibPr, fib = fib, fib+fibPr
     return fibPr
 
 def catalan(n: int) -> int:
@@ -67,7 +66,7 @@ def rowland(n: int) -> int:
 ```
 
 </div>
-<div class="half">
+<div class="half" style="width:52%">
 
 sequences_test.py <!-- .element: class="title" -->
 ```
@@ -91,7 +90,8 @@ def plot_all_sequences() -> None: ...
 
 </div>
 
-* Les indications de type sont optionnelles en <span class="label">Python</span>
+* Remarque : les indications de type sont optionnelles en <span
+  class="label">Python</span>
 
 <!-- .element: style="margin-top:5%" -->
 
@@ -100,7 +100,7 @@ def plot_all_sequences() -> None: ...
 
 ## Code modulaire : OCaml
 
-<div class="half">
+<div class="half" style="width:45%">
 
 sequences.ml <!-- .element: class="title" -->
 ```ocaml
@@ -121,7 +121,7 @@ end
 ```
 
 </div>
-<div class="half" style="padding-top:1%">
+<div class="half" style="width:53%; padding-top:1%">
 
 sequences_test.ml <!-- .element: class="title" -->
 ```ocaml
@@ -155,17 +155,17 @@ end
 
 * Chaque module met ainsi à disposition une **interface**&nbsp;:
 
-	- la liste des éléments à l'intérieur (fonctions, valeurs&hellip;)
+	- la liste des éléments à l'intérieur (fonctions, valeurs&hellip;),
 
 	- le cas échéant une forme de spécification plus précise (types,
-      documentation&hellip;)
+      documentation&hellip;).
 
-* Et il contient une **implémentation** de ces éléments&nbsp;:
+* Et contient une **implémentation** de ces éléments&nbsp;:
 
-	- le code de chacun des éléments dans le modules
+	- le code de chacun des éléments dans le modules,
 
-	- le cas échéant, des éléments internes servant à implémenter ces
-      éléments
+	- le cas échéant, des éléments internes servant à implémenter les
+      autres.
 
 --
 

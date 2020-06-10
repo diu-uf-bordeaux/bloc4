@@ -5,12 +5,14 @@ Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
 1. des qualités de **fonctionnalité**&nbsp;: le code produit-il les
    comportements attendus ? avec quel degré de certitude ?
 
-2. des qualités d'**évolutivité**&nbsp;: le code peut-il faire évoluer
-   l'ensemble des comportements attendus dans le temps ?
+2. des qualités d'**évolutivité**&nbsp;: peut-on faire évoluer le code
+   dans le temps et ainsi l'ensemble des comportements attendus ?
 
 --
 
-## Correction
+## Qualités de fonctionnalité
+
+### Correction
 
 - Qualité du code consistant à vérifier une spécification :
 
@@ -27,7 +29,9 @@ Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
 
 --
 
-## Modularité
+## Qualités d'évolutivité
+
+### Modularité
 
 - Qualité de découpage du code en composants distincts ayant des
   dépendances réduites entre eux

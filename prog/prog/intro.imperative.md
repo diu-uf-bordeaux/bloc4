@@ -3,13 +3,35 @@
 * Brique élémentaire : l'**instruction**
 
 * Idée générale :
-  - la machine possède un **état** (mémoire, registres, &hellip;)
-  - chaque instruction modifie cet état
-  - les instructions se composent en **séquence**
+  - la machine possède un **état** (mémoire, registres, &hellip;),
+  - chaque instruction modifie cet état,
+  - les instructions se composent en **séquence**.
 
 * Représentants historiques : Fortran (1954), Algol (1958)
 
 * Exemple emblématique : **C** (1972, dernière norme : 2018)
+
+--
+
+## Cas d'étude : la suite de Fibonacci
+
+- Un objet mathématique simple à définir&nbsp;:
+
+$$
+\begin{cases}
+f_0 = 1 \\\\
+f_1 = 1 \\\\
+f_{n+2} = f_{n+1} + f_n
+\end{cases}
+$$
+
+- Un programme simple à spécifier&nbsp;:
+
+```python
+def fibo(n):
+	"""Assuming that n is a non-negative integer (i.e n >= 0)
+	   Returns the n-th element of the Fibonacci sequence"""
+```
 
 --
 
@@ -88,10 +110,13 @@ Calcul de la suite de Fibonacci en Python <!-- .element: class="title" -->
 
 ```python
 def fibo(n):
-    fibPr, fib = 0, 1
-    for num in range(1, n+1):
+    if n <= 1:
+        return n
+    fibPr = 1
+    fib = 1
+    for num in range(2, n):
         fibPr, fib = fib, fib + fibPr
-    return fibPr
+    return fib
 ```
 
 </div>
@@ -102,9 +127,9 @@ def fibo(n):
 - La programmation structurée encourage l'utilisation de **structures
   de contrôle** pour organiser le code :
 
-  * branchements (<span class="label">Python</span> `if`)
-  * boucles (<span class="label">Python</span> `for`, `while`)
-  * blocs de code
+  * branchements (<span class="label">Python</span> `if`),
+  * boucles (<span class="label">Python</span> `for`, `while`),
+  * blocs de code (`begin`, `end`).
 
 - &hellip; et leur arrangement à discrétion dans des fonctions.
 
