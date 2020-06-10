@@ -34,7 +34,7 @@ $\Rightarrow$ Un objet est instance d'une classe !
 
 ## Propriété
 
-Un **nom** unique parmis les propriétés
+Un **nom** unique parmi les propriétés
 
 (Un **type** qui définit la structure des données)
 
@@ -44,11 +44,11 @@ Un **nom** unique parmis les propriétés
 
 ## Méthode
 
-Une **signature**: nom, paramètres entrée et sortie 
+Une **signature**: nom, paramètres entrée et sortie
 
-Un **corps**: le code du traitement (**this** ou **self** référence l'objet lui même)  
+Un **corps**: le code du traitement (**this** ou **self** référence l'objet lui même)
 
-(Des exceptions qui peuvent être levée)
+(Des exceptions qui peuvent être levées)
 
 --
 
@@ -61,7 +61,7 @@ données: liste de caractères
 
 méthodes: empiler, dépiler
 
-$\Rightarrow$ Une pile: p = Pile()
+$\Rightarrow$ Une pile: `p = Pile()`
 
 --
 
@@ -81,9 +81,9 @@ La classe précise les règles d'accès aux champs
 
 Affectation à la création
 
-Lecture (get_field)
+Lecture (`get_field`)
 
-Écriture (set_field)
+Écriture (`set_field`)
 
 --
 

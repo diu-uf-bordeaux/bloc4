@@ -30,6 +30,16 @@
 		  # produit le texte sur une page
 	```
 
+- <!-- .element: style="list-style-type:'⇒ '" -->
+Abstraction &nbsp;: les fonctions `open`, `close` &hellip;
+permettent de manier n'importe quel livre, sans connaître ses
+particularités.
+
+- <!-- .element: style="list-style-type:'⇒ '" -->
+Modularité&nbsp;: l'implémentation du livre et son utilisation sont
+clairement séparées.
+
+
 <!-- NB : la notation "&rarr;" ainsi que le verbe "produit" permettent de -->
 <!-- dénoter à la fois un paradigme impératif et fonctionnel, selon que -->
 <!-- l'on estime que l'on a un état avant / après ou un passage -->
@@ -65,7 +75,7 @@
 
 --
 
-## A suivre &hellip;
+## À suivre &hellip;
 
 Les parties suivantes de ce cours explorent plus précisément&nbsp;:
 
@@ -75,10 +85,10 @@ Les parties suivantes de ce cours explorent plus précisément&nbsp;:
 
 	* et le paradigme <a href="#/functional">fonctionnel</a>.
 
-- Plusieurs types abstraits de données&nbsp;:
+- Trois types abstraits de données&nbsp;:
 
 	* les <a href="#/sequence">séquences</a> (listes, piles, files),
 
 	* les <a href="#/tree">arbres</a>,
 
-	* les <a href="#/graph">graphes</a>.
+	* et les <a href="#/graph">graphes</a>.

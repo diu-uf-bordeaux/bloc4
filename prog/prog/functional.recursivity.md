@@ -23,7 +23,7 @@ Version récursive <!-- .element: class="title" -->
 ```python
 def fibo(n):
 	if (n <= 1):
-		return n
+		return 1
 	else:
 		return fibo(n-1) + fibo(n-2)
 ```
@@ -34,7 +34,7 @@ def fibo(n):
 
 $$
 \begin{cases}
-f_0 = 0 \\\\
+f_0 = 1 \\\\
 f_1 = 1 \\\\
 f_n = f_{n-1} + f_{n-2} \quad \textrm{si}~n \geq 2
 \end{cases}

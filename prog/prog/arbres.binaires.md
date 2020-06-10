@@ -55,7 +55,7 @@ Arbre **binaire** équivalent
     -  *e* son étiquette,
     -  *g* son sous-arbre binaire **gauche**,
     -  *d* son sous-arbre binaire **droit**.
-- <!-- .element: class="fragment" -->Définition <strong>récursive</strong> car un arbre binaire est défini par des arbres binaires.
+- <!-- .element: class="fragment" -->Définition <strong>récursive</strong>&nbsp;: un arbre binaire est construit à partir d'un élément et des sous-arbres binaires.
 - <!-- .element: class="fragment" -->La première partie de la définition assure l'arrêt et donc la cohérence de la définition.
 
 --
@@ -132,7 +132,7 @@ Arbre **binaire** équivalent
 
 --
 
-## Arbre binaire de hauteur ```h``` 
+## Arbre binaire de hauteur ```h```
 <!-- .slide: data-transition="fade" -->
 
 Combien de **feuilles** et de **nœuds** comporte-il :
@@ -142,7 +142,7 @@ Combien de **feuilles** et de **nœuds** comporte-il :
 1. Au minimum ?
   - <!-- .element: class="fragment" data-fragment-index="1" -->1 feuille et h+1 nœuds d'arité 1.
   - <!-- .element: class="fragment" data-fragment-index="1" -->On parle alors d'arbre <strong>filiforme</strong>.
-   
+
 </div>
 
 <div class='half fragment' data-fragment-index="2">
@@ -153,7 +153,7 @@ Combien de **feuilles** et de **nœuds** comporte-il :
 
 --
 
-## Arbre binaire de hauteur ```h```  
+## Arbre binaire de hauteur ```h```
 <!-- .slide: data-transition="fade" -->
 
 Combien de **feuilles** et de **nœuds** comporte-il :
