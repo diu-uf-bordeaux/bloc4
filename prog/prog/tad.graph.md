@@ -118,16 +118,21 @@ Les arêtes sont représentées par un **tableau 2D** (matrice) :
   i = graphe[0].index(s1)
   j = graphe[0].index(s2)
   graphe[1][i][j] = 1
+  graphe[1][j][i] = 1 # si graphe non-orienté
   return graphe
 
  def sommets(graphe):
   return graphe[0]
 
- def voisins(graphe, sommet):
-  i = sommets(graphe).index(sommet)
-  return [sommets(graphe)[j] for j in range (len(sommets(graphe))) if graphe[1][i][j]==1]
+ def voisins(graphe, s):
+  i = sommets(graphe).index(s)
+  voisins = []
+  for j in range(len(graphe[1][i])):
+    if graphe[1][i][j] == 1:
+      voisins += [sommets(graphe)[j]]
+  return voisins 
 ```
-<!-- .element: style="width:95%" -->
+<!-- .element: class="stretch" -->
 
 --
 ## Matrice d'adjacence
@@ -139,9 +144,14 @@ Exemple d'utilisation :
  G = creer_graphe(['a', 'b', 'c', 'd'])
  ajouter_arete(G, 'a', 'b')
  ajouter_arete(G, 'a', 'c')
- ajouter_arete(G, 'c', 'd')
- print(voisins(G, 'c'))
- print(G)
+ print(G) # (['a', 'b', 'c', 'd'], 
+          # [[0, 1, 1, 0], 
+          #  [1, 0, 0, 0], 
+          #  [1, 0, 0, 0], 
+          #  [0, 0, 0, 0]])
+ print(voisins(G, 'a')) # ['b', 'c']
+ print(voisins(G, 'c')) # ['a']
+ print(voisins(G, 'd')) # []
 ```
 
 --
@@ -153,12 +163,6 @@ Plusieurs implémentations possibles :
 1. **Matrice d'adjacence** <br/>&#x279E; paradigme impératif
 
 2. **Listes de successeurs (ou de prédécesseurs)** <br/>&#x279E; paradigme fonctionnel
-
-<br/>
-
-**Remarque** : sommets et/ou arêtes peuvent être représentés par des
-classes (paradigme objet), si nécessaire
-<!-- .element: class="fragment" -->
 
 --
 
@@ -214,7 +218,7 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 - **b** : [a,c]
 - **c** : [a,f,g]
 - **d** : []
-- **e** : [b,e]
+- **e** : [b]
 - **f** : [g]
 - **g** : []
 
@@ -260,7 +264,7 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
 - **b** : [e]
 - **c** : [b]
 - **d** : []
-- **e** : [e]
+- **e** : []
 - **f** : [a,c]
 - **g** : [c,f]
 
@@ -275,15 +279,15 @@ Les arêtes sont représentées par un **dictionnaire** de **listes** :
  def creer_graphe(sommets):
    return {key: [] for key in sommets}
 
- def ajouter_arete (graphe, x, y):
-   if x in graphe and y in graphe:
-       graphe[x].add(y)
+ def ajouter_arete (graphe, s1, s2):
+   graphe[s1].append(s2)
+   graphe[s2].append(s1) # si graphe non-orienté
 
  def sommets (graphe):
    return list(graphe.keys())
 
  def voisins (graphe, sommet):
-   return list(graphe[sommet])
+   return graphe[sommet]
 ```
 
 --
@@ -297,10 +301,25 @@ Exemple d'utilisation :
  G = creer_graphe(['a', 'b', 'c', 'd'])
  ajouter_arete(G, 'a', 'b')
  ajouter_arete(G, 'a', 'c')
- ajouter_arete(G, 'c', 'd')
- print(G)
- print(voisins(G, 'c'))
+ print(G) # {'a': ['b', 'c'], 'b': ['a'], 'c': ['a'], 'd': []}
+ print(voisins(G, 'a')) # ['b', 'c']
+ print(voisins(G, 'c')) # []
 ```
+
+--
+
+## Mise en oeuvre en <span class="label">Python</span>
+
+Plusieurs implémentations possibles :
+
+1. **Matrice d'adjacence** <br/>&#x279E; paradigme impératif
+
+2. **Listes de successeurs (ou de prédécesseurs)** <br/>&#x279E; paradigme fonctionnel
+
+<br/>
+
+**Remarque** : sommets et/ou arêtes peuvent être représentés par des
+classes (paradigme objet), si nécessaire.
 
 --
 
