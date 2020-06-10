@@ -55,7 +55,8 @@ Certaines implémentations d'annulation/rétablissement d'actions utilisent une 
     - *e* l'étiquette de la cellule (la valeur stockée)
     - *L* le reste de la liste
 
-- <!-- .element: class="fragment" -->Définition <strong>récursive</strong> car une liste est définie par d'autres listes.
+- <!-- .element: class="fragment" -->Définition <strong>récursive</strong>&nbsp;: une liste est construite à partir d'un élément et d'une sous-liste.
+
 - <!-- .element: class="fragment" -->La première partie de la définition assure l’arrêt et donc la cohérence de la définition.
 
 --

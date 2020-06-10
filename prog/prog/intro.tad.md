@@ -85,10 +85,10 @@ Les parties suivantes de ce cours explorent plus précisément&nbsp;:
 
 	* et le paradigme <a href="#/functional">fonctionnel</a>.
 
-- Plusieurs types abstraits de données&nbsp;:
+- Trois types abstraits de données&nbsp;:
 
 	* les <a href="#/sequence">séquences</a> (listes, piles, files),
 
 	* les <a href="#/tree">arbres</a>,
 
-	* les <a href="#/graph">graphes</a>.
+	* et les <a href="#/graph">graphes</a>.

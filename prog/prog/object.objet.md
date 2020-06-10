@@ -47,7 +47,7 @@ Qu'est ce qu'un objet ?
 
 ## Exemple : La Pile de caractères
 
-1. Identité : Pile_1
+1. Identité : `Pile_1`
 2. Données : Une liste de caractères (vide au début)
 3. Traitements
    1. Empiler un caractère
@@ -145,6 +145,7 @@ $\Rightarrow$ Couper un objet en deux ne devrait pas avoir de sens
 * Fournir les paramètres nécessaires au traitement
 
 ## Recevoir un message
+<!-- .element: style="margin-top: 5%;" -->
 
 * Obligation de réponse
 * (Envoyeur inconnu)

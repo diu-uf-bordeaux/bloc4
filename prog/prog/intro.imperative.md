@@ -21,7 +21,7 @@ $$
 \begin{cases}
 f_0 = 1 \\\\
 f_1 = 1 \\\\
-f_{n+2} = f_{n+1} + f_n
+f_{n} = f_{n-1} + f_{n-2} \quad \textrm{si}~n \geq 2
 \end{cases}
 $$
 

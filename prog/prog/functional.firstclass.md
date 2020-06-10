@@ -61,7 +61,8 @@ lamb(34,23)  # 11
 
 </div>
 
-- Caveat&nbsp;: le corps d'une lambda doit être une expression.
+- Caveat <span class="label">Python</span>&nbsp;: le corps d'une
+  lambda doit être une expression.
 
 - Les fonctions peuvent alors&nbsp;:
 
@@ -172,10 +173,10 @@ c(np.pi) # -0.9999833334166452
 - Exemples d'application :
 
 	* la représentation des données par les fonctions <br/>
-	  (cf. [characteristic](../td/functional/td_characteristic.html))
+	  (cf. [characteristic](../td/functional/td_characteristic.html)),
 
 	* la parallèlisation automatique des calculs <br/>
-	  (cf. [mapreduce](../td/functional/td_mapreduce.html))
+	  (cf. [mapreduce](../td/functional/td_mapreduce.html)),
 
 	* le contrôle de l'évaluation et la paresse<br/>
-	  (cf. [laziness](../td/functional/td_laziness.html))
+	  (cf. [laziness](../td/functional/td_laziness.html)).
