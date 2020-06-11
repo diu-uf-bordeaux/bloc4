@@ -19,8 +19,8 @@
 ## Liste de paradigmes (sur Wikipedia)
 <!-- .element: style="margin-bottom:-30px" -->
 
-![Liste de paradigmes (1/2)](prog/images/intro/paradigms_list.1.png) <!-- .element: style="height: calc(70vh); padding-right: 50px" -->
-![Liste de paradigmes (2/2)](prog/images/intro/paradigms_list.2.png) <!-- .element: style="height: calc(70vh);" -->
+![Liste de paradigmes (1/2)](prog/images/intro/paradigms_list.1.png) <!-- .element: style="height: calc(66vh); padding-right: 50px" -->
+![Liste de paradigmes (2/2)](prog/images/intro/paradigms_list.2.png) <!-- .element: style="height: calc(66vh);" -->
 
 https://en.wikipedia.org/wiki/Programming_paradigm
 <!-- .element: style="margin-top:-30px; font-size:medium" -->
