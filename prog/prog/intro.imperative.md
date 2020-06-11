@@ -25,13 +25,19 @@ f_{n} = f_{n-1} + f_{n-2} \quad \textrm{si}~n \geq 2
 \end{cases}
 $$
 
+$$ 1, 1, 2, 3, 5, 8, 13, 21, 34 \ldots $$
+
 - Un programme simple à spécifier&nbsp;:
 
 ```python
 def fibo(n):
 	"""Assuming that n is a non-negative integer (i.e n >= 0)
-	   Returns the n-th element of the Fibonacci sequence"""
+	   Returns the n-th element of the Fibonacci sequence """
 ```
+<!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px" -->
+
+- Plusieurs exemples tirés de [Rosetta Code](http://rosettacode.org).
+
 
 --
 
@@ -41,7 +47,7 @@ Calcul de la suite de Fibonacci en Assembleur 8080 <!-- .element: class="title" 
 
 ```x86asm
 fibnci: mov  C,  A  ; C will store the counter
-        dcr  C      ; decrement, because we know f(1) already
+        dcr  C      ; decrement because we know f(1) already
         mvi  A,  1
         mvi  B,  0
 loop:   mov  D,  A
@@ -51,6 +57,7 @@ loop:   mov  D,  A
         jnz  loop   ; jump if not zero
         ret         ; return from subroutine
 ```
+<!-- .element: style="font-size: 24px" -->
 
 https://rosettacode.org/wiki/Fibonacci_sequence#8080_Assembly <!-- .element: class="small" -->
 
@@ -58,7 +65,7 @@ https://rosettacode.org/wiki/Fibonacci_sequence#8080_Assembly <!-- .element: cla
 
 ## Code impératif : Fortran
 
-Calcul de la suite de Fibonacci en Fortran <!-- .element: class="title" -->
+Calcul de la suite de Fibonacci en Fortran IV (1962)<!-- .element: class="title" -->
 
 ```fortran
       FUNCTION IFIBO(N)
@@ -77,6 +84,7 @@ Calcul de la suite de Fibonacci en Fortran <!-- .element: class="title" -->
     9 IFIBO=IFN
       END
 ```
+<!-- .element: style="font-size: 20px" -->
 
 https://rosettacode.org/wiki/Fibonacci_sequence#FORTRAN_IV <!-- .element: class="small" -->
 
@@ -97,6 +105,7 @@ long long int fibo(int n) {
 	return fnext;
 }
 ```
+<!-- .element: style="font-size: 24px" -->
 
 https://rosettacode.org/wiki/Fibonacci_sequence#Iterative_13 <!-- .element: class="small" -->
 
@@ -118,11 +127,12 @@ def fibo(n):
         fibPr, fib = fib, fib + fibPr
     return fib
 ```
+<!-- .element: style="font-size: 24px" -->
 
 </div>
 
 --
-## Transition vers le modulaire
+## Flot de contrôle
 
 - La programmation structurée encourage l'utilisation de **structures
   de contrôle** pour organiser le code :
@@ -133,13 +143,13 @@ def fibo(n):
 
 - &hellip; et leur arrangement à discrétion dans des fonctions.
 
-- L'idée est de structurer le **flot de contrôle**, à savoir
+- L'idée est d'organiser le **flot de contrôle**, à savoir
   l'agencement des instructions entre elles.
 
   * problème des sauts (`goto`, jumps)
 
 --
-## Graphe de flot contrôle
+## Graphe de flot de contrôle
 
 <div class='half'>
 
@@ -164,10 +174,14 @@ def fibo(n):
 --
 ## Transition vers le modulaire
 
+- Pour structurer ces ensembles d'instructions, il est naturel
+  d'arranger le code en ensembles de fonctions.
 
-- L'arrangement du code en fonctions est une première forme
-  d'organisation **hiérarchique** du code.
+- Cet arrangement est une première forme d'organisation
+  **hiérarchique** du code.
 
 - La généralisation de cette idée est la notion d'**architecture
   logicielle** : un ensemble de modèles et techniques pour organiser
   des composants logiciels de manière efficace.
+
+- Exemple&nbsp;: la **programmation modulaire**.

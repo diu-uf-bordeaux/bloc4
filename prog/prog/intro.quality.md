@@ -23,9 +23,9 @@ Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
 	* le code utilise t'il une quantité de ressources (temps, mémoire)
       raisonnables ?
 
-- Concepts : fiabilité, sûreté, validation, efficacité &hellip;
+- Concepts : vérification, fiabilité, sûreté, validation &hellip;
 
-- Outils : spécifications, types, tests, modèles logiques &hellip;
+- Outils : spécifications, types, tests, modèles formels &hellip;
 
 --
 
@@ -55,12 +55,12 @@ Quels sont les objectifs que l'on vise lorsqu'on écrit du code ?
   nombreuses techniques&nbsp;:
 
 	* construire des composants fortement réutilisables
-   (bibliothèques, frameworks &hellip;)
+   (bibliothèques, frameworks &hellip;),
 
-	* construire des composants fortement indépendants
+	* construire des composants fortement indépendants,
 
 	* remplacer des composants par d'autres proposant la même
-      interface (résolution de bugs, améliorations &hellip;)
+      interface (résolution de bugs, améliorations &hellip;).
 
 - Concepts : généricité, réutilisabilité, séparation des
   responsabilités &hellip;

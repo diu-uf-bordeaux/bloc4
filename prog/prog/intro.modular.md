@@ -8,7 +8,7 @@
   - chaque module peut être remplacé aisément.
 
 * Qualités : les dépendances entre modules doivent être **faibles**, les
-  dépendances à l'intérieur doivent être **fortes**
+  dépendances à l'intérieur peuvent être **fortes**
 
 * Représentant historique : CLU (1974)
 
@@ -25,14 +25,17 @@ n'a jamais été présentée en tant que tel historiquement.
 
 * Ce code peut être **étendu** de diverses manières :
 
-  - en ajoutant le code d'autres suites connues
+  - en ajoutant le code d'autres suites connues&nbsp;:<br/>
+	`catalan`, `rowland` &hellip;
 
-  - en ajoutant des tests de validation pour chaque suite
+  - en ajoutant des tests de validation pour chaque suite&nbsp;:<br/>
+	`test_fibo`, `test_catalan` &hellip;
 
-  - en ajoutant un afficheur générique de suites &hellip;
+  - en ajoutant un afficheur générique de suites&nbsp;:<br/>
+	`plot_a_sequence`, `plot_all_sequences` &hellip;
 
-* Considérons une décomposition du code classifiant ces ajouts selon
-  leur nature.
+* Réfléchissons à une décomposition du code arrangeant ces ajouts
+  selon leur nature.
 
 --
 
@@ -85,15 +88,15 @@ import matplotlib
 def plot_a_sequence(f: Callable[[int],
                                 int],
                     n: int) -> None: ..
+
 def plot_all_sequences() -> None: ...
 ```
 
 </div>
 
-* Remarque : les indications de type sont optionnelles en <span
-  class="label">Python</span>
-
-<!-- .element: style="margin-top:5%" -->
+<span style="font-size:large">Remarque : les indications de type sont
+  optionnelles en <span class="label">Python</span> et disponibles
+  uniquement depuis la version 3.5 </span>
 
 
 --
@@ -109,6 +112,7 @@ module type SEQUENCE = sig
     val catalan : int -> int
 	val rowland : int -> int
 end
+
 module S : SEQUENCE = struct
 	let fibo(n) =
 	  let fibP = ref (0,1) in
@@ -145,9 +149,9 @@ end
 
 * Distinction est faite entre l'**interface** et l'**implémentation**.
 
-* Les modules sont liés entre eux à la compilation en <span class="label">OCaml</span>
+Note: Les modules sont liés entre eux à la compilation en <span
+class="label">OCaml</span>
 
-<!-- .element: style="margin-top:5%" -->
 
 --
 

@@ -11,8 +11,8 @@
   de leurs briques élémentaires, qui permettent à leur tour
   d'identifier des constructions plus complexes.
 
-* En fait, un paradigme façonne la forme des solutions apportées à un
-  problème donné.
+* En fait, un paradigme **façonne** la forme des solutions apportées à
+  un problème donné.
 
 --
 

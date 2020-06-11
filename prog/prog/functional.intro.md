@@ -35,7 +35,7 @@
 def f(x,y):
 	sin(2*pi*x) + cos(2*pi*y)
 ```
-<!-- .element: style="padding:20px; background-color: #3f3f3f" -->
+<!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px" -->
 
 ![Fonction](prog/images/functional/function.svg)
 
@@ -46,7 +46,7 @@ Un moyen de construire des expressions plus complexes.
 
 ## Un if-then-else ?
 
-<div class="half">
+<div class="half" style="width:47%">
 
 ```python
 def abs(x):
@@ -55,19 +55,19 @@ def abs(x):
 	else:
 		return -x
 ```
-<!-- .element: style="padding:20px; background-color: #3f3f3f" -->
+<!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px" -->
 
 </div>
 
-<div class="half">
+<div class="half" style="width:51%">
 
 ```python
 def abs(x):
-	return (                     \
-		x if (x > 0) else -x     \
+	return (                  \
+		x if (x > 0) else -x  \
 	)
 ```
-<!-- .element: style="padding:25px 20px 25px 20px; background-color: #3f3f3f" -->
+<!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px" -->
 
 </div>
 
@@ -85,7 +85,7 @@ def fibo(n):
         fibPr, fib = fib, fib + fibPr
     return fib
 ```
-<!-- .element: style="padding:20px; background-color: #3f3f3f" -->
+<!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px" -->
 
 ![Fibonacci](prog/images/functional/fibonacci.svg)
 
