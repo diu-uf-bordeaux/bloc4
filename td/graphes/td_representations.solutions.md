@@ -1,14 +1,12 @@
 ---
 layout: page_ext
-title: "Manipulation des représentations"
-permalink: /td/graphes/representations/
+title: "Manipulation des représentations - solutions"
+permalink: /td/graphes/representations/solutions/
 ---
 
-- [Retour aux exercices sur les graphes](../)
+- [Retour aux exercices sur les graphes](../../)
 
-- [Accès aux solutions](./solutions/)
-
-L'objectif des exercices de cette page est de manipuler les deux représentations des graphes vues en cours : les matrices d'adjacence et les listes de successeurs.
+- [Retour à l'exercice](../)
 
 ### 1ère partie : activités débranchées
 

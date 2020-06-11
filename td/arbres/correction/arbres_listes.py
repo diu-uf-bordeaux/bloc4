@@ -79,6 +79,13 @@ def evalue(expression, valeurs):
     if o=='/':
         return a/b
 
+def affichePolonaise(expression):
+  if est_feuille(expression):
+    print(etiquette(expression), end =' ')
+  else:
+    affichePolonaise(gauche(expression))
+    affichePolonaise(droit(expression))
+    print(etiquette(expression), end =' ')
 
 a = noeud('a', arbre_vide(), arbre_vide())
 c = noeud('c', arbre_vide(), arbre_vide())
@@ -90,4 +97,5 @@ A3 = noeud('r', a, b)
 expression = noeud('+', noeud('*', noeud(6,arbre_vide(),arbre_vide()), noeud('+', noeud('x',arbre_vide(),arbre_vide()), noeud('y',arbre_vide(),arbre_vide()))), noeud('-', noeud('y',arbre_vide(),arbre_vide()), noeud(14,arbre_vide(),arbre_vide())))
 
 # affiche(expression)
-print(evalue(expression, {'x':5,'y':2}))
+# print(evalue(expression, {'x':5,'y':2}))
+affichePolonaise(expression)

@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: page_ext
 title: "Expressions arithmétiques"
 permalink: /td/arbres/expression/
 ---
 
-[Retour aux exercices sur les arbres binaires](../)
+- [Retour aux exercices sur les arbres binaires](../)
+
+- [Accès aux solutions](./solutions/)
 
 Une expression arithmétique construite avec des opérateurs binaires (c'est-à-dire à deux opérandes telles l'addition, la soustraction, la multiplication, la division) peut être représentée par un arbre binaire dont les nœuds internes portent les opérateurs et les feuilles des symboles de variables ($x$, $y$, $z$, etc.) ou des constantes ($6$, $14$, etc.)
 

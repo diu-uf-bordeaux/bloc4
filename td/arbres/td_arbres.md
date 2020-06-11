@@ -4,7 +4,7 @@ title: "Exercices sur les arbres binaires"
 permalink: /td/arbres/
 ---
 
-[Retour à l'ensemble des exercices](../)
+- [Retour à l'ensemble des exercices](../)
 
 - [Opérations sur les arbres](./operations/)
 

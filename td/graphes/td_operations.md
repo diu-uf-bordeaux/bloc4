@@ -4,7 +4,9 @@ title: "Opérations sur les graphes"
 permalink: /td/graphes/operations/
 ---
 
-[Retour aux exercices sur les graphes](../)
+- [Retour aux exercices sur les graphes](../)
+
+- [Accès aux solutions](./solutions/)
 
 L'objectif de cet exercice est d'étendre le TAD `Graphe simple` avec de nouvelles opérations dont vous proposerez une implémentation pour les deux représentations vues en cours : les matrices d'adjacence et les listes de successeurs. Pour plus de simplicité, on considéra des graphes **non-orientés**.
 
