@@ -38,8 +38,8 @@ class Board():
     # One peculiarity of keyword args, that they are references
     # defined once and for all. You must not copy them for fear of
     # strange aliasing results.
-    def __init__(self, moves = []):
-        if (moves == []):
+    def __init__(self, moves = None):
+        if (moves is None):
             self.moves = []
         else:
             self.moves = moves

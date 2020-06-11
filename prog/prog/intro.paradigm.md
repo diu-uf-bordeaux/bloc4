@@ -17,6 +17,7 @@
 --
 
 ## Liste de paradigmes (sur Wikipedia)
+<!-- .element: style="margin-bottom:-30px" -->
 
 ![Liste de paradigmes (1/2)](prog/images/intro/paradigms_list.1.png) <!-- .element: style="height: calc(70vh); padding-right: 50px" -->
 ![Liste de paradigmes (2/2)](prog/images/intro/paradigms_list.2.png) <!-- .element: style="height: calc(70vh);" -->
