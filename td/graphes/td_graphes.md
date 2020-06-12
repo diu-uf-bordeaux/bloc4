@@ -9,3 +9,5 @@ permalink: /td/graphes/
 - [Manipulation des représentations](./representations/)
 
 - [Opérations sur les graphes](./operations/)
+
+- [Passage d'une représentation à l'autre](./conversions/)

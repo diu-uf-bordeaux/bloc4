@@ -8,9 +8,7 @@ permalink: /td/graphes/representations/
 
 - [Accès aux solutions](./solutions/)
 
-L'objectif des exercices de cette page est de manipuler les deux représentations des graphes vues en cours : les matrices d'adjacence et les listes de successeurs.
-
-### 1ère partie : activités débranchées
+L'objectif des exercices de cette page est de manipuler sur papier les deux représentations des graphes vues en cours : les matrices d'adjacence et les listes de successeurs.
 
 1. Pour chaque graphe ci-dessous, donnez :
    - sa matrices d'adjacence,
@@ -50,12 +48,3 @@ L'objectif des exercices de cette page est de manipuler les deux représentation
       0 & 1 & 1 & 0\\
       \end{pmatrix}$$ associée à l'ensemble de sommets $S=\\{a,b,c,d\\}$.
    {: .list_alpha}
-
-
-### 2ème partie : implémentation en Python
-
-Avec le type abstrait `Graphe simple` défini en cours, passer d'une représentation à l'autre consiste à énumérer les sommets et les voisins depuis une représentation tout en construisant l'autre représentation.
-
-Écrivez deux fonctions Python permettant respectivement de passer des listes de successeurs à une matrice d'adjacence et réciproquement.
-
-*Remarque* : vous pouvez utiliser la programmation modulaire pour encapsuler les deux représentations puis créer un module effectuant ses conversions.
