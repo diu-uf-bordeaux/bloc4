@@ -8,7 +8,7 @@ permalink: /td/arbres/operations/
 
 - [Accès aux solutions](./solutions/)
 
-L'objectif de cet exercice est d'étendre le TAD `Arbre binaire` avec de nouvelles opérations dont vous proposerez une implémentation pour la mise en oeuvre à base de listes de listes et avec la classe `Noeud`.
+L'objectif de cet exercice est d'étendre le TAD `Arbre binaire` avec de nouvelles opérations dont vous proposerez une implémentation pour la mise en oeuvre à base de listes de listes ([code](./arbre_listes.py)) et avec la classe `Noeud` ([code](./arbre_classe.py)).
 
 Pour commencer, on souhaite étendre le TAD avec le prédicat suivant :
 

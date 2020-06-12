@@ -8,7 +8,7 @@ permalink: /td/graphes/operations/
 
 - [Accès aux solutions](./solutions/)
 
-L'objectif de cet exercice est d'étendre le TAD `Graphe simple` avec de nouvelles opérations dont vous proposerez une implémentation pour les deux représentations vues en cours : les matrices d'adjacence et les listes de successeurs. Pour plus de simplicité, on considéra des graphes **non-orientés**.
+L'objectif de cet exercice est d'étendre le TAD `Graphe simple` avec de nouvelles opérations dont vous proposerez une implémentation pour les deux représentations vues en cours : les matrices d'adjacence ([code](./graphe_matrice.py)) et les listes de successeurs ([code](./graphe_listes.py)). Pour plus de simplicité, on considéra des graphes **non-orientés**.
 
 Tout d'abord, on souhaite pouvoir calculer le degré d'un sommet du graphe :
 
