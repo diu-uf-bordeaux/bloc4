@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: page_ext
 title: "Représentation visuelle"
 permalink: /td/arbres/representation/
 ---
 
-[Retour aux exercices sur les arbres binaires](../)
+- [Retour aux exercices sur les arbres binaires](../)
+
+- [Accès aux solutions](./solutions/)
 
 Dans cet exercice nous aimerions produire une représentation visuelle lors de l'affichage de l'arbre sur le terminal. 
 

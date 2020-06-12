@@ -30,8 +30,12 @@
   border-collapse: collapse;
 }
 .graph table, td, th {
-    border: 1px solid black;
-    padding: 4px;
-    font-weight: normal;
-    text-align: left;
+  border: 1px solid black;
+  padding: 4px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.highlight {
+  padding-left: 10px;
 }

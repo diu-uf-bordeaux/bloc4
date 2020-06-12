@@ -6,8 +6,10 @@ def creer_graphe(sommets):
 
 def ajouter_arete (graphe, x, y):
   if x in graphe and y in graphe:
-    graphe[x].append(y)
-    graphe[y].append(x) # non-orienté
+    if not y in graphe[x]:
+      graphe[x].append(y)
+    if not x in graphe[y]:
+      graphe[y].append(x) # non-orienté
 
 def sommets(graphe):
   return list(graphe.keys())
@@ -32,13 +34,13 @@ def degre_moyen(graphe):
 def sont_voisins(graphe, s1, s2):
   return s2 in voisins(graphe, s1)
 
-G = creer_graphe(['a', 'b', 'c', 'd'])
-ajouter_arete(G, 'a', 'b')
-ajouter_arete(G, 'a', 'c')
-ajouter_arete(G, 'c', 'd')
-print(G)
-print(voisins(G, 'c'))
-print(degre(G,'c'))
-print(est_isole(G,'d'))
-print(degre_moyen(G))
-print(sont_voisins(G,'a','b'))
+# G = creer_graphe(['a', 'b', 'c', 'd'])
+# ajouter_arete(G, 'a', 'b')
+# ajouter_arete(G, 'a', 'c')
+# ajouter_arete(G, 'c', 'd')
+# print(G)
+# print(voisins(G, 'c'))
+# print(degre(G,'c'))
+# print(est_isole(G,'d'))
+# print(degre_moyen(G))
+# print(sont_voisins(G,'a','b'))
