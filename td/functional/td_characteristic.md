@@ -5,6 +5,8 @@ title: "Fonctions caractéristiques"
 
 - [Retour aux exercices de programmation fonctionnelle](./td_functional.md)
 
+- [Accès aux solutions](./td_characteristic.solutions.md)
+
 Cette page contient des exercices mettant en valeur les fonctions
 comme capables de représenter des données. L'exemple mis en place ici
 est celui des [fonctions
@@ -82,6 +84,8 @@ def set_display_2d(s):
 Les ensembles dessinés à l'aide de `set_display_2d` sont affichés dans
 le carré d'extrémités $(0,0)$ et $(10,10)$.
 
+![PacMan](./pacman.png)
+
 Écrire une fonction de distance euclidienne entre les points définis
 précédemment. Écrire la fonction caractéristique d'un disque centré
 sur un point $c$ de rayon $r$. Écrire la fonction d'un rectangle
@@ -114,3 +118,6 @@ une musique, et les mettre ensemble)
 Écrire une requête représentant l'ensemble des morceaux dont le genre
 contient la chaîne `"rock"`. Écrire une requête représentant
 l'ensemble des morceaux dont le titre débute par `"Don't"`.
+
+Écrire une fonction prenant une requête, et générant une liste de
+lecture de morceaux répondant à cette requête.

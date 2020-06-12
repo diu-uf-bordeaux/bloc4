@@ -21,6 +21,9 @@ def set_union(s1, s2):
 def set_intersection(s1, s2):
     return lambda y: s1(y) and s2(y)
 
+def set_add(s, x):
+    return lambda y: s(y) or y == x
+
 ################################################################
 import numpy as np
 import matplotlib.pyplot as mp
@@ -68,9 +71,16 @@ c2 = set_complement(set_circle((7.5,3.5), 1))
 r  = set_square((4,0),(10,10))
 s = set_intersection(set_intersection(c1,c2), r)
 
+s = set_empty
+for i in range(1, 10):
+    for j in range(1, 10):
+        s = set_add(s, (i,j))
+
 # set_display_2d(s)
 
 ################################################################
+import random
+
 songs = [ \
 { "title": "Walking on Broken Glass", "artist": "Annie Lennox", "album": "Diva", "track": 2, "genre": "pop rock" },
 { "title": "Roar", "artist": "Katy Perry", "album": "PRISM", "track": 1, "genre": "power pop" },
@@ -79,3 +89,18 @@ songs = [ \
 { "title": "Don't Stop Me Now", "artist": "Queen", "album": "Jazz", "track": 6, "genre": "pop rock" },
 { "title": "Black Pearls", "artist": "Apollo Brown", "album": "Clouds", "track": 7, "genre": "hip hop underground" },
 ]
+
+r1 = lambda m: "rock" in m["genre"]
+r2 = lambda m: m["title"].startswith("Don't")
+
+def generate_playlist(req, n):
+    res = []
+    valid_songs = [ s for s in songs if req(s) ]
+    if len(valid_songs) == 0:
+        return res
+    for i in range(n):
+        res.append(random.choice(valid_songs))
+    return res
+
+print(generate_playlist(r1, 5))
+print(generate_playlist(r2, 5))
