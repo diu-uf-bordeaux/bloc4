@@ -36,6 +36,7 @@ comptera un point par gain).
 éliminés soit ils ont décidé de ne plus recevoir de carte), alors le
 joueur dont la somme des valeurs de ses cartes est la plus proche de
 21 gagne.
+{: .list}
 
 On imagine, qu'il est possible de jouer à plusieurs joueurs (5 au max,
 mais a priori 2 pour les besoins de cet exercice).
@@ -52,6 +53,7 @@ Pour vous aider, voici les données que ceux-ci devront se partager :
 * Le jeu de cartes à distribuer
 * Les mains de chaque joueur
 * Les scores de chaque joueur
+{: .list}
 
 Et voici les traitements qui devront être réalisés:
 
@@ -62,6 +64,7 @@ Et voici les traitements qui devront être réalisés:
 * vérifier que la valeur d'une main n'est pas au dessus de 21
 * préciser qu'un joueur ne veut plus recevoir de cartes ou confirmer qu'il veut bien recevoir des cartes
 * compter le nombre de joueurs engagés et, si personne n'est engagé, calculer qui est le gagnant
+{: .list}
 
 1. Une conception qui consisterait à ne faire qu'un seul objet ne serait pas cohérente. Est-il possible de couper en deux types d'objets : donneur et joueurs ? Précisez les données et les traitements pour chaque objet.
 
