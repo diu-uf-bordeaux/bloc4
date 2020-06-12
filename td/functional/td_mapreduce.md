@@ -5,6 +5,8 @@ title: "Map &amp; Reduce"
 
 - [Retour aux exercices de programmation fonctionnelle](./td_functional.md)
 
+- [Accès aux solutions](./td_mapreduce.solutions.md)
+
 Cette page contient un ensemble d'exemples montrant comment utiliser
 des fonctions d'ordre supérieur (des fonctions prenant en paramètre
 d'autrs fonction, comme `filter`, `map`, `reduce` &hellip;) pour
@@ -81,7 +83,7 @@ class="label">Difficile</span> Utiliser la fonction `reduce` pour
 écrire une fonction `reverse` qui prend une liste et renvoie la liste
 symétrique.
 
-### 2ème partie : Sagesse de l'Antiquité
+### 2ème partie : sagesse de l'Antiquité
 
 Les fonctions évoquées précédemment servent en quelque sorte de
 "couteau-suisse" pour effectuer des transformations sur des ensembles
@@ -110,7 +112,7 @@ Utiliser à bon escient les fonctions `map`, `filter`, `sort` et
 
 - extraire de cette base la personne dont la durée de vie a été la plus longue;
 
-- extraire de cette base la somme de toutes les durées de vies de ces sages.
+- extraire de cette base la moyenne des durées de vies de ces sages.
 
 ### 3ème partie <span class="label">Pour aller plus loin ...</span> : questions de parallélisation
 
