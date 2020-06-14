@@ -14,8 +14,8 @@
 ```python
  file_vide : () -> File
     # produit la file vide
- file : (Etiquette * File) -> File
-    # produit une file avec une valeur
+ file : (Valeur * File) -> File
+    # produit une file à partir d'une valeur et d'une autre file
 ```
 
 2. Fonctions : <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -64,12 +64,10 @@ Plusieurs implémentations possibles :
 
 2. Sélecteurs : <!-- .element: class="fragment" data-fragment-index="1" -->
 
-```python 
-  # Nous considérons que la tête de la file est la première case
+```python
   def push(valeur, file):
     if est_vide(file):
       return [valeur, file_vide()]
-
     return [file[0], push(valeur, file[1])]
 
   def pop(file):
@@ -135,24 +133,28 @@ La classe file est implémentée à l'aide d'un tableau:
 
 ```python
   class File:
-    file_vide = []
+    file_vide = None
 
-    def __init__(self):
-        self._file = []
+    def __init__(self, valeur, file):
+      self._valeur = valeur
+      self._suite = file
     
     def push(self, valeur):
-        self._file = self._file + [valeur]
-        return self
+      if File.est_vide(self._suite):
+        self._suite = File(valeur, file_vide)
+      else:
+        self._suite.push(valeur)
+      return self
     
     def pop(self):
-        val = self._file[0]
-        self._file = self._file[1:]
-        return (val, self)
+      return (self._valeur, self._suite)
     
     @staticmethod
     def est_vide(file):
-        return file == File.file_vide
+      return file is File.file_vide
 ```
+
+<!-- .element: class="stretch" -->
 
 --
 
@@ -162,18 +164,19 @@ La classe file est implémentée à l'aide d'un tableau:
 Exemple d'utilisation :
 
 ```python
-   1. F1 = File()
-   2. F1.push(3)
-   3. print(F1.pop()) # (3, <__main__.File object at 0x...>)
+   1. F1 = File(3, File.file_vide)
+   3. print(F1.pop()) # (3, None)
    4.
-   5. F2 = File()
-   6. F2.push(3).push(6).push(9)
-   7. # F2: [3, 6, 9]
+   5. F2 = File(3, File.file_vide)
+   6. F2.push(6).push(9)
+   7. # F2: <--[3]<--[6]<--[9]<--
    8.
    9. F3 = File()
   10. while not File.est_vide(F2):
-  11.   F3.push(F2.pop()[0])
-  12. # F3: [3, 6, 9]
+  11.   res = F2.pop()
+  12.   F2 = res[1]
+  13.   F3.push(res[0])
+  14. # F3: <--[3]<--[6]<--[9]<--
 ```
 
 --
@@ -201,17 +204,16 @@ File stockée dans un tableau.
 
 ```python 
   def file_vide():
-    return None
+    return []
 
-  file = file_vide()
+  def file(valeur, file):
+    return file + [valeur]
 
   def push(valeur, file):
     file = file + [valeur]
 
   def pop(file):
-    val = file[0]
-    file = file[1:]
-    return val
+    return (file[0], file[1:])
 
   def est_vide(file):
     return file == file_vide()
@@ -227,15 +229,16 @@ Exemple d'utilisation :
 ```python
    1. file = file_vide()
    2. push(3, file)
-   3. print(pop(file)) # 3
-   4. print(file) # []
-   5.
-   6. push(3, file)
-   7. push(6, file)
-   8. push(9, file)
+   3. print(pop(file)) # (3, [])
+   4.
+   5. file = file_vide()
+   6. file = push(3, file)
+   7. file = push(6, file)
+   8. file = push(9, file)
    9. copie = file_vide()
   10.
   11. while not est_vide(file):
-  12.   push(pop(file), copie)
+  12.   (val, file) = pop(file)
+  12.   push(val, copie)
   13. print(copie) # [3, 6, 9]
 ```
