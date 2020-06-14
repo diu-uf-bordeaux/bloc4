@@ -14,6 +14,8 @@
 ```python
  file_vide : () -> File
     # produit la file vide
+ file : (Etiquette * File) -> File
+    # produit une file avec une valeur
 ```
 
 2. Fonctions : <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -55,6 +57,9 @@ Plusieurs implémentations possibles :
 ```python 
   def file_vide():
     return []
+
+  def file(valeur, file):
+    return [valeur, file]
 ```
 
 2. Sélecteurs : <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -62,10 +67,13 @@ Plusieurs implémentations possibles :
 ```python 
   # Nous considérons que la tête de la file est la première case
   def push(valeur, file):
-    return file + [valeur]  
+    if est_vide(file):
+      return [valeur, file_vide()]
+
+    return [file[0], push(valeur, file[1])]
 
   def pop(file):
-    return (file[0], file[1:])
+    return (file[0], file[1])
 ```
 
 <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -89,21 +97,21 @@ Exemple d'utilisation :
 ```python
   1. F1 = file_vide()
   2. push(3, F1)
-  3. print(F1) # [3]
+  3. print(F1) # [3, []]
   4.
   5. push(6, F1)
-  6. print(F1) # [3, 6]
+  6. print(F1) # [3, [6, ]]
   7.
   8. resultat = pop(push(9, F1))
-  9. print(resultat) # (3, [6, 9])
+  9. print(resultat) # (3, [6, [9, ]])
  10.
  11. # Nous pouvons copier une file en la défilant dans une autre file
  11. F2 = file_vide()
  12. while not est_vide(F1):
- 13.   res = pop(F1)  # res[0] contient la valeur, res[1] contient la pile restante
+ 13.   res = pop(F1)  # res[0] contient la valeur, res[1] contient la file restante
  14.   push(res[0], F2)
  15.   F1 = res[1]
- 16. print(F2)  # [6, 9]
+ 16. print(F2)  # [6, [9, ]]
 ```
 
 --
