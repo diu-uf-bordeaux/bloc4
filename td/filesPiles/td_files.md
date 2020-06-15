@@ -6,19 +6,20 @@ permalink: /td/filesPiles/files/
 
 - [Retour aux exercices sur les files et piles](../)
 
-L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `File` à l'aide des codes suivants:
+L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `File` à l'aide des codes suivants :
 
-- Classe File: [code](./classe_file.py)
-- Code File: [code](./code_file.py)
+- Classe `File` : [code](./classe_file.py)
+- Code `File` : [code](./code_file.py)
+{: .list}
 
-Pour commencer, ajoutez le prédicat suivant:
+Pour commencer, ajoutez le prédicat suivant :
 
 ```python
 taille : File -> entier
   # à partir d'une file F, renvoi le nombre d'éléments qu'elle contient
 ```
 
-Nous pourrons ensuite ajouter deux autres prédicats:
+Nous pourrons ensuite ajouter deux autres prédicats :
 
 ```python
 max: File -> entier
@@ -28,14 +29,14 @@ min: File -> entier
   # à partir d'une file F, renvoi la valeur minimum
 ```
 
-Ensuite, proposez une implémentation pour la méthode suivante:
+Ensuite, proposez une implémentation pour la méthode suivante :
 
 ```python
 inverse: File -> File
     # Renvoi une copie de la file en paramètre avec l'ordre des éléments inversé
 ```
 
-Nous allons maintenant nous intéresser à des opérations un peu plus compliquées:
+Nous allons maintenant nous intéresser à des opérations un peu plus compliquées :
 
 ```python
 trier: File -> File
@@ -45,7 +46,7 @@ fusionne: (File * File) -> File
   # Fusionne deux files triées en une seule (bien triée)
 ```
 
-Enfin, pour pousser un peu plus loin, proposez une implémentation pour la méthode suivante:
+Enfin, pour pousser un peu plus loin, proposez une implémentation pour la méthode suivante :
 
 ```python
 popValeur: (Valeur * File) -> File

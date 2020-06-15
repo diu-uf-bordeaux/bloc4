@@ -8,17 +8,18 @@ permalink: /td/filesPiles/piles/
 
 L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Pile` à l'aide des codes suivants:
 
-- Classe Pile: [code](./classe_pile.py)
-- Code Pile: [code](./code_pile.py)
+- Classe `Pile` : [code](./classe_pile.py)
+- Code `Pile` : [code](./code_pile.py)
+{: .list}
 
-Pour commencer, ajoutez le prédicat suivant:
+Pour commencer, ajoutez le prédicat suivant :
 
 ```python
 taille : Pile -> entier
   # à partir d'une pile P, renvoi le nombre d'éléments qu'elle contient
 ```
 
-Nous pourrons ensuite ajouter deux autres prédicats:
+Nous pourrons ensuite ajouter deux autres prédicats :
 
 ```python
 max: Pile -> entier
@@ -28,14 +29,14 @@ min: Pile -> entier
   # à partir d'une pile P, renvoi la valeur minimum
 ```
 
-Ensuite, proposez une implémentation pour la méthode suivante:
+Ensuite, proposez une implémentation pour la méthode suivante :
 
 ```python
 copie: Pile -> Pile
     # Renvoi une copie de la pile en paramètre dans une nouvelle pile
 ```
 
-Nous allons maintenant nous intéresser à une opération un peu plus compliquée: A partir d'une file contenant des parenthèses, crochets et accolades, vérifier si le parenthésage est bon.
+Nous allons maintenant nous intéresser à une opération un peu plus compliquée : à partir d'une file contenant des parenthèses, crochets et accolades, vérifier si le parenthésage est bon.
 Vous aurez besoin d'une pile.
 Exemple:
 
@@ -44,7 +45,7 @@ Exemple:
 ["(", "[", ")", "]"] -> False
 ```
 
-Enfin, pour pousser un peu plus loin, proposez une implémentation pour la méthode suivante:
+Enfin, pour pousser un peu plus loin, proposez une implémentation de la méthode suivante :
 
 ```python
 switch: Pile -> Pile
