@@ -1,7 +1,7 @@
 ## Files
 
 - Les files sont largement utilisées lorsque l'on veut modéliser une file d'attente.
-- Par exemple:
+- Par exemple :
   - Les impressions sont gérées par une file.
   - Dans une simulation de guichet, on modélisera généralement l'arrivée des clients par une file.
 
@@ -129,7 +129,7 @@ Plusieurs implémentations possibles :
 ## Classe File
 <!-- .slide: data-transition="fade" -->
 
-La classe file est implémentée à l'aide d'un tableau:
+La classe file est implémentée à l'aide d'un tableau :
 
 ```python
   class File:

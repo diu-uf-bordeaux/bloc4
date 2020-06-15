@@ -53,7 +53,7 @@ Certaines implémentations d'annulation/rétablissement d'actions utilisent une 
 
 ## Définition récursive
 
-- Une **liste** c'est:
+- Une **liste** c'est :
   - soit une **liste vide**, notée ∆ ;
   - soit un **couple** (*e*, *L*), appelé cellule, avec :
     - *e* l'étiquette de la cellule (la valeur stockée)
@@ -239,7 +239,7 @@ Plusieurs implémentations possibles :
 ## Tableau
 <!-- .slide: data-transition="fade" -->
 
-Liste stockée dans un tableau de taille fixe. Les opérations se font sur des cellules et non plus sur la liste entière:
+Liste stockée dans un tableau de taille fixe. Les opérations se font sur des cellules et non plus sur la liste entière :
 
 ```python 
   taille_max = 8

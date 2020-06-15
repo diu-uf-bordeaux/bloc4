@@ -1,10 +1,10 @@
 ## Pile
 
-- Les piles sont omniprésentes en informatique:
-- Par exemple:
-  - L'annulation de commande (CTRL-Z) est gérée par une pile
-  - Vérifier si une expression est bien parenthésée nécessite une pile
-  - Evaluer une expression arithmétique peut être fait avec une pile
+- Les piles sont omniprésentes en informatique :
+- Par exemple :
+  - L'annulation de commande (CTRL-Z) est gérée par une pile.
+  - Vérifier si une expression est bien parenthésée nécessite une pile.
+  - Évaluer une expression arithmétique peut être fait avec une pile.
 
 --
 
@@ -129,7 +129,7 @@ Plusieurs implémentations possibles :
 ## Classe Pile
 <!-- .slide: data-transition="fade" -->
 
-La classe Pile est implémentée de la même façon que la classe File:
+La classe Pile est implémentée de la même façon que la classe `File` :
 
 ```python
   class Pile:
