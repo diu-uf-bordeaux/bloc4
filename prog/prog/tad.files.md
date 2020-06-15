@@ -98,10 +98,10 @@ Exemple d'utilisation :
   3. print(F1) # [3, []]
   4.
   5. push(6, F1)
-  6. print(F1) # [3, [6, ]]
+  6. print(F1) # [3, [6, []]]
   7.
   8. resultat = pop(push(9, F1))
-  9. print(resultat) # (3, [6, [9, ]])
+  9. print(resultat) # (3, [6, [9, []]])
  10.
  11. # Nous pouvons copier une file en la défilant dans une autre file
  11. F2 = file_vide()
@@ -109,7 +109,7 @@ Exemple d'utilisation :
  13.   res = pop(F1)  # res[0] contient la valeur, res[1] contient la file restante
  14.   push(res[0], F2)
  15.   F1 = res[1]
- 16. print(F2)  # [6, [9, ]]
+ 16. print(F2)  # [6, [9, []]]
 ```
 
 --
