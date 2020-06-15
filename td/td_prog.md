@@ -10,6 +10,10 @@ permalink: /td/
 
 - [Programmation Fonctionnelle](./functional/)
 
+- [Listes](./listes/)
+
+- [Files et piles](./filesPiles/)
+
 - [Arbres binaires](./arbres/)
 
 - [Graphes](./graphes/)
