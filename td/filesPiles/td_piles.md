@@ -38,7 +38,7 @@ copie: Pile -> Pile
 
 Nous allons maintenant nous intéresser à une opération un peu plus compliquée : à partir d'une file contenant des parenthèses, crochets et accolades, vérifier si le parenthésage est bon.
 Vous aurez besoin d'une pile.
-Exemple:
+Exemple :
 
 ```python
 ["(", "[", "]", ")"] -> True

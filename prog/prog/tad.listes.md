@@ -209,7 +209,7 @@ Exemple d'utilisation :
   1. L1 = Cellule(3, Cellule.liste_vide)
   2. print(L1) # <__main__.Cellule object at 0x...>
   3. print(L1.valeur()) # 3
-  4. print(Cellule.liste_vide(L1)) # False
+  4. print(Cellule.est_vide(L1)) # False
   5. 
   6. c1 = Cellule(9, Cellule.liste_vide)
   7. c2 = Cellule(6, c1)
