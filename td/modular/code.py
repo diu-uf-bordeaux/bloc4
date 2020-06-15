@@ -95,7 +95,7 @@ def fibo_tail_rec(n):
     return fib_help(0, 1, n)
 
 def plot_time_a_sequence(seq_fun):
-    ns = range(10,100,2)
+    ns = range(10,25,2)
     ts = [timeit.timeit(lambda: seq_fun(n), number=100) for n in ns]
     mp.gca().set_xlabel('Valeur de $n$')
     mp.gca().set_ylabel('Temps de calcul de $fibo(n)$')
