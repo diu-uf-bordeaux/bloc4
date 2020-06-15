@@ -1,12 +1,15 @@
 ---
 layout: page_ext
-title: "Opérations"
+title: "Piles"
 permalink: /td/filesPiles/piles/
 ---
 
 - [Retour aux exercices sur les files et piles](../)
 
-L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Pile`.
+L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Pile` à l'aide des codes suivants:
+
+- Classe Pile: [code](./classe_pile.py)
+- Code Pile: [code](./code_pile.py)
 
 Pour commencer, ajoutez le prédicat suivant:
 
