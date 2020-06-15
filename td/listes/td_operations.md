@@ -8,14 +8,14 @@ permalink: /td/listes/operations/
 
 L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Liste`.
 
-Pour commencer, ajoutez le prédicat suivant:
+Pour commencer, ajoutez le prédicat suivant :
 
 ```python
 taille : Liste -> entier
   # à partir d'une liste L, renvoi le nombre d'éléments qu'elle contient
 ```
 
-Nous pourrons ensuite ajouter deux autres prédicats:
+Nous pourrons ensuite ajouter deux autres prédicats :
 
 ```python
 max: Liste -> entier
@@ -25,7 +25,7 @@ min: Liste -> entier
   # à partir d'une liste L, renvoi la valeur minimum
 ```
 
-Enfin, pour poussez encore plus loin, essayer d'implémenter le transformateur suivant:
+Enfin, pour poussez encore plus loin, essayez d'implémenter le transformateur suivant :
 
 ```python
 trier: Liste -> Liste
