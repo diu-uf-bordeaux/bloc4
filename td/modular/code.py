@@ -40,7 +40,7 @@ def log_2(n):
 def test_fibo() -> None:
     tab = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
     for i in range(10):
-        assert(fibo(i) == tab[i])
+        assert(fibo_imp(i) == tab[i])
 
 def test_rowland():
     tab = [7, 7, 8, 9, 10, 15, 18, 19, 20, 21]
@@ -53,15 +53,15 @@ def plot_a_sequence(f, n) -> None:
     mp.plot(xs, ys, 'o-')
     mp.show()
 
-# plot_a_sequence(fibo, 10)
+# plot_a_sequence(fibo_imp, 10)
 
 def plot_all_sequences(n) -> None:
     xs = range(n)
     fs = [
-        (fibo,    "Fibonacci"),
-        (catalan, "Catalan"),
-        (rowland, "Rowland"),
-        (log_2,   "Log 2"),
+        (fibo_imp, "Fibonacci"),
+        (catalan,  "Catalan"),
+        (rowland,  "Rowland"),
+        (log_2,    "Log 2"),
     ]
     sqrt_len = int(math.ceil(math.sqrt(len(fs))))
     fig, axs = mp.subplots(sqrt_len, sqrt_len)
