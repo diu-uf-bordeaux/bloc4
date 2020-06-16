@@ -193,7 +193,8 @@ nombre de mécanismes :
    méthodes de la classe `C`. Néanmoins, elle reste accessible, mais
    sous un nom différent. Par exemple, si la clase `C` a une méthode
    `__longueur`, alors elle sera utilisable sous le nom
-   `_C__longueur`.
+   `_C__longueur`. On peut retrouver le nom effectif de la méthode en
+   faisant un `dir(C)`.
 
 1. Une méthode d'une classe `C` qui débute *et* finit par `__` (deux
    underscores) n'est pas considérée comme privée, mais est réservées

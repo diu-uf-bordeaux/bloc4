@@ -87,7 +87,8 @@ Les parties suivantes de ce cours explorent plus précisément&nbsp;:
 
 - Trois types abstraits de données&nbsp;:
 
-	* les <a href="#/sequence">séquences</a> (listes, piles, files),
+	* les séquences (<a href="#/tad.listes">listes</a>, <a
+      href="#/tad.piles">piles</a>, <a href="#/tad.files">files</a>),
 
 	* les <a href="#/tree">arbres</a>,
 
