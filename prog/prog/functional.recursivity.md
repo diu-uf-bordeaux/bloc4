@@ -161,17 +161,69 @@ Version **récursive-terminale**
 
 --
 
-## Intérêts de la pureté
+## Une structure récursive : la liste
 
-- **Portabilité** de la fonction : indépendance du moment et de lieu
-  de l'appel.
+Les <a href="#/tad.listes">listes</a> sont un type de données
+construit de manière **récursive**. Une liste peut prendre deux formes
+différentes :
 
-- Facilitation des **tests** : pas de nécessité de préparer un
-  contexte particulier à chaque fois.
+- soit elle est vide (appelée par la suite **liste vide**),
 
-- **Parallélisation** possible du code : des appels indépendants
-  peuvent être faits sur des machines différentes.
+- soit elle est constituée d'une valeur initiale (la **tête**) et d'une
+  autre liste (la **queue**).
 
-Il ne s'agit pas d'être dogmatique : on peut mélanger les styles purs
-et impurs, si on prend soin des effets de bords.
-<!-- .element: class="title" style="margin-top:50px" -->
+
+![Liste](prog/images/functional/listes.png)<!-- .element: class="stretch" style="width: 44%;" -->
+
+
+--
+
+## Structure récursive, algos récursifs
+
+- Lorsqu'un type de données est conçu de manière récursive, les
+  algorithmes qui l'utilisent sont naturellement récursifs.
+
+<div class="half">
+
+```python
+def cons(x, l):
+    return { "hd": x, "tl": l }
+
+def head(l): return l["hd"]
+def tail(l): return l["tl"]
+
+def empty(): return cons(None, None)
+def is_empty(l):
+	return (head(l) is None) and \
+           (tail(l) is None)
+```
+
+</div>
+
+<div class="half">
+
+```python
+def length(l):
+    if is_empty(l):
+        return 0
+    else:
+        return 1 + length(tail(l))
+```
+
+```python
+l = cons(1, cons(2, cons(3, empty())))
+length(l)       # -> 3
+length(tail(l)) # -> 2
+length(empty()) # -> 0
+```
+
+</div>
+
+- Structure canonique :
+
+```python
+if is_empty(l):
+    # Do something for the empty list
+else:
+    # Now l is not empty, do something with is head and tail
+```

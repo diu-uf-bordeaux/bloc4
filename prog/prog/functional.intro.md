@@ -33,7 +33,7 @@
 
 ```python
 def f(x,y):
-	sin(2*pi*x) + cos(2*pi*y)
+	return sin(2*pi*x) + cos(2*pi*y)
 ```
 <!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px" -->
 

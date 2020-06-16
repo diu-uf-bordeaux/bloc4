@@ -190,3 +190,21 @@ def play_rec(board, n):
         next_board = play(play(board, Color.WHITE), Color.BLACK)
         return play_rec(next_board, n-1)
 ```
+
+
+--
+
+## Intérêts de la pureté
+
+- **Portabilité** de la fonction : indépendance du moment et de lieu
+  de l'appel.
+
+- Facilitation des **tests** : pas de nécessité de préparer un
+  contexte particulier à chaque fois.
+
+- **Parallélisation** possible du code : des appels indépendants
+  peuvent être faits sur des machines différentes.
+
+Il ne s'agit pas d'être dogmatique : on peut mélanger les styles purs
+et impurs, si on prend soin des effets de bords.
+<!-- .element: class="title" style="margin-top:50px" -->
