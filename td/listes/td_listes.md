@@ -32,14 +32,14 @@ class Cellule:
 La classe s'utilise ainsi :
 
 ```python
-import classe_cellule as cell
+from classe_cellule import Cellule
 
-l1 = cell.Cellule.liste_vide  # returns an empty list
-l2 = cell.Cellule(1, cell.Cellule.liste_vide)
-l3 = cell.Cellule(2, l2)
+l1 = Cellule.liste_vide  # returns an empty list
+l2 = Cellule(1, Cellule.liste_vide)
+l3 = Cellule(2, l2)
 
-cell.Cellule.est_vide(l1) # -> True
-cell.Cellule.est_vide(l2) # -> False
+Cellule.est_vide(l1) # -> True
+Cellule.est_vide(l2) # -> False
 
 l3.suite()                # -> returns a list
 l3.suite() == l2          # -> True
