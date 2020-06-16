@@ -228,7 +228,7 @@ Exemple d'utilisation :
 
 ```python
    1. file = file_vide()
-   2. push(3, file)
+   2. file = push(3, file)
    3. print(pop(file)) # (3, [])
    4.
    5. file = file_vide()
