@@ -46,6 +46,6 @@ r
 --*
 ```
 
-Écrire une fonction `represente` permettant cette représentation textuelle. Dans le cas de la classe `Noeud`, cette fonction sera une méthode statique. Vous réalisez ainsi une **parcours préfixe** de l'arbre.
+Écrire une fonction `represente` permettant cette représentation textuelle. Dans le cas de la classe `Noeud`, cette fonction sera une méthode de classe. Vous réalisez ainsi une **parcours préfixe** de l'arbre.
 
 _Remarque_ : le comportement de la fonction Python `print` en fin de ligne peut être modifié à l'aide du paramètre `end` (par défaut égal à `'\n'`).
