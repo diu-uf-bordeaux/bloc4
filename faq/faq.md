@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: page_ext
 title: "Foire aux questions"
 permalink: /faq/
 ---
 
 - [Retour à la page principale](../)
+
+## Liste des questions
 
 - [Quelle est la différence entre `import ..` et `from .. import` ?](./#quelle-est-la-différence-entre-import--et-from--import-)
 
@@ -13,6 +15,8 @@ permalink: /faq/
 - [Quelle est la différence entre une méthode d'instance et une méthode de classe ?](./#quelle-est-la-différence-entre-une-méthode-dinstance-et-une-méthode-de-classe-)
 
 - [A quoi sert l'annotation `@staticmethod` pour les méthodes des objets ?](./#a-quoi-sert-lannotation-staticmethod-pour-les-méthodes-des-objets-)
+
+- [Quelle est la signification des underscores `_` dans les noms de variables Python ?](./#quelle-est-la-signification-des-underscores-_-dans-les-noms-de-variables-python-)
 
 ## Questions fréquemment posées
 
@@ -150,7 +154,6 @@ Cellule.est_vide(l) # -> True
 pas appeler la méthode `longueur` dessus. Par contre, mais on peut
 appeler la méthode `Cellule.est_vide` dessus.
 
-<a id="annot"/>
 ### A quoi sert l'annotation `@staticmethod` pour les méthodes des objets ?
 
 Il s'agit d'une décoration Python. Elle permet d'utiliser une méthode
@@ -165,3 +168,37 @@ l.est_vide(l)
 Nous déconseillons l'utilisation de cette annotation dans le cadre des
 cours d'apprentissage de la programmation, car elle floute la
 distinction entre méthode de classe et méthode d'instance.
+
+### Quelle est la signification des underscores `_` dans les noms de variables Python ?
+
+Dans le cadre d'une programmation objet ou modulaire, on parle de
+visibilité des variables. Certaines variables sont *publiques*, et
+donc accessibles depuis l'extérieur, et d'autres sont *privées* et
+donc invisibles. En <span class="label">Java</span> et en <span
+class="label">C++</span>, les langages offre les mots-clés `public` et
+`private`, qui n'existent pas en <span class="label">Python</span>.
+
+Idéalement, chaque objet doit "protéger" ses données. Quand un objet
+possède des données, il devrait être le seul à avoir le droit de les
+modifier. On parle alors de visibilité (ou d'accessibilité) privée. À
+l'inverse si les données ne sont pas protégées, on dit qu'elles sont
+publiques en programmation.
+
+Le langage <span class="label">Python</span> n'est pas très regardant
+sur le côté public ou privé de ses méthodes, mais il offre un certain
+nombre de mécanismes :
+
+1. Une méthode d'une classe `C` débutant par `__` (deux underscores)
+   est par convention privée. Elle n'est utilisable que par les autres
+   méthodes de la classe `C`. Néanmoins, elle reste accessible, mais
+   sous un nom différent. Par exemple, si la clase `C` a une méthode
+   `__longueur`, alors elle sera utilisable sous le nom
+   `_C__longueur`.
+
+1. Une méthode d'une classe `C` qui débute *et* finit par `__` (deux
+   underscores) n'est pas considérée comme privée, mais est réservées
+   aux cas d'usages spéciaux de Python (comme par exemple la méthode
+   `__str__` utilisée pour afficher les objets).
+
+Plus d'informations sur [ce
+lien](https://dbader.org/blog/meaning-of-underscores-in-python).
