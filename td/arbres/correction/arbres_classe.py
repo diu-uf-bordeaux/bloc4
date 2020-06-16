@@ -15,7 +15,6 @@ class Noeud:
   def droit(self):
     return self._droit
 
-  @staticmethod
   def est_vide(arbre):
     return arbre is Noeud.arbre_vide
 
@@ -45,7 +44,6 @@ class Noeud:
     h2 = 1 + self.droit().hauteur()
     return max(h1,h2)
 
-  @staticmethod
   def represente (arbre, p=0):
     if Noeud.est_vide(arbre):
       print('*')

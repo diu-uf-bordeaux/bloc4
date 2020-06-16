@@ -149,7 +149,7 @@ La classe file est implémentée à l'aide d'un tableau :
     def pop(self):
       return (self._valeur, self._suite)
     
-        def est_vide(file):
+    def est_vide(file):
       return file is File.file_vide
 ```
 
