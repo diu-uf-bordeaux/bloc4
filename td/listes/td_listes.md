@@ -24,7 +24,6 @@ class Cellule:
     def suite(self):
         return self._suivant
 
-    @staticmethod
     def est_vide(liste):
         return liste is Cellule.liste_vide
 ```

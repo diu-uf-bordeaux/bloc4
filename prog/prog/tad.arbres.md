@@ -138,7 +138,6 @@ Plusieurs implémentations possibles :
       def droit(self):
           return self._droit
       
-      @staticmethod
       def est_vide(arbre):
           return arbre is Noeud.arbre_vide
   ```

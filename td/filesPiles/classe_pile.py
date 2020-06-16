@@ -11,6 +11,5 @@ class Pile:
     def pop(self):
         return (self._valeur, self._suite)
     
-    @staticmethod
     def est_vide(pile):
         return pile is Pile.pile_vide
