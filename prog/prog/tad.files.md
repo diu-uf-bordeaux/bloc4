@@ -107,7 +107,7 @@ Exemple d'utilisation :
  11. F2 = file_vide()
  12. while not est_vide(F1):
  13.   res = pop(F1)  # res[0] contient la valeur, res[1] contient la file restante
- 14.   push(res[0], F2)
+ 14.   F2 = push(res[0], F2)
  15.   F1 = res[1]
  16. print(F2)  # [6, [9, []]]
 ```
@@ -170,11 +170,11 @@ Exemple d'utilisation :
    6. F2.push(6).push(9)
    7. # F2: <--[3]<--[6]<--[9]<--
    8.
-   9. F3 = File()
-  10. while not File.est_vide(F2):
-  11.   res = F2.pop()
-  12.   F2 = res[1]
-  13.   F3.push(res[0])
+   9. (val, F2) = F2.pop()
+  10. F3 = File(val, File.file_vide)
+  11. while not File.est_vide(F2):
+  12.   (val, F2) = F2.pop()
+  13.   F3.push(val)
   14. # F3: <--[3]<--[6]<--[9]<--
 ```
 
@@ -238,6 +238,6 @@ Exemple d'utilisation :
   10.
   11. while not est_vide(file):
   12.   (val, file) = pop(file)
-  12.   push(val, copie)
+  12.   copie = push(val, copie)
   13. print(copie) # [3, 6, 9]
 ```
