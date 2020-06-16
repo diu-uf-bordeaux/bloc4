@@ -278,5 +278,5 @@ Exemple d'utilisation :
   7. 
   8. print(liste) # [3, 6, 9, None, None, None, None, None]
   9. print(valeur(1)) # 6
- 10. print(liste_vide(4)) # True
+ 10. print(est_vide(4)) # True
 ```
