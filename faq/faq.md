@@ -71,3 +71,17 @@ def greeting(name: str) -> str:
 Remarque importante : l'interpréteur Python *n'effectue pas* de
 vérification sur les annotations de types, contrairement à ce que
 ferait par exemple un compilateur en `C` ou en `OCaml`.
+
+Les intérêts des annotations de type :
+
+- un intérêt de *documentation* : les fonctions annoncent la forme que
+  prennent leurs paramètres et les valeurs renvoyées
+
+- un intérêt de *vérification* : des outils externes (comme par
+  exemple [mypy](http://mypy-lang.org/) peuvent vérifier l'usage des
+  types et aider le programmeur
+
+- un intérêt d'*optimisation* : des compilateurs comme
+  [cython](https://cython.org/) peuvent utiliser les annotations de
+  type pour générer du code plus efficace (cf. par exemple ce
+  [lien](https://cython.readthedocs.io/en/latest/src/quickstart/cythonize.html))
