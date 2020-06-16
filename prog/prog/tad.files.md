@@ -141,7 +141,7 @@ La classe file est implémentée à l'aide d'un tableau :
     
     def push(self, valeur):
       if File.est_vide(self._suite):
-        self._suite = File(valeur, file_vide)
+        self._suite = File(valeur, File.file_vide)
       else:
         self._suite.push(valeur)
       return self
