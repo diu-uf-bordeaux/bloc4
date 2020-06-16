@@ -63,7 +63,7 @@ Plusieurs implémentations possibles :
     return [valeur, pile]
 ```
 
-2. Sélecteurs : <!-- .element: class="fragment" data-fragment-index="1" -->
+2. Fonctions : <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ```python 
   # Nous considérons que le sommet de la Pile est la première case
@@ -145,8 +145,7 @@ La classe Pile est implémentée de la même façon que la classe `File` :
     def pop(self):
         return (self._valeur, self._suite)
     
-    @staticmethod
-    def est_vide(pile):
+        def est_vide(pile):
         return pile is Pile.pile_vide
 ```
 
