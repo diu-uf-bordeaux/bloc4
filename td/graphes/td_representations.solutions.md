@@ -66,9 +66,9 @@ permalink: /td/graphes/representations/solutions/
 #### Question 2
 
 - Graphes :
-   1. <img src="../../images/graphe4.svg" width="225px"/>
-   2. <img src="../../images/graphe5.svg" width="225px"/>
-   3. <img src="../../images/graphe6.svg" width="225px"/>
+   1. <img src="../../images/graphe4.svg" width="225px" height="115px"/>
+   2. <img src="../../images/graphe5.svg" width="225px" height="115px"/>
+   3. <img src="../../images/graphe6.svg" width="225px" height="115px"/>
    {: .list_alpha_inline}
 
 - Matrices d'adjacence :
@@ -98,8 +98,8 @@ permalink: /td/graphes/representations/solutions/
 #### Question 3
 
 - Graphes :
-   1. <img src="../../images/graphe7.svg" width="145px"/>
-   2. <img src="../../images/graphe8.svg" width="225px"/>
+   1. <img src="../../images/graphe7.svg" width="225px" height="115px"/>
+   2. <img src="../../images/graphe8.svg" width="225px" height="115px"/>
    {: .list_alpha_inline}
 
 - Listes de successeurs :

@@ -15,9 +15,9 @@ L'objectif des exercices de cette page est de manipuler sur papier les deux repr
    - ses listes de successeurs,
    - ses listes de prédécesseurs.
    {: .list}
-   1. <img src="../images/graphe1.svg" width="225px"/>
-   2. <img src="../images/graphe2.svg" width="225px"/>
-   3. <img src="../images/graphe3.svg" width="225px"/>
+   1. <img src="../images/graphe1.svg" width="225px" height="115px"/>
+   2. <img src="../images/graphe2.svg" width="225px" height="115px"/>
+   3. <img src="../images/graphe3.svg" width="225px" height="115px"/>
    {: .list_alpha_inline}
 
 2. Pour chaque tableau ci-dessous, tracez le graphe correspondant et donnez sa matrice d'adjacence.

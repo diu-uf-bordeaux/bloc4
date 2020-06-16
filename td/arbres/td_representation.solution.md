@@ -26,7 +26,6 @@ def represente(arbre, p = 0) :
 ### Solution pour la mise en oeuvre avec la classe `Noeud` :
 
 ```python
-@staticmethod
 def represente (arbre, p=0):
   if Noeud.est_vide(arbre):
     print('*')

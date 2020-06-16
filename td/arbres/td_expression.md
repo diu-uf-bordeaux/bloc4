@@ -12,7 +12,7 @@ Une expression arithmétique construite avec des opérateurs binaires (c'est-à-
 
 Ainsi, l'arbre suivant représente l'expression $6(x+y)+(y−14)$.
 
-<img src="../images/expression.svg" width="250px"/>
+<img src="../images/expression.svg" width="350px" height="180px"/>
 
 En utilisant l'implémentation à base de listes, cet arbre peut être construits avec l'instruction suivante :
 ```python
