@@ -16,6 +16,7 @@ class Noeud:
     return self._droit
 
   def est_vide(arbre):
+    print(arbre)
     return arbre is Noeud.arbre_vide
 
   def est_feuille(self):
@@ -59,9 +60,9 @@ class Noeud:
         print(arbre.etiquette())
         p += 1
         print('-' * p, end ='')
-        Noeud.represente(arbre.gauche())
+        Noeud.represente(arbre.gauche(),p)
         print('-' * p, end ='')
-        Noeud.represente(arbre.droit())
+        Noeud.represente(arbre.droit(),p)
 
 
 a = Noeud('a', Noeud.arbre_vide, Noeud.arbre_vide)
@@ -69,5 +70,5 @@ c = Noeud('c', Noeud.arbre_vide, Noeud.arbre_vide)
 b = Noeud('b', Noeud.arbre_vide, c)
 A2 = Noeud('r', a, b)
 # print(a.est_feuille())
-print(A2.hauteur())
+print(A2.est_vide())
 # Noeud.represente(A2)

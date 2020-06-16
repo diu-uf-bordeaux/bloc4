@@ -33,7 +33,7 @@ def represente (arbre, p=0):
       print(arbre.etiquette())
       p += 1
       print('-' * p, end ='')
-      Noeud.represente(arbre.gauche())
+      Noeud.represente(arbre.gauche(), p)
       print('-' * p, end ='')
-      Noeud.represente(arbre.droit())
+      Noeud.represente(arbre.droit(), p)
 ```
