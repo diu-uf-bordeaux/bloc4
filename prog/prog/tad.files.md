@@ -210,7 +210,7 @@ File stockée dans un tableau.
     return file + [valeur]
 
   def push(valeur, file):
-    file = file + [valeur]
+    return file + [valeur]
 
   def pop(file):
     return (file[0], file[1:])
