@@ -106,10 +106,9 @@ Exemple d'utilisation :
  11. # Nous pouvons inverser une pile en la dépilant dans une autre pile
  11. P2 = pile_vide()
  12. while not est_vide(P1):
- 13.   res = pop(P1)  # res[0] contient la valeur, res[1] contient la pile restante
- 14.   push(res[0], P2)
- 15.   P1 = res[1]
- 16. print(P2)  # [3, [6, []]]
+ 13.   (val, P1) = pop(P1)  # res[0] contient la valeur, res[1] contient la pile restante
+ 14.   P2 = push(val, P2)
+ 15. print(P2)  # [3, [6, []]]
 ```
 
 --
@@ -165,7 +164,8 @@ Exemple d'utilisation :
    6.
    7. P3 = Pile(P2.pop(), Pile.pile_vide)
    8. while not Pile.est_vide(P2):
-   9.   P3.push(P2.pop()[0])
+   9.   (val, P2) = P2.pop()
+   9.   P3.push(val)
   10. # P3: [3, 6, 9]
 ```
 
@@ -220,7 +220,7 @@ Exemple d'utilisation :
 
 ```python
    1. pile = pile_vide()
-   2. push(3, pile)
+   2. pile = push(3, pile)
    3. print(pop(pile)) # (3, [])
    4.
    5. pile = pile_vide()
@@ -232,6 +232,6 @@ Exemple d'utilisation :
   11.
   12. while not est_vide(pile):
   13.   (val, pile) = pop(pile)
-  14.   push(val, rev)
+  14.   rev = push(val, rev)
   15. print(rev) # [3, 6, 9]
 ```
