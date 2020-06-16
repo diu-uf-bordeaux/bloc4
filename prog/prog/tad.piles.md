@@ -145,7 +145,7 @@ La classe Pile est implémentée de la même façon que la classe `File` :
     def pop(self):
         return (self._valeur, self._suite)
     
-        def est_vide(pile):
+    def est_vide(pile):
         return pile is Pile.pile_vide
 ```
 
@@ -157,17 +157,16 @@ La classe Pile est implémentée de la même façon que la classe `File` :
 Exemple d'utilisation :
 
 ```python
-   1. P1 = Pile()
-   2. P1.push(3)
-   3. print(P1.pop()) # (3, None)
-   4.
-   5. P2 = Pile()
-   6. P2.push(3).push(6).push(9)
-   7.
-   8. P3 = Pile()
-   9. while not Pile.est_vide(P2):
-  10.   P3.push(P2.pop()[0])
-  11. # P3: [3, 6, 9]
+   1. P1 = Pile(3, Pile.pile_vide)
+   2. print(P1.pop()) # (3, None)
+   3.
+   4. P2 = Pile(3, Pile.pile_vide)
+   5. P2.push(6).push(9)
+   6.
+   7. P3 = Pile(P2.pop(), Pile.pile_vide)
+   8. while not Pile.est_vide(P2):
+   9.   P3.push(P2.pop()[0])
+  10. # P3: [3, 6, 9]
 ```
 
 --
