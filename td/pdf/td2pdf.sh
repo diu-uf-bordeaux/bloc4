@@ -5,3 +5,4 @@ while read i; do
   n=$((n+1))
 done < url-list.txt
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile=bloc4-td.pdf $(ls -1 *.pdf)
+rm 0*.pdf
