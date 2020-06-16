@@ -5,9 +5,9 @@ title: Programmation avancée et bases de données
 
 - Programmation
   - [cours](./prog/prog.html) - version [imprimable](./prog/prog.html?print-pdf) - version [pdf](./prog/pdf/diu.pdf)
-  - [exercices](./td/)
+  - [exercices](./td/) - version [pdf](./td/pdf/bloc4-td.pdf)
   - [faq](./faq/)
 
 > Remarque: Les version imprimables rendent mieux sous chrome. Elles
 > sont plus longues à charger. Pour les imprimer ou générer un `pdf`,
-> utilisez la fonction imprimer dans un `pdf` de votre navigateur.*
+> utilisez la fonction imprimer dans un `pdf` de votre navigateur.
