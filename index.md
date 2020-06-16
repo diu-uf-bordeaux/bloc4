@@ -4,7 +4,7 @@ title: Programmation avancée et bases de données
 ---
 
 - Programmation
-  - [cours](./prog/prog.html) - version [imprimable](./prog/prog.html?print-pdf)
+  - [cours](./prog/prog.html) - version [imprimable](./prog/prog.html?print-pdf) - version [pdf](./prog/pdf/diu.pdf)
   - [exercices](./td/)
   - [faq](./faq/)
 

@@ -50,7 +50,24 @@ Les désavantages de l'import "classique" :
   bibliothèque. C'est simplifié si on fait un import classique nommé
   avec un nom court.
 
-Les avantages d'une solution sont les désavantages de l'autre.
-
+Les avantages d'une solution sont les désavantages de
+l'autre. D'autres idées de réponses sont données sur le [lien
+suivant](https://stackoverflow.com/questions/710551/use-import-module-or-from-module-import).
 
 ### A quoi servent les annotations de types en Python ?
+
+Les annotations de types sont un ajout au langage Python depuis la
+version 3.5, et utilisables avec la bibliothèque `typing`
+([documentation](https://docs.python.org/3/library/typing.html)). Elles
+apparaissent de la façon suivante :
+
+```python
+from typing import str
+
+def greeting(name: str) -> str:
+    return 'Hello ' + name
+```
+
+Remarque importante : l'interpréteur Python *n'effectue pas* de
+vérification sur les annotations de types, contrairement à ce que
+ferait par exemple un compilateur en `C` ou en `OCaml`.
