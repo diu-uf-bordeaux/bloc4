@@ -94,10 +94,10 @@ Exemple d'utilisation :
 
 ```python
   1. F1 = file_vide()
-  2. push(3, F1)
+  2. F1 = push(3, F1)
   3. print(F1) # [3, []]
   4.
-  5. push(6, F1)
+  5. F1 = push(6, F1)
   6. print(F1) # [3, [6, []]]
   7.
   8. resultat = pop(push(9, F1))

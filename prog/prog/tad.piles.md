@@ -94,10 +94,10 @@ Exemple d'utilisation :
 
 ```python
   1. P1 = pile_vide()
-  2. push(3, P1)
+  2. P1 = push(3, P1)
   3. print(P1) # [3, []]
   4.
-  5. push(6, P1)
+  5. P1 = push(6, P1)
   6. print(P1) # [6, [3, []]]
   7.
   8. resultat = pop(push(9, P1))
