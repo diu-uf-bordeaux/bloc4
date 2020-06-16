@@ -22,26 +22,34 @@ class Noeud:
     return Noeud.est_vide(self.gauche()) and Noeud.est_vide(self.droit())
 
   def compte_feuille (self):
-    if Noeud.est_vide(self):
-      return 0
     if self.est_feuille():
       return 1 
-    return self.gauche().compte_feuille() + self.droit().compte_feuille()
+    n = 0
+    if not Noeud.est_vide(self.gauche()):
+      n += self.gauche().compte_feuille()
+    if not Noeud.est_vide(self.droit()):
+      n += self.droit().compte_feuille()
+    return n
 
   def taille (self):
-    if Noeud.est_vide(self):
-      return 0
     if self.est_feuille():
       return 1 
-    return 1 + self.gauche().taille() + self.droit().taille()
+    n = 1
+    if not Noeud.est_vide(self.gauche()):
+      n += self.gauche().compte_feuille()
+    if not Noeud.est_vide(self.droit()):
+      n += self.droit().compte_feuille()
+    return n
 
   def hauteur (self):
-    if Noeud.est_vide(self):
-      return -1
     if self.est_feuille():
       return 0
-    h1 = 1 + self.gauche().hauteur()
-    h2 = 1 + self.droit().hauteur()
+    h1 = 0
+    h2 = 0
+    if not Noeud.est_vide(self.gauche()):
+      h1 = 1 + self.gauche().hauteur()
+    if not Noeud.est_vide(self.droit()):
+      h2 = 1 + self.droit().hauteur()
     return max(h1,h2)
 
   def represente (arbre, p=0):
@@ -57,8 +65,9 @@ class Noeud:
 
 
 a = Noeud('a', Noeud.arbre_vide, Noeud.arbre_vide)
-b = Noeud('b', Noeud.arbre_vide, Noeud.arbre_vide)
+c = Noeud('c', Noeud.arbre_vide, Noeud.arbre_vide)
+b = Noeud('b', Noeud.arbre_vide, c)
 A2 = Noeud('r', a, b)
 # print(a.est_feuille())
-# print(A2.hauteur())
-Noeud.represente(A2)
+print(A2.hauteur())
+# Noeud.represente(A2)
