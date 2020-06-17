@@ -55,9 +55,9 @@ def taille (self):
     return 1 
   n = 1
   if not Noeud.est_vide(self.gauche()):
-    n += self.gauche().compte_feuille()
+    n += self.gauche().taille()
   if not Noeud.est_vide(self.droit()):
-    n += self.droit().compte_feuille()
+    n += self.droit().taille()
   return n
 
 def hauteur (self):
