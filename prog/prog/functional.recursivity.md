@@ -237,23 +237,23 @@ En Scheme <!-- .element: class="title" -->
 ```scheme
 (define (length lis)
    (cond ((null? lis)
-          0)
+          0)                          ;; liste vide
          (else
-          (+ 1 (length (cdr lis))))))
+          (+ 1 (length (cdr lis)))))) ;; liste non vide
 ```
 
-En OCaml <!-- .element: class="title" -->
+En OCaml <!-- .element: class="title" style="margin-top:30px"-->
 
 ```ocaml
 let rec length l = match l with
-  | []      -> 0
-  | _ :: tl -> 1 + length tl
+  | []      -> 0                      (* liste vide *)
+  | _ :: tl -> 1 + length tl          (* liste non vide *)
 ```
 
-En Haskell <!-- .element: class="title" -->
+En Haskell <!-- .element: class="title" style="margin-top:30px" -->
 
 ```haskell
-length :: [a] -> Integer
-length []     = 0
-length (_:xs) = 1 + length xs
+length :: [a] -> Integer              -- type de la fonction
+length []     = 0                     -- liste vide
+length (_:xs) = 1 + length xs         -- liste non vide
 ```
