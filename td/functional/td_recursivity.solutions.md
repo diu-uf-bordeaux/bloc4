@@ -134,6 +134,27 @@ def max_flight(flight_fun, n):
     return imax_s
 ```
 
+Une autre implémentation d'une fonction qui calcule la longueur d'un
+vol, avec *mémoïsation* des calculs. Cette seconde fonction permet de
+calculer plus rapidement les valeurs avec `max_flight`.
+
+```python
+def flight_mem():
+    mem = { 1: 1 }  # stores computed flight lengths
+    def flight_rec(n):
+        if n in mem:
+            return mem[n]
+        elif (n % 2 == 0):
+            l = flight_rec(n // 2)
+            mem[n] = l+1
+            return l+1
+        else:
+            l = flight_rec(3*n + 1)
+            mem[n] = l+1
+            return l+1
+    return flight_rec
+```
+
 
 ### 4ème partie : récursivité et listes
 
