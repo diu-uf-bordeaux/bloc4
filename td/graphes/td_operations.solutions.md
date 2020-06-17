@@ -12,10 +12,14 @@ permalink: /td/graphes/operations/solutions/
 
 ```python
 def degre(graphe, sommet):
-  i = sommets(graphe).index(sommet)
-  c = 0
-  for j in range(len(sommets(graphe))):
-    c += graphe[1][i][j]
+  ## Sans tirer partie du TAD 
+  # i = sommets(graphe).index(sommet)
+  # c = 0
+  # for j in range(len(sommets(graphe))):
+  #   c += graphe[1][i][j]
+  # return c
+  #
+  ## En tirant partie du TAD 
   return len(voisins(graphe, sommet))
 
 def est_isole(graphe, sommet):
