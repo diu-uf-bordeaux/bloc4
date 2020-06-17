@@ -135,7 +135,8 @@ def max_flight(flight_fun, n):
 ```
 
 Une autre implémentation d'une fonction qui calcule la longueur d'un
-vol, avec *mémoïsation* des calculs. Cette seconde fonction permet de
+vol, avec *mémoïsation* des calculs : on garde les calculs déjà faits
+dans une variable nommée `mem`. Cette seconde fonction permet de
 calculer plus rapidement les valeurs avec `max_flight`.
 
 ```python
@@ -153,6 +154,13 @@ def flight_mem():
             mem[n] = l+1
             return l+1
     return flight_rec
+```
+Exemples d'utilisation des deux fonctions pour comparaison :
+
+```python
+n = 6
+print(max_flight(flight_len, 10**n))
+print(max_flight(flight_mem(), 10**n))
 ```
 
 
