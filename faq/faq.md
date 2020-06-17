@@ -191,7 +191,7 @@ nombre de mécanismes :
 1. Une méthode d'une classe `C` débutant par `__` (deux underscores)
    est par convention privée. Elle n'est utilisable que par les autres
    méthodes de la classe `C`. Néanmoins, elle reste accessible, mais
-   sous un nom différent. Par exemple, si la clase `C` a une méthode
+   sous un nom différent. Par exemple, si la classe `C` a une méthode
    `__longueur`, alors elle sera utilisable sous le nom
    `_C__longueur`. On peut retrouver le nom effectif de la méthode en
    faisant un `dir(C)`.

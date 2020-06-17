@@ -55,3 +55,30 @@ def length(l):
 
 print(length(l.cons(4).cons(5)))
 print(length(List()))
+
+print("####################")
+
+class Liste:
+
+    def __init__(self, x, l):
+        self._hd = x
+        self._tl = l
+
+    def hd(self): return self._hd
+    def tl(self): return self._tl
+
+    def is_empty(self):
+        return self is Liste.liste_vide
+
+Liste.liste_vide = Liste(None, None)
+
+def length(l):
+    if l.is_empty():
+        return 0
+    else:
+        return 1 + length(l.tl())
+
+l = Liste.liste_vide
+print(length(l))
+l = Liste(1, Liste(2, Liste(3, Liste.liste_vide)))
+print(length(l))

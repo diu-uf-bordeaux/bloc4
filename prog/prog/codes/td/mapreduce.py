@@ -169,9 +169,10 @@ def map_reduce2():
         "https://www.labri.fr/perso/borgne",
         "https://www.labri.fr/perso/rollet",
         ]
-    all_urls = [ 1, 2, 3 ]
-    with multiprocessing.Pool(num_workers) as pool:
-        results = pool.map(time.sleep, all_urls)
-        print(results)
+    results = list(map(scrape, all_urls))
+    print(results)
+    # with multiprocessing.Pool(num_workers) as pool:
+    #     results = pool.map(scrape, all_urls)
+    #     print(results)
 
 map_reduce2()
