@@ -57,7 +57,12 @@ $$
 Dessiner sur un quart de plan le chemin réalisé par le calcul de
 $\mathrm{pgcd}(7,5)$. Donner une borne supérieure de la complexité du
 calcul de $\mathrm{pgcd}(a,b)$. Écrire cet algorithme en Python,
-d'abord de manière récursive, et ensuite avec une boucle `for`.
+d'abord de manière récursive, et ensuite avec une boucle `while`.
+
+Note : la complexité de cet algorithme est bien étudiée, mais ne
+correspond pas à une réponse simple. Cf. par exemple [ce
+lien](https://en.wikipedia.org/wiki/Euclidean_algorithm#Algorithmic_efficiency)
+pour simplement se rendre compte de la difficulté de la question.
 
 ### 3ème partie : suite de Syracuse
 
