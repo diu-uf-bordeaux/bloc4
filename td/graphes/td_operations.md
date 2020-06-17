@@ -27,8 +27,8 @@ Tout d'abord, on souhaite pouvoir calculer le degré d'un sommet du graphe :
 On souhaite maintenant calculer le degré moyen des sommets du graphe :
 
 ```python
- degre_moyen : Graphe -> int
-  # à partir d'un graphe simple G, produit un entier indiquant le degré moyen des sommets de G
+ degre_moyen : Graphe -> float
+  # à partir d'un graphe simple G, produit un réel indiquant le degré moyen des sommets de G
 ```
 
 Enfin, on veut ajouter le prédicat :
