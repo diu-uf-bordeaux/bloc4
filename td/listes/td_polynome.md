@@ -5,6 +5,8 @@ permalink: /td/listes/polynome/
 ---
 
 - [Retour aux exercices sur les listes](../)
+- [Accès au code solution en objet](./solution_liste_poly_objet.py)
+- [Accès au code solution](./solution_liste_poly.py)
 
 L'objectif de ce TD est de proposer une gestion de polynômes à l'aide de listes.
 

@@ -6,7 +6,9 @@ permalink: /td/listes/operations/
 
 - [Retour aux exercices sur les listes](../)
 
-- [Accès aux solutions](./td_operations.solutions.md)
+- [Accès à une solution au format web](./td_operations.solutions.md)
+- [Accès au code solution en objet](./solution_liste_operations.py)
+- [Accès au code solution](./solution_liste_operations_objet.py)
 
 L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Liste`.
 

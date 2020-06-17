@@ -5,6 +5,8 @@ permalink: /td/filesPiles/piles/
 ---
 
 - [Retour aux exercices sur les files et piles](../)
+- [Accès au code solution en objet](./solution_pile_operations_objet.py)
+- [Accès au code solution](./solution_pile_operations.py)
 
 L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Pile` à l'aide des codes suivants:
 
