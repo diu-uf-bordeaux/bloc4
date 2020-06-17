@@ -219,11 +219,41 @@ length(empty()) # -> 0
 
 </div>
 
-- Structure canonique :
+- Structure canonique des algorithmes :
 
 ```python
 if is_empty(l):
     # Do something for the empty list
 else:
     # Now l is not empty, do something with is head and tail
+```
+
+--
+
+## Récursivité dans d'autres langages
+
+En Scheme <!-- .element: class="title" -->
+
+```scheme
+(define (length lis)
+   (cond ((null? lis)
+          0)
+         (else
+          (+ 1 (length (cdr lis))))))
+```
+
+En OCaml <!-- .element: class="title" -->
+
+```ocaml
+let rec length l = match l with
+  | []      -> 0
+  | _ :: tl -> 1 + length tl
+```
+
+En Haskell <!-- .element: class="title" -->
+
+```haskell
+length :: [a] -> Integer
+length []     = 0
+length (_:xs) = 1 + length xs
 ```
