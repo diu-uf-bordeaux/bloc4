@@ -49,6 +49,10 @@ l3.suite()                # -> returns a list
 l3.suite() == l2          # -> True
 ```
 
+Note : dans cette implémentation, `Cellule.liste_vide` *n'est pas* une
+instance de `Cellule`, et donc on *ne peut pas* appeler de méthodes
+dessus.
+
 - Code liste : [code](./code_liste.py), une implémentation orientée
 fonctionnelle
 {: .list}
