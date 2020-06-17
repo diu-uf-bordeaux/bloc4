@@ -152,3 +152,21 @@ délicatesse pour ne pas surcharger les serveurs. Considérer le fait
 que la parallélisation ne fonctionne bien uniquement parce que les
 fonctions comme `scrape` ne font pas d'effets de bords (i.e leurs
 appels sont indépendants).
+
+Remarque : dans le cas où l'on ne désirerait pas faire de requêtes sur
+des sites web externes, ou simplement parce que ce n'est pas possible,
+on peut remplacer la requête par un calcul "long". La façon la plus
+simple de le faire est d'utiliser `time.sleep` :
+
+```python
+def parallel_do():
+    num_workers = 5
+    all_urls = [ 1, 2, 3 ]
+    with multiprocessing.Pool(num_workers) as pool:
+        results = pool.map(time.sleep, all_urls)
+        print(results)
+```
+
+On constate (normalement, sur une machine avec plusieurs processeurs)
+que le code précédent ne prend que 3 secondes, au lieu des 6
+nécessaires pour faire l'ensemble des "calculs".

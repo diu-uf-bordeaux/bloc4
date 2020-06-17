@@ -2,6 +2,7 @@ import collections
 import itertools
 import multiprocessing
 import requests
+import time
 
 ################################################################
 def map_imp(f, l):
@@ -120,18 +121,18 @@ sages = [
 
 age = lambda s: s["death"] - s["birth"]
 
-names = sorted(map_rec(lambda s: s["name"], sages))
-names = sorted([s["name"] for s in sages])
-print(names)
+# names = sorted(map_rec(lambda s: s["name"], sages))
+# names = sorted([s["name"] for s in sages])
+# print(names)
 
-most_ancient = sorted(sages, key=lambda s: s["birth"])[0]
-print(most_ancient)
+# most_ancient = sorted(sages, key=lambda s: s["birth"])[0]
+# print(most_ancient)
 
-most_longlived = sorted(sages, key=age, reverse=True)[0]
-print(most_longlived)
+# most_longlived = sorted(sages, key=age, reverse=True)[0]
+# print(most_longlived)
 
-mean_age = sum(map_rec(age, sages)) / len(sages)
-print(mean_age)
+# mean_age = sum(map_rec(age, sages)) / len(sages)
+# print(mean_age)
 
 ################################################################
 def map_func(x):
@@ -168,8 +169,9 @@ def map_reduce2():
         "https://www.labri.fr/perso/borgne",
         "https://www.labri.fr/perso/rollet",
         ]
+    all_urls = [ 1, 2, 3 ]
     with multiprocessing.Pool(num_workers) as pool:
-        results = pool.map(scrape, all_urls)
+        results = pool.map(time.sleep, all_urls)
         print(results)
 
-# map_reduce2()
+map_reduce2()
