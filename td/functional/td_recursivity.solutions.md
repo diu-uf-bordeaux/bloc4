@@ -136,8 +136,9 @@ def max_flight(flight_fun, n):
 
 Une autre implémentation d'une fonction qui calcule la longueur d'un
 vol, avec *mémoïsation* des calculs : on garde les calculs déjà faits
-dans une variable nommée `mem`. Cette seconde fonction permet de
-calculer plus rapidement les valeurs avec `max_flight`.
+dans une variable (nommée ici `mem`). Dans l'exemple suivant, la
+fonction `flight_mem` renvoie une fonction. Et cette fonction
+permet de calculer plus rapidement les valeurs avec `max_flight`.
 
 ```python
 def flight_mem():
@@ -159,8 +160,10 @@ Exemples d'utilisation des deux fonctions pour comparaison :
 
 ```python
 n = 6
+f = flight_mem()
+# Comparaison des temps de calcul de f et de flight_len :
 print(max_flight(flight_len, 10**n))
-print(max_flight(flight_mem(), 10**n))
+print(max_flight(f, 10**n))
 ```
 
 
