@@ -109,7 +109,7 @@ permalink: /td/graphes/representations/solutions/
      {: .graph}
   2. | **sommet**      | a | b | c | d |
      |-----------------|---|---|---|---|
-     | **successeurs** | d | a |   | a |
+     | **successeurs** | d | a |   | b,c |
      {: .graph}
   {: .list_alpha_inline}
 
