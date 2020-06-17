@@ -62,6 +62,7 @@ fonction suivante permet de produire un dessin à partir d'un
 ensemble&nbsp;:
 
 ```python
+import numpy as np
 import matplotlib.pyplot as mp
 
 def set_display_2d_generic(c1, c2, n, s):
