@@ -30,12 +30,30 @@ def set_all(x):
 
 Il s'agit d'un exemple simple de **représentation des données par des
 fonctions**. Ici, la donnée, i.e l'ensemble, est identifié à sa
-fonction caractéristique. Avec cet exemple, il est facile d'écrire en
-Python la fonction représentant l'ensemble vide. Noter que l'on peut
-restreindre l'usage de cette fonction à un ensemble particulier. Par
-exemple, si on considère que $x$ est restreint au points du plan,
-alors les ensembles que l'on va représenter seront des ensembles de
-points du plan.
+fonction caractéristique. Avec cet exemple, il est possible d'écrire
+en Python la fonction représentant l'ensemble vide. Noter que l'on
+peut restreindre l'usage de cette fonction à un ensemble
+particulier. Par exemple, si on considère que $x$ est restreint au
+points du plan, alors les ensembles que l'on va représenter seront des
+ensembles de points du plan.
+
+Une fois qu'on a une fonction caractéristique `s`, il est facile de
+vérifier si `x` appartient à l'ensemble `s` : il suffit d'appliquer
+`s` (en tant que fonction) à `x` ! Ca donne ce genre de choses :
+
+```python
+def belongs(s, x):
+    return s(x)
+```
+
+Avec ça, on peut commencer à construire des ensembles non triviaux :
+
+```
+ens = {1,2,3}
+s = lambda x : x in ens
+belongs(s,1) # -> True
+belongs(s,0) # -> False
+```
 
 Écrire la fonction représentant le singleton $x$ est déjà plus
 compliqué, puisque l'on désire une fonction qui prend en paramètre $x$
