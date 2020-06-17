@@ -80,7 +80,7 @@ Cette implémentation s'utilise ainsi :
 import code_list as lis
 
 l1 = lis.liste_vide()  # returns an empty list
-l2 = lis.cellule(1, lis.liste_vide)
+l2 = lis.cellule(1, lis.liste_vide())
 l3 = lis.cellule(2, l2)
 
 lis.est_vide(l1) # -> True
@@ -89,6 +89,48 @@ lis.est_vide(l2) # -> False
 lis.suite(l3)       # -> returns a list
 lis.suite(l3) == l2 # -> True
 ```
+
+- Classe `List` : [code](./classe_liste.py), une implémentation
+  orientée objet dans laquelle la liste vide est aussi une
+  instance. Noter que cette implémentation est simplement présente
+  pour montrer la différence avec l'implémentation `Cellule` où la
+  liste vide n'est pas une instance.
+{: .list}
+
+```python
+class Liste:
+
+    def __init__(self, x, l):
+        self._hd = x
+        self._tl = l
+
+    def valeur(self): return self._hd
+    def suite(self): return self._tl
+
+    def est_vide(self):
+        return self is Liste.liste_vide
+
+Liste.liste_vide = Liste(None, None)
+```
+
+Cette implémentation s'utilise ainsi :
+
+
+```python
+from classe_liste import Liste
+
+l1 = Liste.liste_vide  # returns an empty list
+l2 = Liste(1, Liste.liste_vide)
+l3 = Liste(2, l2)
+
+l1.est_vide() # -> True
+l2.est_vide() # -> False
+
+l3.suite()       # -> returns a list
+l3.suite() == l2 # -> True
+```
+
+
 
 ### Exercices
 

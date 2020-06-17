@@ -6,28 +6,33 @@ permalink: /td/listes/operations/
 
 - [Retour aux exercices sur les listes](../)
 
+- [Accès aux solutions](./td_operations.solutions.md)
+
 L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Liste`.
 
-Pour commencer, ajoutez le prédicat suivant :
+Pour commencer, ajoutez les prédicats suivants :
 
 ```python
-taille : Liste -> entier
-  # à partir d'une liste L, renvoi le nombre d'éléments qu'elle contient
+str_liste : Liste -> str
+  # à partir d'une liste L, produit une chaîne de caractères décrivant L
+
+taille_liste : Liste -> entier
+  # à partir d'une liste L, renvoie le nombre d'éléments qu'elle contient
 ```
 
 Nous pourrons ensuite ajouter deux autres prédicats :
 
 ```python
-max: Liste -> entier
-  # à partir d'une liste L, renvoi la valeur maximum
+max_liste: Liste -> entier
+  # à partir d'une liste L, renvoie la valeur maximum ou une exception si L est vide
 
-min: Liste -> entier
-  # à partir d'une liste L, renvoi la valeur minimum
+min_liste: Liste -> entier
+  # à partir d'une liste L, renvoie la valeur minimum ou une exception si L est vide
 ```
 
 Enfin, pour poussez encore plus loin, essayez d'implémenter le transformateur suivant :
 
 ```python
-trier: Liste -> Liste
-  # à partir d'une liste L, renvoi cette liste avec les valeurs triées (tri au choix)
+trier_liste: Liste -> Liste
+  # à partir d'une liste L, renvoie cette liste avec les valeurs triées (tri au choix)
 ```

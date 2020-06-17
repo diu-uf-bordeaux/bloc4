@@ -1,90 +1,28 @@
-def search_rec(l, x):
-    if (l == []):
-        return False
-    elif (l[0] == x):
-        return True
-    else:
-        return search_rec(l[1:], x)
+---
+layout: page_ext
+title: "Fonctions caractéristiques"
+---
 
-def search_for(l, x):
-    for y in l:
-        if (x == y):
-            return True
-    return False
+- [Retour aux exercices de programmation sur les listes](./td_listes.md)
 
-def test_search(search_fun):
-    test_values = [
-        (([], 1), False),
-        (([1], 1), True),
-        (([1,2], 1), True),
-        (([2,1], 1), True),
-        (([2,3], 1), False),
-    ]
-    for ((l,x), r) in test_values:
-        assert(search_fun(l,x) == r)
+- [Retour aux exercices de programmation des opérations sur les listes](./td_operations.md)
 
-# test_search(search_rec)
-# test_search(search_for)
+### 1ère partie : implémentation objet, version avec ajout de fonctions
 
-def count_rec(l, x):
-    if (l == []):
-        return 0
-    elif (l[0] == x):
-        return 1 + count_rec(l[1:], x)
-    else:
-        return count_rec(l[1:], x)
+A partir du [code](./classe_cellule.py) de `Cellule` :
 
-def count_for(l, x):
-    res = 0
-    for y in l:
-        if (y == x):
-            res += 1
-    return res
-
-def test_count(count_fun):
-    test_values = [
-        (([], 1), 0),
-        (([1], 1), 1),
-        (([1,1], 1), 2),
-        (([1,2], 1), 1),
-        (([2,1], 1), 1),
-        (([2,3], 1), 0),
-    ]
-    for ((l,x), r) in test_values:
-        assert(count_fun(l,x) == r)
-
-# test_count(count_rec)
-# test_count(count_for)
-
-print("##### Listes Code Objet #####")
-from cellule import Cellule
-
-l1 = Cellule.liste_vide  # returns an empty list
-l2 = Cellule(1, Cellule.liste_vide)
-l3 = Cellule(2, l2)
-
-print(Cellule.est_vide(l1), True) # -> True
-print(Cellule.est_vide(l2), False) # -> False
-
-print(l3.suite())                # -> returns a list
-print(l3.suite() == l2, True)    # -> True
-l3 = Cellule(3, l3)
-
+```python
 def str_liste(l):
     if Cellule.est_vide(l):
         return "[]"
     else:
         return "[{},{}]".format(l.valeur(), str_liste(l.suite()))
 
-print(str_liste(l3))
-
-def taille(l):
+def taille_liste(l):
     if Cellule.est_vide(l):
         return 0
     else:
-        return 1 + taille(l.suite())
-
-print(taille(l3), 3)
+        return 1 + taille_liste(l.suite())
 
 def max_liste(l):
     if Cellule.est_vide(l):
@@ -94,8 +32,6 @@ def max_liste(l):
     else:
         return max(l.valeur(), max_liste(l.suite()))
 
-print(max_liste(l3), 3)
-
 def min_liste(l):
     if Cellule.est_vide(l):
         raise Exception("No min on an empty list")
@@ -104,55 +40,39 @@ def min_liste(l):
     else:
         return min(l.valeur(), min_liste(l.suite()))
 
-print(min_liste(l3), 1)
-
-def inserer(x, l):
+def inserer_liste(x, l):
     if Cellule.est_vide(l):
         return Cellule(x, Cellule.liste_vide)
     elif x < l.valeur():
         return Cellule(x, l)
     else:
-        return Cellule(l.valeur(), inserer(x, l.suite()))
+        return Cellule(l.valeur(), inserer_liste(x, l.suite()))
 
-def trier(l):
+def trier_liste(l):
     if Cellule.est_vide(l):
         raise Exception("No min on an empty list")
     elif Cellule.est_vide(l.suite()):
         return l
     else:
-        return inserer(l.valeur(), trier(l.suite()))
+        return inserer_liste(l.valeur(), trier_liste(l.suite()))
+```
 
-print(str_liste(trier(l3)))
+### 2ème partie : implémentation fonctionnelle
 
-print("##### Listes Code Fonctionnel #####")
-import func_list as lis
+A partir du [code](./code_liste.py) fonctionnel :
 
-l1 = lis.liste_vide()  # returns an empty list
-l2 = lis.cellule(1, lis.liste_vide())
-l3 = lis.cellule(2, l2)
-
-print(lis.est_vide(l1), True) # -> True
-print(lis.est_vide(l2), False) # -> False
-
-print(lis.suite(l3))                # -> returns a list
-print(lis.suite(l3) == l2, True)    # -> True
-l3 = lis.cellule(3, l3)
-
+```python
 def str_liste(l):
     if lis.est_vide(l):
         return "[]"
     else:
         return "[{},{}]".format(lis.valeur(l), str_liste(lis.suite(l)))
 
-print(str_liste(l3))
-
 def taille(l):
     if lis.est_vide(l):
         return 0
     else:
         return 1 + taille(lis.suite(l))
-
-print(taille(l3), 3)
 
 def max_liste(l):
     if lis.est_vide(l):
@@ -162,8 +82,6 @@ def max_liste(l):
     else:
         return max(lis.valeur(l), max_liste(lis.suite(l)))
 
-print(max_liste(l3), 3)
-
 def min_liste(l):
     if lis.est_vide(l):
         raise Exception("No min on an empty list")
@@ -171,8 +89,6 @@ def min_liste(l):
         return lis.valeur(l)
     else:
         return min(lis.valeur(l), min_liste(lis.suite(l)))
-
-print(min_liste(l3), 1)
 
 def inserer(x, l):
     if lis.est_vide(l):
@@ -189,38 +105,24 @@ def trier(l):
         return l
     else:
         return inserer(lis.valeur(l), trier(lis.suite(l)))
+```
 
-print(str_liste(trier(l3)))
+### 3ème partie : implémentation objet, version avec liste_vide objet
 
-print("##### Listes Code Objet + Empty Object #####")
-from classe2 import Liste
+A partir du [code](./classe_liste.py) de `Liste` :
 
-l1 = Liste.liste_vide  # returns an empty list
-l2 = Liste(1, Liste.liste_vide)
-l3 = Liste(2, l2)
-
-print(l1.est_vide(), True) # -> True
-print(l2.est_vide(), False) # -> False
-
-print(l3.suite())                # -> returns a list
-print(l3.suite() == l2, True)    # -> True
-l3 = Liste(3, l3)
-
+```python
 def str_liste(l):
     if l.est_vide():
         return "[]"
     else:
         return "[{},{}]".format(l.valeur(), str_liste(l.suite()))
 
-print(str_liste(l3))
-
 def taille(l):
     if l.est_vide():
         return 0
     else:
         return 1 + taille(l.suite())
-
-print(taille(l3), 3)
 
 def max_liste(l):
     if l.est_vide():
@@ -230,8 +132,6 @@ def max_liste(l):
     else:
         return max(l.valeur(), max_liste(l.suite()))
 
-print(max_liste(l3), 3)
-
 def min_liste(l):
     if l.est_vide():
         raise Exception("No min on an empty list")
@@ -239,8 +139,6 @@ def min_liste(l):
         return l.valeur()
     else:
         return min(l.valeur(), min_liste(l.suite()))
-
-print(min_liste(l3), 1)
 
 def inserer(x, l):
     if l.est_vide():
@@ -257,11 +155,13 @@ def trier(l):
         return l
     else:
         return inserer(l.valeur(), trier(l.suite()))
+```
 
-print(str_liste(trier(l3)))
+### 4ème partie : implémentation objet, version avec ajout de méthodes
 
-print("##### Listes Code Objet + Empty Object + Methods inside class #####")
+A partir du [code](./classe_liste.py) de `Liste` :
 
+```python
 def str_liste(self):
     if self.est_vide():
         return "[]"
@@ -269,16 +169,12 @@ def str_liste(self):
         return "[{},{}]".format(self.valeur(), str_liste(self.suite()))
 Liste.str_liste = str_liste
 
-print(l3.str_liste())
-
 def taille(self):
     if self.est_vide():
         return 0
     else:
         return 1 + taille(self.suite())
 Liste.taille = taille
-
-print(l3.taille(), 3)
 
 def max_liste(self):
     if self.est_vide():
@@ -289,8 +185,6 @@ def max_liste(self):
         return max(self.valeur(), max_liste(self.suite()))
 Liste.max_liste = max_liste
 
-print(l3.max_liste(), 3)
-
 def min_liste(self):
     if self.est_vide():
         raise Exception("No min on an empty list")
@@ -299,8 +193,6 @@ def min_liste(self):
     else:
         return min(self.valeur(), min_liste(self.suite()))
 Liste.min_liste = min_liste
-
-print(l3.min_liste(), 1)
 
 def inserer(self, x):
     if self.est_vide():
@@ -319,5 +211,8 @@ def trier(self):
     else:
         return trier(self.suite()).inserer(self.valeur())
 Liste.trier = trier
+```
 
-print(l3.trier().str_liste())
+Noter qu'ici on ajoute des méthodes à la classe `Liste` a
+posteriori. On pourrait aussi bien écrire ces méthodes directement
+dans la classe `Liste` si on le droit de la modifier.
