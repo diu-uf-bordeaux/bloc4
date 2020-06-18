@@ -113,6 +113,16 @@ sur un point $c$ de rayon $r$. Écrire la fonction d'un rectangle
 défini par ses deux extrémités $(gauche,bas)$ et $(droite,
 haut)$. Dessiner un [Pac-Man](https://fr.wikipedia.org/wiki/Pac-Man).
 
+<span class="label">Difficile</span> Si le Pac-Man vous a semblé trop
+facile, voici un petit challenge à réaliser avec la même bibliothèque
+:
+
+![Moire](./moire.png)
+
+(ce n'est pas trivial à réaliser, il faut écrire quelques fonctions de
+transformations géométriques, comme une opération de rotation d'un
+ensemble)
+
 ### 3ème partie : les listes de lectures
 
 Telles quelles, les fonctions caractéristiques gardent un parfum
