@@ -9,7 +9,7 @@ def ajouter_arete (graphe, x, y):
     if not y in graphe[x]:
       graphe[x].append(y)
     if not x in graphe[y]:
-      graphe[y].append(x) # non-orienté
+    graphe[y].append(x) # non-orienté
 
 def sommets(graphe):
   return list(graphe.keys())
@@ -29,7 +29,10 @@ def degre_moyen(graphe):
   # for s in S:
   #   c += degre(graphe, s)
   # return c / len(S)
-  return functools.reduce(operator.add, [ degre(graphe,s) for s in S ]) / len(S)
+  ## ou :
+  # return functools.reduce(operator.add, [ degre(graphe,s) for s in S ]) / len(S)
+  ## ou encore : 
+  return sum([ degre(graphe,s) for s in S ]) / len(S)
 
 def sont_voisins(graphe, s1, s2):
   return s2 in voisins(graphe, s1)
