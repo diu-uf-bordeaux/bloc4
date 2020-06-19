@@ -59,6 +59,37 @@ s = set_intersection(set_intersection(c1,c2), r)
 set_display_2d(s)
 ```
 
+Fonctions de transformation géométriques :
+
+
+```python
+def translate(deltax, deltay):
+    return lambda p: (p[0] + deltax, p[1] + deltay)
+
+def scale(a, b):
+    return lambda p: (p[0] * a, p[1] * b)
+
+def rotate(theta):
+    costheta = math.cos(theta)
+    sintheta = math.sin(theta)
+    return lambda p: (p[0] * costheta - p[1] * sintheta, \
+                      p[1] * costheta + p[0] * sintheta)
+
+def set_translate(s, deltax, deltay):
+    return lambda p: s(translate(-deltax, -deltay)(p))
+
+def set_scale(s, a, b):
+    return lambda p: s(scale(1./a,1./b)(p))
+
+def set_rotate(s, theta):
+    return lambda p: s(rotate(-theta)(p))
+
+def set_rotate_rel(s, theta, p):
+    cen_x = p[0]
+    cen_y = p[1]
+    return lambda p: s(translate(cen_x, cen_y)(rotate(theta)(translate(-cen_x,-cen_y)(p))))
+```
+
 
 ### 3ème partie : les listes de lectures
 
