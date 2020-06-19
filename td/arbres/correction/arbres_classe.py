@@ -8,15 +8,14 @@ class Noeud:
 
   def etiquette(self):
     return self._etiquette
-  
+
   def gauche(self):
     return self._gauche
-  
+
   def droit(self):
     return self._droit
 
   def est_vide(arbre):
-    print(arbre)
     return arbre is Noeud.arbre_vide
 
   def est_feuille(self):
@@ -24,7 +23,7 @@ class Noeud:
 
   def compte_feuille (self):
     if self.est_feuille():
-      return 1 
+      return 1
     n = 0
     if not Noeud.est_vide(self.gauche()):
       n += self.gauche().compte_feuille()
@@ -34,7 +33,7 @@ class Noeud:
 
   def taille (self):
     if self.est_feuille():
-      return 1 
+      return 1
     n = 1
     if not Noeud.est_vide(self.gauche()):
       n += self.gauche().compte_feuille()
@@ -72,3 +71,5 @@ A2 = Noeud('r', a, b)
 # print(a.est_feuille())
 print(A2.est_vide())
 # Noeud.represente(A2)
+print(A2.hauteur(), 2)
+print(a.hauteur(), 0)

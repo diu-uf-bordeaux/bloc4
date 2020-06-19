@@ -23,23 +23,25 @@ def compte_feuille (arbre):
   if est_vide(arbre):
     return 0
   if est_feuille(arbre):
-    return 1 
+    return 1
   return compte_feuille(gauche(arbre)) + compte_feuille(droit(arbre))
 
 def taille (arbre):
   if est_vide(arbre):
     return 0
-  return 1 + taille(gauche(arbre)) + taille(droit(arbre)) 
+  else:
+    return 1 + taille(gauche(arbre)) + taille(droit(arbre))
 
 def hauteur (arbre):
   if est_vide(arbre):
     return -1
-  h1 = 1 + hauteur(gauche(arbre))
-  h2 = 1 + hauteur(droit(arbre))
-  return max(h1,h2)
+  else:
+    h1 = hauteur(gauche(arbre))
+    h2 = hauteur(droit(arbre))
+    return 1 + max(h1,h2)
 
 def represente(arbre, p = 0) :
-  if est_vide(arbre): 
+  if est_vide(arbre):
     print('*')
   else:
     print(etiquette(arbre))
@@ -60,7 +62,7 @@ def affiche(expression):
     print(')', end ='')
 
 def evalue(expression, valeurs):
-    if est_vide(expression): 
+    if est_vide(expression):
         return 0
     if est_feuille(expression):
         v = etiquette(expression)
@@ -99,3 +101,7 @@ print(compte_feuille(A3))
 # affiche(expression)
 # print(evalue(expression, {'x':5,'y':2}))
 # affichePolonaise(expression)
+print(hauteur(A3), 2)
+print(hauteur(gauche(A3)), 0)
+print(hauteur(droit(A3)), 1)
+print(hauteur(arbre_vide()), -1)

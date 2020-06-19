@@ -26,28 +26,31 @@ def est_feuille(i):
 def compte_feuille(i):
   if(est_vide(i)):
     return 0
-  if est_feuille(i):
-    return 1 
-  return compte_feuille(gauche(i)) + compte_feuille(droit(i))
+  elif est_feuille(i):
+    return 1
+  else:
+    return compte_feuille(gauche(i)) + compte_feuille(droit(i))
 
 def taille (i):
   if(est_vide(i)):
     return 0
-  if est_feuille(i):
-    return 1 
-  return 1 + taille(gauche(i)) + taille(droit(i)) 
+  elif est_feuille(i):
+    return 1
+  else:
+    return 1 + taille(gauche(i)) + taille(droit(i))
 
 def hauteur (i):
   if(est_vide(i)):
     return -1
-  if est_feuille(i):
+  elif est_feuille(i):
     return 0
-  h1 = 1 + hauteur(gauche(i))
-  h2 = 1 + hauteur(droit(i))
-  return max(h1,h2)
+  else:
+    h1 = 1 + hauteur(gauche(i))
+    h2 = 1 + hauteur(droit(i))
+    return max(h1,h2)
 
 def represente(i, p = 0) :
-  if est_vide(i): 
+  if est_vide(i):
     print('*')
   else:
     print(etiquette(i))
@@ -65,3 +68,7 @@ noeud('c',gauche(droit(0)))
 # print(est_feuille(gauche(droit(0))))
 # print(hauteur(1))
 represente(0)
+
+print(hauteur(0), 2)
+print(hauteur(gauche(0)), 0)
+print(hauteur(droit(0)), 1)
