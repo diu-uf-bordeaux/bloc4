@@ -88,6 +88,19 @@ def set_rotate_rel(s, theta, p):
     cen_x = p[0]
     cen_y = p[1]
     return lambda p: s(translate(cen_x, cen_y)(rotate(theta)(translate(-cen_x,-cen_y)(p))))
+
+def set_diffs(s1, s2):
+    return lambda y: s1(y) != s2(y)
+
+def wheel(s, p, n):
+    cen_x = p[0]
+    cen_y = p[1]
+    theta = 2. * 3.1415927 / n
+    all_rots = [ set_rotate_rel(s, theta*i, p) for i in range(n) ]
+    return functools.reduce(set_diffs, all_rots, set_all)
+
+s = set_scale(set_circle((7.5,10), 3), 1, 0.5)
+set_display_2d(wheel(s,(5,5),24))
 ```
 
 
