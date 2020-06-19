@@ -70,6 +70,12 @@ def reduce_rec(f, acc, l):
 ```
 
 ```python
+def sum_reduce(l):
+    return reduce_rec(lambda acc, x: x + acc, 0, l)
+
+def any_reduce(l):
+    return reduce_rec(lambda acc, x: x or acc, False, l)
+
 def reverse_reduce(l):
     return reduce_rec(lambda acc, x: [x] + acc, [], l)
 ```
