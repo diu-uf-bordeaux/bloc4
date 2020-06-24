@@ -17,3 +17,6 @@ permalink: /td/functional/
 
 - [Programmation paresseuse](./td_laziness.md) : un exemple de contrôle de
   l'évaluation sous la forme de programmation paresseuse.
+
+- [Tchisla](./td_tchisla.md) : un exemple de jeu où la résolution met
+  en valeur des algorithmes récursifs.
