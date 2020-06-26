@@ -1,0 +1,56 @@
+drop table if exists Immeuble;
+create table Immeuble(
+       NomImmeuble text,
+       Adresse text,
+       NbEtages integer,
+       AnneeConstruction integer,
+       NomGerant text);
+
+
+insert into Immeuble values('Koudalou', '3 rue Blanche', 15, 1975, 'Doug');
+insert into Immeuble values('Barabas', '2 Allee Nikos', 2, 1973, 'Ross');
+
+
+drop table if exists Appart;
+Create table Appart(
+       NomImmeuble text,
+       NoAppart integer,
+       Superficie integer,
+       Etage integer);
+
+
+insert into Appart values ('Koudalou', 1, 150, 14);
+insert into Appart values ('Koudalou', 34, 50, 15);
+insert into Appart values ('Koudalou', 51, 200, 2);
+insert into Appart values ('Koudalou', 52, 50, 5);
+insert into Appart values ('Barabas', 1, 250, 1);
+insert into Appart values ('Barabas', 2, 250, 2);
+
+
+drop table if exists Personne;
+create table Personne(
+       Nom text,
+       Age integer,
+       Profession text);
+
+
+insert into Personne values('Ross', 51, 'Informaticien');
+insert into Personne values('Alice', 34, 'Cadre');
+insert into Personne values('Rachel',23, 'Stagiaire');
+insert into Personne values('William',52,'Acteur');
+insert into Personne values('Doug',34,'Rentier');
+
+
+drop table if exists Occupant;
+create table Occupant(
+       NomImmeuble text,
+       NoAppart integer,
+       NomOccupant text,
+       AnneeArrivee integer);
+
+
+insert into Occupant values('Koudalou',1,'Rachel',2012);
+insert into Occupant values('Barabas',1,'Doug',2014);
+insert into Occupant values('Barabas',2,'Ross',2014);
+insert into Occupant values('Koudalou',51,'William',2016);
+insert into Occupant values('Koudalou',34,'Alice',2013);
