@@ -10,6 +10,8 @@ https://diu-uf-bordeaux.github.io/bloc4/td/functional/td_characteristic.solution
 https://diu-uf-bordeaux.github.io/bloc4/td/functional/td_mapreduce.html
 https://diu-uf-bordeaux.github.io/bloc4/td/functional/td_mapreduce.solutions.html
 https://diu-uf-bordeaux.github.io/bloc4/td/functional/td_laziness.solutions.html
+https://diu-uf-bordeaux.github.io/bloc4/td/functional/td_tchisla.html
+https://diu-uf-bordeaux.github.io/bloc4/td/functional/td_tchisla.solutions.html
 https://diu-uf-bordeaux.github.io/bloc4/td/listes/
 https://diu-uf-bordeaux.github.io/bloc4/td/listes/operations/
 https://diu-uf-bordeaux.github.io/bloc4/td/listes/polynome/
