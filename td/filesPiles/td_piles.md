@@ -53,4 +53,4 @@ switch: Pile -> Pile
 ```
 
 - [Accès au code solution en objet](./solution_pile_operations_objet.py)
-- [Accès au code solution](./solution_pile_operations.py)
+- [Accès au code solution en fonctionnel](./solution_pile_operations.py)
