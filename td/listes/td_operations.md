@@ -4,7 +4,7 @@ title: "Opérations"
 permalink: /td/listes/operations/
 ---
 
-- [Retour aux exercices sur les listes](../)
+[Retour aux exercices sur les listes](../)
 
 L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Liste`.
 

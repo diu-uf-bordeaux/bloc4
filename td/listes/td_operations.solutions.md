@@ -3,9 +3,7 @@ layout: page_ext
 title: "Fonctions caractéristiques"
 ---
 
-- [Retour aux exercices de programmation sur les listes](./td_listes.md)
-
-- [Retour aux exercices de programmation des opérations sur les listes](./td_operations.md)
+[Retour aux exercices de programmation des opérations sur les listes](./td_operations.md)
 
 ### 1ère partie : implémentation objet, version avec ajout de fonctions
 

@@ -25,7 +25,7 @@
     # ajoute une valeur dans la file
  pop : File -> (Valeur * File)
     # extrait la valeur de la tête de la file
-    # puis renvoi la file sans cette valeur
+    # puis renvoie la file sans cette valeur
     # Attention: La file ne doit pas être vide
 ```
 
