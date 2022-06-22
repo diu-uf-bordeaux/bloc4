@@ -60,15 +60,49 @@ def represente(i, p = 0) :
     print('-' * p, end ='')
     represente(droit(i), p)
 
-noeud('r',0)
+noeud('d',0)
 noeud('a',gauche(0))
 noeud('b',droit(0))
 noeud('c',gauche(droit(0)))
-# print(etiquette(gauche(droit(0))))
-# print(est_feuille(gauche(droit(0))))
-# print(hauteur(1))
+
+print('== Test est_feuille ==')
+
+print('est_feuille:', est_feuille(1))
+print('est_feuille:', est_feuille(2))
+print('est_feuille:', est_feuille(0))
+
+print('==============')
+
+print('== Test compte_feuille ==')
+
+print('compte_feuille:', compte_feuille(1))
+print('compte_feuille:', compte_feuille(2))
+print('compte_feuille:', compte_feuille(0))
+
+print('==============')
+
+print('== Test taille ==')
+
+print('taille:', taille(1))
+print('taille:', taille(2))
+print('taille:', taille(0))
+
+print('==============')
+
+print('== Test hauteur ==')
+
+print('hauteur:', hauteur(1))
+print('hauteur:', hauteur(2))
+print('hauteur:', hauteur(0))
+
+print('==============')
+
+print('== Test represente ==')
+
+represente(1)
+print()
+represente(2)
+print()
 represente(0)
 
-print(hauteur(0), 2)
-print(hauteur(gauche(0)), 0)
-print(hauteur(droit(0)), 1)
+print('==============')

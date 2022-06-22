@@ -51,57 +51,49 @@ def represente(arbre, p = 0) :
     print('-' * p, end ='')
     represente(droit(arbre), p)
 
-def affiche(expression):
-  if est_feuille(expression):
-    print(etiquette(expression), end ='')
-  else:
-    print('(', end ='')
-    affiche(gauche(expression))
-    print(etiquette(expression), end ='')
-    affiche(droit(expression))
-    print(')', end ='')
-
-def evalue(expression, valeurs):
-    if est_vide(expression):
-        return 0
-    if est_feuille(expression):
-        v = etiquette(expression)
-        if v in valeurs:
-          return valeurs[v]
-        return v
-    a=evalue(gauche(expression), valeurs)
-    b=evalue(droit(expression), valeurs)
-    o=etiquette(expression)
-    if o=='+':
-        return a+b
-    if o=='*':
-        return a*b
-    if o=='-':
-        return a-b
-    if o=='/':
-        return a/b
-
-def affichePolonaise(expression):
-  if est_feuille(expression):
-    print(etiquette(expression), end =' ')
-  else:
-    affichePolonaise(gauche(expression))
-    affichePolonaise(droit(expression))
-    print(etiquette(expression), end =' ')
-
 a = noeud('a', arbre_vide(), arbre_vide())
 c = noeud('c', arbre_vide(), arbre_vide())
 b = noeud('b', c, arbre_vide())
-A3 = noeud('r', a, b)
-print(compte_feuille(A3))
-# represente(A3)
+d = noeud('d', a, b)
 
-# expression = noeud('+', noeud('*', noeud(6,arbre_vide(),arbre_vide()), noeud('+', noeud('x',arbre_vide(),arbre_vide()), noeud('y',arbre_vide(),arbre_vide()))), noeud('-', noeud('y',arbre_vide(),arbre_vide()), noeud(14,arbre_vide(),arbre_vide())))
+print('== Test est_feuille ==')
 
-# affiche(expression)
-# print(evalue(expression, {'x':5,'y':2}))
-# affichePolonaise(expression)
-print(hauteur(A3), 2)
-print(hauteur(gauche(A3)), 0)
-print(hauteur(droit(A3)), 1)
-print(hauteur(arbre_vide()), -1)
+print('est_feuille:', est_feuille(a))
+print('est_feuille:', est_feuille(b))
+print('est_feuille:', est_feuille(d))
+
+print('==============')
+
+print('== Test compte_feuille ==')
+
+print('compte_feuille:', compte_feuille(a))
+print('compte_feuille:', compte_feuille(b))
+print('compte_feuille:', compte_feuille(d))
+
+print('==============')
+
+print('== Test taille ==')
+
+print('taille:', taille(a))
+print('taille:', taille(b))
+print('taille:', taille(d))
+
+print('==============')
+
+print('== Test hauteur ==')
+
+print('hauteur:', hauteur(a))
+print('hauteur:', hauteur(b))
+print('hauteur:', hauteur(d))
+
+print('==============')
+
+print('== Test represente ==')
+
+represente(a)
+print()
+represente(b)
+print()
+represente(d)
+
+print('==============')

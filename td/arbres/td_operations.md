@@ -36,4 +36,7 @@ hauteur : Arbre binaire -> int
   # à partir d'un arbre binaire A, produit un entier indiquant la hauteur de A
 ```
 
-[Accès aux solutions au format web](./solutions/)
+- [Accès aux solutions au format web](./solutions/)
+- [Accès au code solution avec des listes de listes](./solution_arbres_listes.py)
+- [Accès au code solution avec la classe Noeud](./solution_arbres_classe.py)
+- [Accès au code solution avec un tableau](./solution_arbres_tableau.py)
