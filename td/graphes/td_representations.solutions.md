@@ -4,9 +4,7 @@ title: "Manipulation des représentations - solutions"
 permalink: /td/graphes/representations/solutions/
 ---
 
-- [Retour aux exercices sur les graphes](../../)
-
-- [Retour à l'exercice](../)
+[Retour à l'exercice](../)
 
 #### Question 1
 

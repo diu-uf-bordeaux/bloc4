@@ -4,9 +4,7 @@ title: "Passage d'une représentation à l'autre - solutions"
 permalink: /td/graphes/conversions/solutions/
 ---
 
-- [Retour aux exercices sur les graphes](../../)
-
-- [Retour à l'exercice](../)
+[Retour à l'exercice](../)
 
 Les deux représentations étant implémentées dans leur module respectif :
 
@@ -32,7 +30,6 @@ def gl2gm(graphe_listes):
 def gm2gl(graphe_matrice):
   graphe_listes = gl.creer_graphe(gm.sommets(graphe_matrice))
   for s1 in gm.sommets(graphe_matrice):
-    print(gm.voisins(graphe_matrice, s1))
     for s2 in gm.voisins(graphe_matrice, s1):
       gl.ajouter_arete(graphe_listes, s1, s2)
   return graphe_listes

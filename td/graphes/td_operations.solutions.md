@@ -4,9 +4,7 @@ title: "Opérations sur les graphes - solutions"
 permalink: /td/graphes/operations/solutions/
 ---
 
-- [Retour aux exercices sur les graphes](../../)
-
-- [Retour à l'exercice](../)
+[Retour à l'exercice](../)
 
 ### Solutions avec les matrices d'adjacence
 
@@ -40,9 +38,6 @@ def sont_voisins(graphe, s1, s2):
 ### Solutions avec les listes de successeurs
 
 ```python
-import functools
-import operator
-
 def degre(graphe, sommet):
   return len(voisins(graphe, sommet))
   
@@ -55,7 +50,10 @@ def degre_moyen(graphe):
   # for s in S:
   #   c += degre(graphe, s)
   # return c / len(S)
-  return functools.reduce(operator.add, [ degre(graphe,s) for s in S ]) / len(S)
+  ## ou :
+  # return functools.reduce(operator.add, [ degre(graphe,s) for s in S ]) / len(S)
+  ## ou encore : 
+  return sum([ degre(graphe,s) for s in S ]) / len(S)
 
 def sont_voisins(graphe, s1, s2):
   return s2 in voisins(graphe, s1)

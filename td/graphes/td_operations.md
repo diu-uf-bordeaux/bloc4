@@ -4,9 +4,7 @@ title: "Opérations sur les graphes"
 permalink: /td/graphes/operations/
 ---
 
-- [Retour aux exercices sur les graphes](../)
-
-- [Accès aux solutions](./solutions/)
+[Retour aux exercices sur les graphes](../)
 
 L'objectif de cet exercice est d'étendre le TAD `Graphe simple` avec de nouvelles opérations dont vous proposerez une implémentation pour les deux représentations vues en cours : les matrices d'adjacence ([code](./graphe_matrice.py)) et les listes de successeurs ([code](./graphe_listes.py)). Pour plus de simplicité, on considéra des graphes **non-orientés**.
 
@@ -38,3 +36,7 @@ Enfin, on veut ajouter le prédicat :
   # à partir d'un graphe simple G et de deux sommets s1 et s2, 
   # produit un booléen indiquant si s1 est voisin de s2
 ```
+
+- [Accès aux solutions au format web](./solutions/)
+- [Accès au code solution avec les listes de successeurs](./solution_graphe_listes.py)
+- [Accès au code solution avec les matrices d’adjacence](./solution_graphe_matrice.py)

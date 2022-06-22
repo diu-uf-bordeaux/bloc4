@@ -4,7 +4,7 @@ title: "Exercices de programmation"
 permalink: /td/
 ---
 
-- [Retour à la page principale](../)
+[Retour à la page principale](../)
 
 ## Liste des exercices
 

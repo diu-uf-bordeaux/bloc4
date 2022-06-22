@@ -4,9 +4,7 @@ title: "Manipulation des représentations"
 permalink: /td/graphes/representations/
 ---
 
-- [Retour aux exercices sur les graphes](../)
-
-- [Accès aux solutions](./solutions/)
+[Retour aux exercices sur les graphes](../)
 
 L'objectif des exercices de cette page est de manipuler sur papier les deux représentations des graphes vues en cours : les matrices d'adjacence et les listes de successeurs.
 
@@ -48,3 +46,5 @@ L'objectif des exercices de cette page est de manipuler sur papier les deux repr
       0 & 1 & 1 & 0\\
       \end{pmatrix}$$ associée à l'ensemble de sommets $S=\\{a,b,c,d\\}$.
    {: .list_alpha}
+
+   [Accès aux solutions au format web](./solutions/)
