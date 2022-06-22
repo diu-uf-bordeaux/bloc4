@@ -4,9 +4,7 @@ title: "Opérations - solutions"
 permalink: /td/arbres/operations/solutions/
 ---
 
-- [Retour aux exercices sur les arbres binaires](../../)
-
-- [Retour à l'exercice](../)
+[Retour à l'exercice](../)
 
 ### Solutions pour la mise en oeuvre avec des listes de listes :
 
@@ -34,7 +32,7 @@ def hauteur (arbre):
   return max(h1,h2)
 ```
 
-### Solutions pour la mise en oeuvre avec la classe `Noeud` :
+### Solutions pour la mise en oeuvre avec la classe Noeud :
 
 ```python
 def est_feuille(self):

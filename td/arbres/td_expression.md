@@ -4,9 +4,7 @@ title: "Expressions arithmétiques"
 permalink: /td/arbres/expression/
 ---
 
-- [Retour aux exercices sur les arbres binaires](../)
-
-- [Accès aux solutions](./solutions/)
+[Retour aux exercices sur les arbres binaires](../)
 
 Une expression arithmétique construite avec des opérateurs binaires (c'est-à-dire à deux opérandes telles l'addition, la soustraction, la multiplication, la division) peut être représentée par un arbre binaire dont les nœuds internes portent les opérateurs et les feuilles des symboles de variables ($x$, $y$, $z$, etc.) ou des constantes ($6$, $14$, etc.)
 
@@ -37,3 +35,5 @@ Quelle structure de données proposez-vous d'utiliser pour mémoriser ces associ
 3. Proposez une fonction `affichePolonaise` qui prend en paramètre un arbre représentant une expression arithmétique et affiche cette expression en utilisant la [notation polonaise inverse](https://fr.wikipedia.org/wiki/Notation_polonaise_inverse). Vous réalisez ainsi une **parcours postfixe** de l'arbre.
 <br/>
 Remarquez que cette expression non-ambiguë ne nécessite pas de parenthèses.
+
+[Accès aux solutions au format web](./solutions/)

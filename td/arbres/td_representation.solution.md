@@ -4,9 +4,7 @@ title: "Représentation visuelle - solutions"
 permalink: /td/arbres/representation/solutions/
 ---
 
-- [Retour aux exercices sur les arbres binaires](../../)
-
-- [Retour à l'exercice](../)
+[Retour à l'exercice](../)
 
 ### Solution pour la mise en oeuvre avec des listes de listes :
 
@@ -23,7 +21,7 @@ def represente(arbre, p = 0) :
     represente(droit(arbre), p)
 ```
 
-### Solution pour la mise en oeuvre avec la classe `Noeud` :
+### Solution pour la mise en oeuvre avec la classe Noeud :
 
 ```python
 def represente (arbre, p=0):

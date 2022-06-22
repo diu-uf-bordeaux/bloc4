@@ -4,9 +4,7 @@ title: "Expressions arithmétiques - solutions"
 permalink: /td/arbres/expression/solutions/
 ---
 
-- [Retour aux exercices sur les arbres binaires](../../)
-
-- [Retour à l'exercice](../)
+[Retour à l'exercice](../)
 
 ### Question 1
 

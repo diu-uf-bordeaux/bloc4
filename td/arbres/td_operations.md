@@ -4,9 +4,7 @@ title: "Opérations"
 permalink: /td/arbres/operations/
 ---
 
-- [Retour aux exercices sur les arbres binaires](../)
-
-- [Accès aux solutions](./solutions/)
+[Retour aux exercices sur les arbres binaires](../)
 
 L'objectif de cet exercice est d'étendre le TAD `Arbre binaire` avec de nouvelles opérations dont vous proposerez une implémentation pour la mise en oeuvre à base de listes de listes ([code](./arbre_listes.py)) et avec la classe `Noeud` ([code](./arbre_classe.py)).
 
@@ -37,3 +35,5 @@ On souhaite enfin calculer la hauteur d'un arbre, c'est-à-dire sa profondeur ma
 hauteur : Arbre binaire -> int
   # à partir d'un arbre binaire A, produit un entier indiquant la hauteur de A
 ```
+
+[Accès aux solutions au format web](./solutions/)
