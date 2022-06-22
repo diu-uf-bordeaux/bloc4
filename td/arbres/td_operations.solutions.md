@@ -69,3 +69,37 @@ def hauteur (self):
     h2 = 1 + self.droit().hauteur()
   return max(h1,h2)
 ```
+
+### Solution pour la mise en oeuvre avec un tableau :
+
+```Python
+def est_feuille(i):
+  return est_vide(gauche(i)) and est_vide(droit(i))
+
+def compte_feuille(i):
+  if(est_vide(i)):
+    return 0
+  elif est_feuille(i):
+    return 1
+  else:
+    return compte_feuille(gauche(i)) + compte_feuille(droit(i))
+
+def taille (i):
+  if(est_vide(i)):
+    return 0
+  elif est_feuille(i):
+    return 1
+  else:
+    return 1 + taille(gauche(i)) + taille(droit(i))
+
+def hauteur (i):
+  if(est_vide(i)):
+    return -1
+  elif est_feuille(i):
+    return 0
+  else:
+    h1 = 1 + hauteur(gauche(i))
+    h2 = 1 + hauteur(droit(i))
+    return max(h1,h2)
+
+```

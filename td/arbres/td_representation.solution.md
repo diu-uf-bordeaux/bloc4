@@ -24,7 +24,7 @@ def represente(arbre, p = 0) :
 ### Solution pour la mise en oeuvre avec la classe Noeud :
 
 ```python
-def represente (arbre, p=0):
+def represente(arbre, p=0):
   if Noeud.est_vide(arbre):
     print('*')
   else :
@@ -34,4 +34,19 @@ def represente (arbre, p=0):
       Noeud.represente(arbre.gauche(), p)
       print('-' * p, end ='')
       Noeud.represente(arbre.droit(), p)
+```
+
+### Solution pour la mise en oeuvre avec un tableau :
+
+```python
+def represente(i, p = 0) :
+  if est_vide(i):
+    print('*')
+  else:
+    print(etiquette(i))
+    p += 1
+    print('-' * p, end ='')
+    represente(gauche(i), p)
+    print('-' * p, end ='')
+    represente(droit(i), p)
 ```

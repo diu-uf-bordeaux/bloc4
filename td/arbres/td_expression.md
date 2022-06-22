@@ -36,4 +36,5 @@ Quelle structure de données proposez-vous d'utiliser pour mémoriser ces associ
 <br/>
 Remarquez que cette expression non-ambiguë ne nécessite pas de parenthèses.
 
-[Accès aux solutions au format web](./solutions/)
+- [Accès aux solutions au format web](./solutions/)
+- [Accès au code solution avec des listes de listes](./solution_arbres_expression.py)
