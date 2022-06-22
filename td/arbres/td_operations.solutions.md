@@ -72,7 +72,7 @@ def hauteur (self):
 
 ### Solution pour la mise en oeuvre avec un tableau :
 
-```Python
+```python
 def est_feuille(i):
   return est_vide(gauche(i)) and est_vide(droit(i))
 
@@ -101,5 +101,4 @@ def hauteur (i):
     h1 = 1 + hauteur(gauche(i))
     h2 = 1 + hauteur(droit(i))
     return max(h1,h2)
-
 ```
