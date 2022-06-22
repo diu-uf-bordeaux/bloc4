@@ -6,10 +6,6 @@ permalink: /td/listes/operations/
 
 - [Retour aux exercices sur les listes](../)
 
-- [Accès à une solution au format web](./td_operations.solutions.md)
-- [Accès au code solution en objet](./solution_liste_operations.py)
-- [Accès au code solution](./solution_liste_operations_objet.py)
-
 L'objectif de ce TD est de proposer de nouvelles méthodes pour le type `Liste`.
 
 Pour commencer, ajoutez les prédicats suivants :
@@ -38,3 +34,8 @@ Enfin, pour poussez encore plus loin, essayez d'implémenter le transformateur s
 trier_liste: Liste -> Liste
   # à partir d'une liste L, renvoie cette liste avec les valeurs triées (tri au choix)
 ```
+
+- [Accès aux solutions au format web](./td_operations.solutions.md)
+- [Accès au code solution en objet (classe Cellule)](./solution_liste_operations_objet_cellule.py)
+- [Accès au code solution en fonctionnel](./solution_liste_operations.py)
+- [Accès au code solution en objet (classe Liste)](./solution_liste_operations_objet_liste.py)

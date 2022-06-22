@@ -5,8 +5,6 @@ permalink: /td/listes/polynome/
 ---
 
 - [Retour aux exercices sur les listes](../)
-- [Accès au code solution en objet](./solution_liste_poly_objet.py)
-- [Accès au code solution](./solution_liste_poly.py)
 
 L'objectif de ce TD est de proposer une gestion de polynômes à l'aide de listes.
 
@@ -46,3 +44,6 @@ Pour aller encore plus loin :
 diviser: (Liste * Liste) -> Liste
     # Renvoi la division des deux polynômes en paramètres
 ```
+
+- [Accès au code solution en objet (classe Cellule)](./solution_liste_poly_objet.py)
+- [Accès au code solution en fonctionnel](./solution_liste_poly.py)

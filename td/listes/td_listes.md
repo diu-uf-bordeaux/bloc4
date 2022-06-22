@@ -15,41 +15,41 @@ dans les codes suivants :
   orientée objet
 {: .list}
 
-```python
-class Cellule:
-    liste_vide = None
+    ```python
+    class Cellule:
+        liste_vide = None
 
-    def __init__(self, etiquette, liste):
-        self._valeur = etiquette
-        self._suivant = liste
+        def __init__(self, etiquette, liste):
+            self._valeur = etiquette
+            self._suivant = liste
 
-    def valeur(self):
-        return self._valeur
+        def valeur(self):
+            return self._valeur
 
-    def suite(self):
-        return self._suivant
+        def suite(self):
+            return self._suivant
 
-    def est_vide(liste):
-        return liste is Cellule.liste_vide
-```
+        def est_vide(liste):
+            return liste is Cellule.liste_vide
+    ```
 
-La classe `Cellule` s'utilise ainsi :
+    La classe `Cellule` s'utilise ainsi :
 
-```python
-from classe_cellule import Cellule
+    ```python
+    from classe_cellule import Cellule
 
-l1 = Cellule.liste_vide  # returns an empty list
-l2 = Cellule(1, Cellule.liste_vide)
-l3 = Cellule(2, l2)
+    l1 = Cellule.liste_vide  # returns an empty list
+    l2 = Cellule(1, Cellule.liste_vide)
+    l3 = Cellule(2, l2)
 
-Cellule.est_vide(l1) # -> True
-Cellule.est_vide(l2) # -> False
+    Cellule.est_vide(l1) # -> True
+    Cellule.est_vide(l2) # -> False
 
-l3.suite()                # -> returns a list
-l3.suite() == l2          # -> True
-```
+    l3.suite()                # -> returns a list
+    l3.suite() == l2          # -> True
+    ```
 
-Note : dans cette implémentation, `Cellule.liste_vide` *n'est pas* une
+**Note :** dans cette implémentation, `Cellule.liste_vide` *n'est pas* une
 instance de `Cellule`, et donc on *ne peut pas* appeler de méthodes
 dessus.
 
@@ -57,78 +57,81 @@ dessus.
 fonctionnelle
 {: .list}
 
-```python
-def liste_vide():
-    return []
+    ```python
+    def liste_vide():
+        return []
 
-def cellule(etiquette, liste):
-    return [etiquette, liste]
+    def cellule(etiquette, liste):
+        return [etiquette, liste]
 
-def valeur(liste):
-    return liste[0]
+    def valeur(liste):
+        return liste[0]
 
-def suite(liste):
-    return liste[1]
+    def suite(liste):
+        return liste[1]
 
-def est_vide(liste):
-    return liste == liste_vide()
-```
+    def est_vide(liste):
+        return liste == liste_vide()
+    ```
 
-Cette implémentation s'utilise ainsi :
+    Cette implémentation s'utilise ainsi :
 
-```python
-import code_list as lis
+    ```python
+    import code_list as lis
 
-l1 = lis.liste_vide()  # returns an empty list
-l2 = lis.cellule(1, lis.liste_vide())
-l3 = lis.cellule(2, l2)
+    l1 = lis.liste_vide()  # returns an empty list
+    l2 = lis.cellule(1, lis.liste_vide())
+    l3 = lis.cellule(2, l2)
 
-lis.est_vide(l1) # -> True
-lis.est_vide(l2) # -> False
+    lis.est_vide(l1) # -> True
+    lis.est_vide(l2) # -> False
 
-lis.suite(l3)       # -> returns a list
-lis.suite(l3) == l2 # -> True
-```
+    lis.suite(l3)       # -> returns a list
+    lis.suite(l3) == l2 # -> True
+    ```
 
-- Classe `List` : [code](./classe_liste.py), une implémentation
+- Classe `Liste` : [code](./classe_liste.py), une implémentation
   orientée objet dans laquelle la liste vide est aussi une
   instance. Noter que cette implémentation est simplement présente
   pour montrer la différence avec l'implémentation `Cellule` où la
   liste vide n'est pas une instance.
 {: .list}
 
-```python
-class Liste:
+    ```python
+    class Liste:
 
-    def __init__(self, x, l):
-        self._hd = x
-        self._tl = l
+        def __init__(self, etiquette, liste):
+            self._valeur = etiquette
+            self._suivant = liste
 
-    def valeur(self): return self._hd
-    def suite(self): return self._tl
+        def valeur(self): 
+            return self._valeur
+        
+        def suite(self): 
+            return self._suivant
 
-    def est_vide(self):
-        return self is Liste.liste_vide
+        def est_vide(self):
+            return self is Liste.liste_vide
 
-Liste.liste_vide = Liste(None, None)
-```
+    Liste.liste_vide = Liste(None, None)
+    ```
 
-Cette implémentation s'utilise ainsi :
+    Cette implémentation s'utilise ainsi :
 
 
-```python
-from classe_liste import Liste
+    ```python
+    from classe_liste import Liste
 
-l1 = Liste.liste_vide  # returns an empty list
-l2 = Liste(1, Liste.liste_vide)
-l3 = Liste(2, l2)
+    l1 = Liste.liste_vide  # returns an empty list
+    l2 = Liste(1, Liste.liste_vide)
+    l3 = Liste(2, l2)
 
-l1.est_vide() # -> True
-l2.est_vide() # -> False
+    l1.est_vide() # -> True
+    l2.est_vide() # -> False
 
-l3.suite()       # -> returns a list
-l3.suite() == l2 # -> True
-```
+    l3.suite()       # -> returns a list
+    l3.suite() == l2 # -> True
+    ```
 
 
 

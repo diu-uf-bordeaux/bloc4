@@ -9,7 +9,7 @@ title: "Fonctions caractéristiques"
 
 ### 1ère partie : implémentation objet, version avec ajout de fonctions
 
-A partir du [code](./classe_cellule.py) de `Cellule` :
+À partir du [code](./classe_cellule.py) de `Cellule` :
 
 ```python
 def str_liste(l):
@@ -59,7 +59,7 @@ def trier_liste(l):
 
 ### 2ème partie : implémentation fonctionnelle
 
-A partir du [code](./code_liste.py) fonctionnel :
+À partir du [code](./code_liste.py) fonctionnel :
 
 ```python
 def str_liste(l):
@@ -109,7 +109,7 @@ def trier(l):
 
 ### 3ème partie : implémentation objet, version avec liste_vide objet
 
-A partir du [code](./classe_liste.py) de `Liste` :
+À partir du [code](./classe_liste.py) de `Liste` :
 
 ```python
 def str_liste(l):
@@ -159,7 +159,7 @@ def trier(l):
 
 ### 4ème partie : implémentation objet, version avec ajout de méthodes
 
-A partir du [code](./classe_liste.py) de `Liste` :
+À partir du [code](./classe_liste.py) de `Liste` :
 
 ```python
 def str_liste(self):
@@ -198,7 +198,7 @@ def inserer(self, x):
     if self.est_vide():
         return Liste(x, Liste.liste_vide)
     elif x < self.valeur():
-        return Liste(x, l)
+        return Liste(x, self)
     else:
         return Liste(self.valeur(), self.suite().inserer(x))
 Liste.inserer = inserer
@@ -215,4 +215,4 @@ Liste.trier = trier
 
 Noter qu'ici on ajoute des méthodes à la classe `Liste` a
 posteriori. On pourrait aussi bien écrire ces méthodes directement
-dans la classe `Liste` si on le droit de la modifier.
+dans la classe `Liste` si on a le droit de la modifier.
