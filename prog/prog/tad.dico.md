@@ -43,7 +43,7 @@
 
 ```python
  valeur : (Valeur * Dictionnaire) -> Valeur
-    # Renvoi la valeur correspondant à la clé correspondante
+    # Renvoie la valeur correspondant à la clé correspondante
 ```
 
 <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -52,7 +52,7 @@
 
 ```python
  existe : (Valeur * Dictionnaire) -> bool
-    # Renvoi un booléen exprimant si une valeur est stockée avec la clé fournie en paramètre
+    # Renvoie un booléen exprimant si une valeur est stockée avec la clé fournie en paramètre
 ```
 
 <!-- .element: class="fragment" data-fragment-index="3" -->

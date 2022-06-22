@@ -26,7 +26,7 @@
     # ajoute une valeur dans la Pile
  pop : Pile -> (Valeur * Pile)
     # extrait la valeur du sommet de la pile
-    # puis renvoi la Pile sans cette valeur
+    # puis renvoie la Pile sans cette valeur
     # Attention: La Pile ne doit pas être vide
 ```
 
