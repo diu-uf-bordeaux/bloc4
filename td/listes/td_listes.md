@@ -33,7 +33,7 @@ class Cellule:
         return liste is Cellule.liste_vide
 ```
 
-    La classe `Cellule` s'utilise ainsi :
+La classe `Cellule` s'utilise ainsi :
 
 ```python
 from classe_cellule import Cellule
@@ -74,7 +74,7 @@ def est_vide(liste):
     return liste == liste_vide()
 ```
 
-    Cette implémentation s'utilise ainsi :
+Cette implémentation s'utilise ainsi :
 
 ```python
 import code_list as lis
@@ -116,7 +116,7 @@ class Liste:
 Liste.liste_vide = Liste(None, None)
 ```
 
-    Cette implémentation s'utilise ainsi :
+Cette implémentation s'utilise ainsi :
 
 
 ```python
