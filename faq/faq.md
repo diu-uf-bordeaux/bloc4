@@ -4,7 +4,7 @@ title: "Foire aux questions"
 permalink: /faq/
 ---
 
-- [Retour à la page principale](../)
+[Retour à la page principale](../)
 
 ## Liste des questions
 
@@ -87,16 +87,16 @@ ferait par exemple un compilateur en `C` ou en `OCaml`.
 Les intérêts des annotations de type :
 
 - un intérêt de *documentation* : les fonctions annoncent la forme que
-  prennent leurs paramètres et les valeurs renvoyées
+  prennent leurs paramètres et les valeurs renvoyées ;
 
 - un intérêt de *vérification* : des outils externes (comme par
-  exemple [mypy](http://mypy-lang.org/) peuvent vérifier l'usage des
-  types et aider le programmeur
+  exemple [mypy](http://mypy-lang.org/)) peuvent vérifier l'usage des
+  types et aider le programmeur ;
 
 - un intérêt d'*optimisation* : des compilateurs comme
   [cython](https://cython.org/) peuvent utiliser les annotations de
   type pour générer du code plus efficace (cf. par exemple ce
-  [lien](https://cython.readthedocs.io/en/latest/src/quickstart/cythonize.html))
+  [lien](https://cython.readthedocs.io/en/latest/src/quickstart/cythonize.html)).
 
 ### Quelle est la différence entre une méthode d'instance et une méthode de classe ?
 
@@ -175,7 +175,7 @@ Dans le cadre d'une programmation objet ou modulaire, on parle de
 visibilité des variables. Certaines variables sont *publiques*, et
 donc accessibles depuis l'extérieur, et d'autres sont *privées* et
 donc invisibles. En <span class="label">Java</span> et en <span
-class="label">C++</span>, les langages offre les mots-clés `public` et
+class="label">C++</span>, les langages offrent les mots-clés `public` et
 `private`, qui n'existent pas en <span class="label">Python</span>.
 
 Idéalement, chaque objet doit "protéger" ses données. Quand un objet
