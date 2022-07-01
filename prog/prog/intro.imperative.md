@@ -127,7 +127,7 @@ def fibo(n):
         fibPr, fib = fib, fib + fibPr
     return fib
 ```
-<!-- .element: style="font-size: 24px" class: "large" -->
+<!-- .element: style="font-size: 24px; width:100%" -->
 
 </div>
 
