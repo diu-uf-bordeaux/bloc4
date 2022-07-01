@@ -17,7 +17,7 @@ lambda x: x+1         # <function <lambda> at 0x7>
 ```
 <!-- .element: style="padding:20px; background-color: #3f3f3f" -->
 
-  en tant qu'exemple de fonction anonyme.
+  en tant qu'exemple de fonction **anonyme**.
 
 --
 
@@ -79,9 +79,9 @@ lamb(34,23)  # 11
 
 ## 1ère classe : Paramètre
 
-- Une fonction peut être paramétrée par une autre fonction.
+- Une fonction peut être **paramétrée** par une autre fonction.
 
-- Exemple : un algorithme de tri paramétrée par un ordre de tri
+- Exemple : un algorithme de tri paramétré par un ordre de tri
 
 <div class="half" style="width:51%">
 
@@ -122,7 +122,7 @@ sort(range(10), lambda x,y: x<y)
 
 ## 1ère classe : Retour
 
-- Une fonction peut renvoyer une autre fonction&nbsp;:
+- Une fonction peut **renvoyer** une autre fonction&nbsp;:
 
 - Exemple : un algorithme de dérivation de fonction
 

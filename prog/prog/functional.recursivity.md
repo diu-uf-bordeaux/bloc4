@@ -88,7 +88,7 @@ def fun_with_rec(n):
 
 ## Récursivité : débordements de pile
 
-- Problème : les appels récursifs parfois trop nombreux
+- Problème : les appels récursifs sont parfois trop nombreux
 
 <div class="half">
 
@@ -199,6 +199,7 @@ def is_empty(l):
 	return (head(l) is None) and \
            (tail(l) is None)
 ```
+<!-- .element: style="width: 100%;" -->
 
 </div>
 
@@ -211,6 +212,7 @@ def length(l):
     else:
         return 1 + length(tail(l))
 ```
+<!-- .element: style="width: 100%;" -->
 
 ```python
 l = cons(1, cons(2, cons(3, empty())))
@@ -218,10 +220,11 @@ length(l)       # -> 3
 length(tail(l)) # -> 2
 length(empty()) # -> 0
 ```
+<!-- .element: style="width: 100%;" -->
 
 </div>
 
-- Structure canonique des algorithmes :
+- Structure canonique des algorithmes sur les listes :
 
 ```python
 if is_empty(l):

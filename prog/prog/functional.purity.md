@@ -30,7 +30,7 @@ f() - f() # (1 - 2) or (2 - 1) ?
 
 - En <span class="label">C</span> : `1` ou `-1`
 
-- En <span class="label">OCaml</span> : `1` ou `-1`
+- En <span class="label">OCaml</span> : `1`
 
 </div>
 <!-- .element: style="margin-top:-10px;" -->
@@ -76,7 +76,7 @@ récentes ont unifié le comportement, mais il est l'opposé de Python.
 
 <div class="half" style="width:46%; margin-top:10px">
 
-Avec effet de bord (imp)<!-- .element: class="title" -->
+Avec effet de bord (impératif)<!-- .element: class="title" -->
 
 ```python
 cpt = 0       # global state
@@ -84,7 +84,7 @@ cpt = 0       # global state
 def count_calls():
 	global cpt
 	cpt += 1
-	print("calls={}".format(cpt))
+	print(f"calls={cpt}")
 
 count_calls() # calls=1
 count_calls() # calls=2
@@ -95,7 +95,7 @@ count_calls() # calls=2
 
 <div class="half" style="width:53%; margin-top:10px">
 
-Sans effet de bord (fonc)<!-- .element: class="title" -->
+Sans effet de bord (fonctionnel)<!-- .element: class="title" -->
 
 ```python
 def count_calls(cpt):
@@ -104,9 +104,9 @@ def count_calls(cpt):
 
 cpt1 = 0
 cpt2 = count_calls(cpt1)
-print("calls={}".format(cpt2)) # calls=1
+print(f"calls={cpt2}") # calls=1
 cpt3 = count_calls(cpt2)
-print("calls={}".format(cpt3)) # calls=2
+print(f"calls={cpt3}") # calls=2
 ```
 <!-- .element: style="width:100%" -->
 
@@ -125,7 +125,7 @@ print("calls={}".format(cpt3)) # calls=2
 
 <div class="half" style="margin-top:10px">
 
-Avec effet de bord (imp)<!-- .element: class="title" -->
+Avec effet de bord (impératif)<!-- .element: class="title" -->
 
 ```python
 global_board = Board() # global state
@@ -144,7 +144,7 @@ play(global_board, Color.BLACK)
 
 <div class="half" style="margin-top:10px">
 
-Sans effet de bord (fonc)<!-- .element: class="title" -->
+Sans effet de bord (fonctionnel)<!-- .element: class="title" -->
 
 ```python
 def play(board, color):
@@ -184,7 +184,7 @@ play(
 	Color.BLACK)
 ```
 
-- Solution possible : écrire des fonctions récursives.
+- Solution possible : écrire des fonctions **récursives**.
 
 ```python
 def play_rec(board, n):

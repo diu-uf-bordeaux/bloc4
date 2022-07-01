@@ -89,6 +89,112 @@ def fibo(n):
 
 ![Fibonacci](prog/images/functional/fibonacci.svg)
 
+--
+
+## De l'importance des fonctions
+
+- Les fonctions se **composent** pour produire des résultats :
+
+```python
+# Mathematical functions
+p = { 'x': 0, 'y': 1 };
+q = { 'x': 1, 'y': 0 }
+math.sqrt((p['x'] - q['x'])**2 + (p['y']-q['y'])**2)
+
+# Functions on lists
+data = [1, 2, 3, 4]
+list(filter(lambda x: x%2==0, map(lambda x: x*x, data)))
+```
+
+- Les fonctions structurent le code en blocs **paramétrables**
+  et **réutilisables**.
+
+--
+
+## Fonctions et portées (1/2)
+
+<div class="half">
+
+Générateur aléatoire de Lehmer <!-- .element: class="title" -->
+
+```python
+seed = 12345
+M = 65537
+A = 75
+
+def rand():
+	global seed
+	seed = (A * seed) % M
+	return seed
+```
+<!-- .element: style="width: 100%" -->
+
+</div>
+
+<div class="half" style="vertical-align: bottom">
+
+```python
+for i in range(6):
+	print(rand())
+
+# -> [ 8357, 36942, 18096,
+# ___ 46460, 11039, 41481 ]
+```
+
+&nbsp;
+
+</div>
+
+- La fonction `rand` utilise une variable `seed` qui lui est
+  extérieure (mot-clé `global`).
+
+- Cette variable a une **portée globale** au code : il est possible de
+  la lire et la modifier en tout point après sa définition.
+
+- Cela pose évidemment des problèmes de sécurité.
+
+--
+
+## Fonctions et portées (2/2)
+
+<div class="half">
+
+```python
+def make_rand():
+    iseed = 12345
+    iM = 65537
+    iA = 75
+    def irand():
+        nonlocal iseed
+        iseed = (iA * iseed) % iM
+        return iseed
+    return irand
+```
+<!-- .element: style="width: 100%" -->
+
+</div>
+
+<div class="half">
+
+```python
+new_rand = make_rand()
+for i in range(6):
+    print(new_rand())
+
+# -> [ 8357, 36942, 18096,
+#     46460, 11039, 41481 ]
+```
+
+</div>
+
+- Ici, on enferme le code dans une fonction `make_rand`, qui renvoie
+  une fonction `irand` définie à l'intérieur.
+
+- La variable `iseed` a une **portée locale** à la fonction
+  `make_rand` et est inaccessible de l'extérieur.
+
+- La fonction `irand` enferme dans son code le lien vers `iseed` et y
+  accède en dehors de `make_rand` : c'est une **fermeture**.
 
 --
 

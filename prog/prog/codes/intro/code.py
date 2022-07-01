@@ -1,4 +1,5 @@
 import functools
+import itertools
 import math
 import operator
 import timeit
@@ -30,6 +31,33 @@ def rowland(n):
             row += math.gcd(i, row)
         return row
 
+def next_conway(l):
+    result = []
+
+    repeat = l[0]
+    l.pop(0)
+    times = 1
+
+    for actual in l:
+        if actual != repeat:
+            result += [times, repeat]
+            times = 1
+            repeat = actual
+        else:
+            times += 1
+    result += [times, repeat]
+
+    return result
+
+def conway(n):
+    if (n <= 1):
+        return 1
+    else:
+        result = [1]
+        for i in range(n):
+            result = next_conway(result)
+        return int("".join([str(r) for r in result]))
+
 def log_2(n):
     lg = 0
     while (n >= 2):
@@ -46,6 +74,16 @@ def test_rowland():
     tab = [7, 7, 8, 9, 10, 15, 18, 19, 20, 21]
     for i in range(10):
         assert(rowland(i) == tab[i])
+
+def test_conway():
+    tab = [1, 1, 21, 1211, 111221, 312211, 13112221, 1113213211,
+           31131211131221, 13211311123113112211]
+    for i in range(1, 10):
+        assert(conway(i) == tab[i])
+
+test_fibo()
+test_rowland()
+test_conway()
 
 def plot_sequence(f, n) -> None:
     xs = range(n)
@@ -73,4 +111,4 @@ def plot_time_fibo():
     mp.plot(ns, ts, 'o-')
     mp.show()
 
-plot_time_fibo()
+# plot_time_fibo()
