@@ -89,6 +89,7 @@ def count_calls():
 count_calls() # calls=1
 count_calls() # calls=2
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -107,6 +108,7 @@ print("calls={}".format(cpt2)) # calls=1
 cpt3 = count_calls(cpt2)
 print("calls={}".format(cpt3)) # calls=2
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -136,6 +138,7 @@ def play(board, color):
 play(global_board, Color.WHITE)
 play(global_board, Color.BLACK)
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -154,6 +157,7 @@ board1 = Board()
 board2 = play(board1, Color.WHITE)
 board3 = play(board2, Color.BLACK)
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -170,13 +174,13 @@ board3 = play(board2, Color.BLACK)
 - Comment organiser un calcul (non trivial) sans variables ?
 
 ```python
-play(                                    \
-	play(                                \
-		play(                            \
-			play(board,                  \
-				 Color.WHITE),           \
-			Color.BLACK),                \
-		Color.WHITE),                    \
+play(
+	play(
+		play(
+			play(board,
+				 Color.WHITE),
+			Color.BLACK),
+		Color.WHITE),
 	Color.BLACK)
 ```
 

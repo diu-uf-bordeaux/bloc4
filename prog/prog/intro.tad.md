@@ -31,12 +31,12 @@
 	```
 
 - <!-- .element: style="list-style-type:'⇒ '" -->
-Abstraction &nbsp;: les fonctions `open`, `close` &hellip;
+**Abstraction** &nbsp;: les fonctions `open`, `close` &hellip;
 permettent de manier n'importe quel livre, sans connaître ses
 particularités.
 
 - <!-- .element: style="list-style-type:'⇒ '" -->
-Modularité&nbsp;: l'implémentation du livre et son utilisation sont
+**Modularité**&nbsp;: l'implémentation du livre et son utilisation sont
 clairement séparées.
 
 

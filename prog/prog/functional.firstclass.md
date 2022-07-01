@@ -43,6 +43,7 @@ def func(param1, param2):
 func         # <function func at 0x7>
 func(34,23)  # 11
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -58,6 +59,7 @@ lamb = lambda param1, param2: \
 lamb    # <function <lambda> at 0x7>
 lamb(34,23)  # 11
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -92,6 +94,7 @@ def sort(l, cmp): # Generic Bubble Sort
         nl[j], nl[j+1] = nl[j+1], nl[j]
   return nl
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -104,6 +107,7 @@ sort(range(10), lambda x,y: x>y)
 sort(range(10), lambda x,y: x<y)
 # -> [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -129,6 +133,7 @@ def derivate(h, f):
     return lambda x: \
 		(f(x+h) - f(x)) / h
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -139,6 +144,7 @@ c = derivate(0.01, np.sin)
 c(0)     # 0.9999833334166665
 c(np.pi) # -0.9999833334166452
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 

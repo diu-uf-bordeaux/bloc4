@@ -67,6 +67,7 @@ def catalan(n: int) -> int:
 def conway(n: int) -> int:
     ...
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 <div class="half" style="width:52%">
@@ -80,6 +81,7 @@ def test_catalan() -> None: ...
 def test_conway() -> None: ...
 
 ```
+<!-- .element: style="width:100%" -->
 
 sequences_plot.py <!-- .element: class="title" -->
 ```
@@ -91,6 +93,7 @@ def plot_a_sequence(f: Callable[[int],
 
 def plot_all_sequences() -> None: ...
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -123,6 +126,7 @@ module S : SEQUENCE = struct
 	  fst !fibPr
 end
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 <div class="half" style="width:53%; padding-top:1%">
@@ -135,6 +139,7 @@ module type SEQUENCE_TEST = sig
     val test_conway : unit -> bool
 end
 ```
+<!-- .element: style="width:100%" -->
 
 sequences_plot.ml <!-- .element: class="title" -->
 ```ocaml
@@ -144,6 +149,7 @@ module type SEQUENCE_PLOT = sig
     val plot_all_seqs : unit -> unit
 end
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 

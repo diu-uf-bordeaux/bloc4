@@ -13,6 +13,7 @@ def fibo(n):
         fibPr, fib = fib, fib + fibPr
     return fibPr
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -27,6 +28,7 @@ def fibo(n):
 	else:
 		return fibo(n-1) + fibo(n-2)
 ```
+<!-- .element: style="width:100%" -->
 
 </div>
 
@@ -241,6 +243,7 @@ En Scheme <!-- .element: class="title" -->
          (else
           (+ 1 (length (cdr lis)))))) ;; liste non vide
 ```
+<!-- .element: style="width:100%" -->
 
 En OCaml <!-- .element: class="title" style="margin-top:30px"-->
 
@@ -249,6 +252,7 @@ let rec length l = match l with
   | []      -> 0                      (* liste vide *)
   | _ :: tl -> 1 + length tl          (* liste non vide *)
 ```
+<!-- .element: style="width:100%" -->
 
 En Haskell <!-- .element: class="title" style="margin-top:30px" -->
 
@@ -257,3 +261,4 @@ length :: [a] -> Integer              -- type de la fonction
 length []     = 0                     -- liste vide
 length (_:xs) = 1 + length xs         -- liste non vide
 ```
+<!-- .element: style="width:100%" -->
