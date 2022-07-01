@@ -1,3 +1,4 @@
+pre.large { width: 100% }
 pre.float2 { float: left; width: 45%; margin: 5px; }
 table.float2 { float: left; width: 45%; margin: 5px; }
 ul.float2 { float: left; width: 45%; margin: 5px; }
@@ -28,8 +29,8 @@ pre.float3 { float: left; width: 32%; margin: 5px; }
 p.title {
   text-align: left; background-color: #ffccc0; color: black;
   margin-bottom: -20px;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 0%;
+  margin-right: 0%;
   padding-left: 10px;
 }
 
