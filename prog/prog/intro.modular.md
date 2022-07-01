@@ -26,7 +26,7 @@ n'a jamais été présentée en tant que tel historiquement.
 * Ce code peut être **étendu** de diverses manières :
 
   - en ajoutant le code d'autres suites connues&nbsp;:<br/>
-	`catalan`, `rowland` &hellip;
+	`catalan`, `conway` &hellip;
 
   - en ajoutant des tests de validation pour chaque suite&nbsp;:<br/>
 	`test_fibo`, `test_catalan` &hellip;
@@ -64,7 +64,7 @@ def fibo(n: int) -> int:
 
 def catalan(n: int) -> int:
     ...
-def rowland(n: int) -> int:
+def conway(n: int) -> int:
     ...
 ```
 
@@ -77,7 +77,7 @@ import unittest
 
 def test_fibo() -> None: ...
 def test_catalan() -> None: ...
-def test_rowland() -> None: ...
+def test_conway() -> None: ...
 
 ```
 
@@ -110,7 +110,7 @@ sequences.ml <!-- .element: class="title" -->
 module type SEQUENCE = sig
     val fibo : int -> int
     val catalan : int -> int
-	val rowland : int -> int
+	val conway : int -> int
 end
 
 module S : SEQUENCE = struct
@@ -132,7 +132,7 @@ sequences_test.ml <!-- .element: class="title" -->
 module type SEQUENCE_TEST = sig
     val test_fibo : unit -> bool
     val test_catalan : unit -> bool
-    val test_rowland : unit -> bool
+    val test_conway : unit -> bool
 end
 ```
 

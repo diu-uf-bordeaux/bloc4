@@ -34,7 +34,7 @@ def fibo(n):
 	"""Assuming that n is a non-negative integer (i.e n >= 0)
 	   Returns the n-th element of the Fibonacci sequence """
 ```
-<!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px" -->
+<!-- .element: style="padding:10px; background-color: #3f3f3f; font-size: 24px; width: 100%" -->
 
 - Plusieurs exemples tirés de [Rosetta Code](http://rosettacode.org).
 
@@ -57,7 +57,7 @@ loop:   mov  D,  A
         jnz  loop   ; jump if not zero
         ret         ; return from subroutine
 ```
-<!-- .element: style="font-size: 24px" -->
+<!-- .element: style="font-size: 24px; width: 100%" -->
 
 https://rosettacode.org/wiki/Fibonacci_sequence#8080_Assembly <!-- .element: class="small" -->
 
@@ -84,7 +84,7 @@ Calcul de la suite de Fibonacci en Fortran IV (1962)<!-- .element: class="title"
     9 IFIBO=IFN
       END
 ```
-<!-- .element: style="font-size: 20px" -->
+<!-- .element: style="font-size: 20px; width: 100%" -->
 
 https://rosettacode.org/wiki/Fibonacci_sequence#FORTRAN_IV <!-- .element: class="small" -->
 
@@ -105,7 +105,7 @@ long long int fibo(int n) {
 	return fnext;
 }
 ```
-<!-- .element: style="font-size: 24px" -->
+<!-- .element: style="font-size: 24px; width: 100%" -->
 
 https://rosettacode.org/wiki/Fibonacci_sequence#Iterative_13 <!-- .element: class="small" -->
 
@@ -153,7 +153,7 @@ def fibo(n):
 
 <div class='half'>
 
-en Python  <!-- .element: class="title" -->
+En Python  <!-- .element: class="title" -->
 ```python
 def fibo(n):
     if n <= 1:
@@ -164,6 +164,7 @@ def fibo(n):
         fibPr, fib = fib, fib + fibPr
     return fib
 ```
+<!-- .element: style="width:100%" -->
 </div>
 <div class='half'>
 
