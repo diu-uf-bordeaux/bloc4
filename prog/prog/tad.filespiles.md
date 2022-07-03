@@ -66,7 +66,7 @@ Ces structures sont le résultat du code suivant :
 
 ## Exemple de file et pile: `Pop`
 
-En reprenant les structures de la slide précédent e:
+En reprenant les structures de la diapo précédente :
 
 ![Représentation](prog/images/pilesfiles/filesPilesRepresentation.svg)<!-- .element: class="stretch" style="max-width: 80%;" -->
 
