@@ -192,7 +192,7 @@ Plusieurs implémentations possibles :
       def suite(self):
           return self._suivant
       
-            def est_vide(liste):
+      def est_vide(liste):
           return liste is Cellule.liste_vide
   ```
 <!-- .element: class="stretch" -->
