@@ -120,7 +120,7 @@ Calcul de la suite de Fibonacci en Python <!-- .element: class="title" -->
 ```python
 def fibo(n):
     if n <= 1:
-        return n
+        return 1
     fibPr = 1
     fib = 1
     for num in range(2, n):
