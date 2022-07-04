@@ -19,6 +19,8 @@ class Noeud:
     return arbre is Noeud.arbre_vide
 
   def est_feuille(self):
+    if Noeud.est_vide(self):
+      return False
     return Noeud.est_vide(self.gauche()) and Noeud.est_vide(self.droit())
 
   def compte_feuille (self):

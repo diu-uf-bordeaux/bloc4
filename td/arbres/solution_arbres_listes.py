@@ -17,6 +17,8 @@ def est_vide(arbre):
   return arbre == arbre_vide()
 
 def est_feuille(arbre):
+  if est_vide(arbre):
+    return False
   return est_vide(gauche(arbre)) and est_vide(droit(arbre))
 
 def compte_feuille (arbre):

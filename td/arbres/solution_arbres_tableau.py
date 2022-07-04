@@ -21,6 +21,8 @@ def est_vide(i):
   return arbre[i] == arbre_vide()
 
 def est_feuille(i):
+  if est_vide(i):
+    return False
   return est_vide(gauche(i)) and est_vide(droit(i))
 
 def compte_feuille(i):
