@@ -37,11 +37,11 @@ Version nommée
 <!-- .element: class="title" -->
 
 ```python
-def func(param1, param2):
-	return param1 - param2
+def p_fun(param1, param2):
+	return param1 + param2
 
-func         # <function func at 0x7>
-func(34,23)  # 11
+p_fun         # <function p_fun at 0x7>
+p_fun(34,23)  # 57
 ```
 <!-- .element: style="width:100%" -->
 
@@ -53,11 +53,11 @@ Version anonyme
 <!-- .element: class="title" -->
 
 ```python
-lamb = lambda param1, param2: \
+m_fun = lambda param1, param2: \
 	        param1 - param2
 
-lamb    # <function <lambda> at 0x7>
-lamb(34,23)  # 11
+m_fun    # <function <lambda> at 0x7>
+m_fun(34,23)  # 11
 ```
 <!-- .element: style="width:100%" -->
 
@@ -68,10 +68,10 @@ lamb(34,23)  # 11
 
 - Les fonctions peuvent alors&nbsp;:
 
-	* être stockées dans des variables (comme `lamb`)
+	* être stockées dans des variables (comme `m_fun`)
    <!-- .element: style="margin-top:-10px" -->
 
-	* apparaître dans des structures : `[func, lamb]`
+	* apparaître dans des structures : `[p_fun, m_fun]`
    <!-- .element: style="margin-top:-20px" -->
 
 

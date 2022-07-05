@@ -12,7 +12,7 @@
 
 * Représentants historiques : **Simula** (1967), **Smalltalk** (1971)
 
-* Exemple emblématique : **Java** (1996, Java SE 14 date de 2020)
+* Exemple emblématique : **Java** (1996, Java SE 18 date de 2022)
 
 --
 

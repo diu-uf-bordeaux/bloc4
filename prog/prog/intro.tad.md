@@ -30,13 +30,13 @@
 		  # produit le texte sur une page
 	```
 
-- <!-- .element: style="list-style-type:'⇒ '" -->
-**Abstraction** &nbsp;: les fonctions `open`, `close` &hellip;
+<!-- .element: style="list-style-type:'⇒ '" -->
+
+- **Abstraction** &nbsp;: les fonctions `open`, `close` &hellip;
 permettent de manier n'importe quel livre, sans connaître ses
 particularités.
 
-- <!-- .element: style="list-style-type:'⇒ '" -->
-**Modularité**&nbsp;: l'implémentation du livre et son utilisation sont
+- **Modularité**&nbsp;: l'implémentation du livre et son utilisation sont
 clairement séparées.
 
 
@@ -50,7 +50,7 @@ clairement séparées.
 ## Exemple de TAD : `sequence`  en <span class="label">Python</span>
 
 
-1. L'ensemble des suites possibles : <br/>
+1. L'ensemble des "suites" possibles : <br/>
    `list` (`[]`, `[1,2,3]`, `['a','b']` &hellip;), `tuple`, `range` &hellip;
 2. Un ensemble d'opérations pour manipuler les suites :
 
@@ -72,6 +72,8 @@ clairement séparées.
 
 	Cf. https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
 	<!-- .element: class="x-small" -->
+
+<!-- .element: style="list-style-type:'⇒ '" -->
 
 --
 

@@ -109,13 +109,23 @@ list(filter(lambda x: x%2==0, map(lambda x: x*x, data)))
 - Les fonctions structurent le code en blocs **paramétrables**
   et **réutilisables**.
 
+```python
+def plot_sequence(a_seq, a, b):
+    """Plotd a sequence with matplotlib for values between a and b"""
+    ...
+
+plot_sequence(fibo, 1, 10)
+plot_sequence(conway, 20, 100)
+```
+
+
 --
 
 ## Fonctions et portées (1/2)
 
 <div class="half">
 
-Générateur aléatoire de Lehmer <!-- .element: class="title" -->
+<a class='title'>Générateur aléatoire de [Lehmer](https://en.wikipedia.org/wiki/Lehmer_random_number_generator)</a>
 
 ```python
 seed = 12345
@@ -134,11 +144,15 @@ def rand():
 <div class="half" style="vertical-align: bottom">
 
 ```python
+# Standard usage
 for i in range(6):
 	print(rand())
 
 # -> [ 8357, 36942, 18096,
 # ___ 46460, 11039, 41481 ]
+
+seed = 3.14  # Unwanted modification
+rand()       # -> 235.5
 ```
 
 &nbsp;
@@ -183,6 +197,10 @@ for i in range(6):
 
 # -> [ 8357, 36942, 18096,
 #     46460, 11039, 41481 ]
+
+iseed
+NameError: 'iseed' is not defined
+
 ```
 
 </div>
