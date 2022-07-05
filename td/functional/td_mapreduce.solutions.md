@@ -82,7 +82,12 @@ def reverse_reduce(l):
 
 ### 2ème partie : sagesse de l'Antiquité
 
+[Lien direct vers la liste des sages](higher.txt)
+
+
 ```python
+sages = [ ... ]
+
 age = lambda s: s["death"] - s["birth"]
 
 names = sorted(map_rec(lambda s: s["name"], sages))
