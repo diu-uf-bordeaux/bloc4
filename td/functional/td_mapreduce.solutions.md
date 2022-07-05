@@ -22,6 +22,9 @@ def map_rec(f, l):
         return []
     else:
         return [f(l[0])] + map_rec(f, l[1:])
+
+def map_python(f, l):
+    return list(map(f, l)) # convert to list
 ```
 
 ```python
@@ -39,6 +42,9 @@ def filter_rec(f, l):
         return [l[0]] + filter_rec(f, l[1:])
     else:
         return filter_rec(f, l[1:])
+
+def filter_python(f, l):
+    return list(filter(f, l))
 ```
 
 ```python

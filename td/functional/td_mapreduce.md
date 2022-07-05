@@ -125,8 +125,9 @@ exemple&nbsp;:
 ```python
 import multiprocessing
 import requests
+import time
 
-def scrape(url):
+def scrape_fun(url):
     print("Scraping '{}'".format(url))
     res = requests.get(url)
     print("Returned {} ({})".format(res.url, res.status_code))
@@ -136,9 +137,11 @@ def parallel_scrape():
     num_workers = 5
     all_urls = [
 		# insert here list of URLs
+        "http://perdu.com/",
+        "http://worldtimeapi.org/api/timezone/Europe/Paris",
         ]
     with multiprocessing.Pool(num_workers) as pool:
-        results = pool.map(scrape, all_urls)
+        results = pool.map(scrape_fun, all_urls)
         print(results)
 ```
 
@@ -150,8 +153,8 @@ aléatoires.
 Tester le code précedent avec une liste d'URLs choisie avec
 délicatesse pour ne pas surcharger les serveurs. Considérer le fait
 que la parallélisation ne fonctionne bien uniquement parce que les
-fonctions comme `scrape` ne font pas d'effets de bords (i.e leurs
-appels sont indépendants).
+fonctions comme `scrape` ne font pas (trop) d'effets de bords (i.e
+leurs appels sont indépendants).
 
 Remarque : dans le cas où l'on ne désirerait pas faire de requêtes sur
 des sites web externes, ou simplement parce que ce n'est pas possible,
@@ -159,14 +162,20 @@ on peut remplacer la requête par un calcul "long". La façon la plus
 simple de le faire est d'utiliser `time.sleep` :
 
 ```python
+def work_fun(value):
+    print(f"Working for {value} seconds")
+    time.sleep(value)
+
 def parallel_do():
     num_workers = 5
-    all_urls = [ 1, 2, 3 ]
+    all_values = [ 1, 2, 3 ]
     with multiprocessing.Pool(num_workers) as pool:
-        results = pool.map(time.sleep, all_urls)
+        results = pool.map(work_fun, all_values)
         print(results)
 ```
 
 On constate (normalement, sur une machine avec plusieurs processeurs)
 que le code précédent ne prend que 3 secondes, au lieu des 6
-nécessaires pour faire l'ensemble des "calculs".
+nécessaires pour faire l'ensemble des "calculs". Noter que
+l'utilisation de la bibliothèque `multiprocessing` impose que la
+fonction `work_fun` soit définie au toplevel pour des raisons techniques.
