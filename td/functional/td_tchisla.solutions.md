@@ -7,6 +7,11 @@ title: "Tchisla"
 
 - [Retour aux exercices sur Tchisla](./td_tchisla.md)
 
+```python
+import math
+```
+
+
 ### 1ère partie
 
 ```python
@@ -53,25 +58,46 @@ class BinaryOp(Expr):
 ### 2ème partie : un peu de programmation fonctionnelle
 
 ```python
-def make_value(e): return Value(e)
+# "0"-ary operations
+def make_value(e):
+    return Value(e)
 
-def make_sqrt_op(e): return UnaryOp(math.sqrt, "sqrt", e)
-def make_fact_op(e): return UnaryOp(fact, "fact", e)
+# Unary operations
+def make_sqrt_op(e):
+    return UnaryOp(lambda x: int(math.sqrt(x)), "int_sqrt", e)
 
-def make_add_op(e1,e2): return BinaryOp(lambda a,b: a+b, "plus", e1, e2)
-def make_sub_op(e1,e2): return BinaryOp(lambda a,b: a-b, "minus", e1, e2)
-def make_mul_op(e1,e2): return BinaryOp(lambda a,b: a*b, "times", e1, e2)
-def make_div_op(e1,e2): return BinaryOp(lambda a,b: a//b, e1, e2)
-def make_pow_op(e1,e2): return BinaryOp(lambda a,b: a**b, "pow", e1, e2)
+def make_fact_op(e):
+    return UnaryOp(lambda x: math.factorial(x), "fact", e)
 
 unary_ops = [
     make_sqrt_op,
     make_fact_op,
     ]
 
-binary_ops = [
+# Binary operations
+def make_add_op(e1,e2):
+    return BinaryOp(lambda a,b: a+b, "plus", e1, e2)
+
+def make_sub_op(e1,e2):
+    return BinaryOp(lambda a,b: a-b, "minus", e1, e2)
+
+def make_mul_op(e1,e2):
+    return BinaryOp(lambda a,b: a*b, "times", e1, e2)
+
+def make_div_op(e1,e2):
+    return BinaryOp(lambda a,b: a//b, "div", e1, e2)
+
+def make_pow_op(e1,e2):
+    return BinaryOp(lambda a,b: a**b, "pow", e1, e2)
+
+# Commutative binary operations
+binary_comm_ops = [
     make_add_op,
     make_mul_op,
+    ]
+
+# Non-commutative binary operations
+binary_not_comm_ops = [
     make_sub_op,
     make_div_op,
     make_pow_op,
@@ -99,7 +125,7 @@ def generate_trees(size, c):
                     res = res + [ b(a1, a2) for a1 in generate_rec(a)
                                   for a2 in generate_rec(sizerec-a-1) ]
             for b in binary_comm_ops:
-                for a in range(0, sizerec // 2):
+                for a in range(0, math.ceil(sizerec / 2)):
                     res = res + [ b(a1, a2) for a1 in generate_rec(a)
                                   for a2 in generate_rec(sizerec-a-1) ]
             cache[sizerec] = res

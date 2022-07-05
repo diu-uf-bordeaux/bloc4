@@ -85,6 +85,16 @@ class BinaryOp(Expr):
 		pass
 ```
 
+L'idée est à la fin de pouvoir construire des expressions de la
+manière suivante :
+
+```python
+# This expression represents "1 + 2"
+one_plus_two = BinaryOp(lambda a,b: a+b, "plus", Value(1), Value(2))
+one_plus_two        # displays 'plus(1,2)'
+one_plus_two.eval() # returns 3
+```
+
 ### 2ème partie : un peu de programmation fonctionnelle
 
 Pour simplifier la suite, nous allons construire des fonctions qui
@@ -104,7 +114,7 @@ def make_sqrt_op(e): return UnaryOp(sqrt, "sqrt", e)
 ```
 
 Construire les fonctions permettant de construire toutes les
-expressions qui vouns intéressent dans le jeu, et les placer dans les
+expressions qui vous intéressent dans le jeu, et les placer dans les
 listes suivantes :
 
 ```python
@@ -125,11 +135,13 @@ mais on peut résoudre un problème plus simple : énumérer toutes les
 expressions (ici des arbres) avec $n$ noeuds internes. Pour cela, on
 applique un algorithme récursif :
 
-- si $n == 0$, alors notre arbre est juste une feuille valant $c$ (on
-  pourra raffiner dans un second temps si on veut ajouter $cc$ $\dots),
+- si $n == 0$, alors notre arbre est juste une feuille valant $c = 1$ (on
+  pourra raffiner dans un second temps si on veut ajouter d'autres
+  valeurs $cc$ $\dots),
 
 - sinon, on engendre récursivement tous les arbres contenant $m$
-  opérations pour $m$ compris entre $0$ et $n-1$. Et on renvoie :
+  opérations pour $m$ compris entre $0$ et $n-1$ (mémoïser les
+  résultats serait sympathique). Et on renvoie :
 
   * d'une part, pour toute opération unaire $u$ dans `unary_ops` un
   arbre de racine $u$ dont le fils est un arbre de taille $n-1$,
