@@ -98,6 +98,16 @@ Les intérêts des annotations de type :
   type pour générer du code plus efficace (cf. par exemple ce
   [lien](https://cython.readthedocs.io/en/latest/src/quickstart/cythonize.html)).
 
+Conseil : vu le manque de vérification par défaut, il ne faut pas se
+forcer à mettre des indications de type. Tant qu'il s'agit de types
+natifs simples (`bool`, `int`, `float`, `str` ...), les annotations
+sont précises et aident à la documentation. Dès que l'on manipule des
+dictionnaires ou des listes contenant des types un peu complexes, il
+est difficile de produire des annotations précises et utiles. La page
+de [documentation de
+mypy](https://mypy.readthedocs.io/en/stable/generics.html) donne une
+idée des difficultés possibles.
+
 ### Quelle est la différence entre une méthode d'instance et une méthode de classe ?
 
 Rappelons vite que dans un objet, on a deux types de méthodes :
