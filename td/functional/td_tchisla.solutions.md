@@ -141,3 +141,42 @@ def find_solution_of_size(size, number, goal):
             res.append(t)
     return res
 ```
+
+### 5ème partie : recherche d'une unique solution
+
+
+```python
+def generate_values(size, c):
+    """Generate all expressions of size up to `size` internal operations,
+       and leaves valued by `c`, one per evaluated value.
+       The expressions are memoized.
+    """
+    cache = { 0 : { c: make_value(c) } }
+    def generate_rec(sizerec):
+        if (sizerec) in cache:
+            return cache[(sizerec)]
+        else:
+            print(f"Generate rec of size {sizerec}")
+            s = {}
+            for u in unary_ops:
+                for lu in generate_rec(sizerec-1).values():
+                    e = u(lu)
+                    s[e.eval()] = e
+            for b in binary_not_comm_ops:
+                for a in range(0, sizerec):
+                    # print(f"Generating size {a},{sizerec-a-1} for {b.__name__}")
+                    for la in generate_rec(a).values():
+                        for lb in generate_rec(sizerec-a-1).values():
+                            e = b(la, lb)
+                            s[e.eval()] = e
+            for b in binary_comm_ops:
+                for a in range(0, math.ceil(sizerec / 2)):
+                    # print(f"Generating size {a},{sizerec-a-1} for {b.__name__}")
+                    for la in generate_rec(a).values():
+                        for lb in generate_rec(sizerec-a-1).values():
+                            e = b(la, lb)
+                            s[e.eval()] = e
+            cache[sizerec] = s
+            return s
+    return generate_rec(size)
+```

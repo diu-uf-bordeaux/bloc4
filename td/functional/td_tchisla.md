@@ -164,5 +164,31 @@ calculés précédemment.
 Même comme cela, le code produit trop d'expressions dès que le nombre
 de noeuds internes augmente. Découper les opérations binaires en
 celles qui sont commutatives et celles qui ne le sont pas. Adapter
-l'algorithme d'énumération pour ne pas générer les expressions
-$2+(2+2)$ et $(2+2)+2$.
+l'algorithme d'énumération pour ne pas générer plusieurs fois les
+mêmes expressions $(2+2)$.
+
+### 5ème partie : recherche d'une unique solution
+
+Le problème de Tchisla ne demande en fait la recherche que d'une seule
+solution possible. Il est donc envisageable d'arrêter les recherches
+dès que l'on en trouve une. Cela peut se faire avec une modification
+simple de l'algorithme précédent~: dans le cache, au lieu de retenir
+l'ensemble des arbres possibles, on retient, pour une taille d'arbre
+$m$ et une valeur objectif donnée $v$, une expression canonique avec
+qui tient en $m$ opérations et s'évalue en $v$.
+
+Modifier le code pour ne produire qu'une expression possible.
+
+### Quelques conseils ...
+
+- Dès que l'on ajoute des opérations "exotiques" (ayant une croissance
+  très rapide comme `factorial`, ou engendrant des flottants comme
+  `div`), on obtient des résultats sans grand intérêt. Il est
+  raisonnable de forcer les opérations utilisées à ne pas produire de
+  telles valeurs pendant leur évaluation. Par exemple, la fonction de
+  division suivante ne produira jamais de valeur non entière :
+
+```python
+def make_div_op(e1,e2):
+    return BinaryOp(lambda a,b: a//b if a % b == 0 else None, "div", e1, e2)
+```
