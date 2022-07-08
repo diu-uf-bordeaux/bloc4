@@ -1,6 +1,6 @@
 ## Le Paradigme Objet
 
-- Brique élémentaire : l'**objet** (la **classe**)
+- Brique élémentaire : l'**objet** (et le **message**)
 
 - Idée générale :
 
@@ -13,6 +13,9 @@
 * Représentants historiques : **Simula** (1967), **Smalltalk** (1971)
 
 * Exemple emblématique : **Java** (1996, Java SE 18 date de 2022)
+
+Note:
+On peut citer C++, python, javascript, ...
 
 --
 
